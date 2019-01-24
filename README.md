@@ -2,34 +2,34 @@
 Within this repository we store all the necessary to start with a Semantic 
 Web Of Things implementation. 
 
-### 1. The WoT Ontology
-The file called `swot_ontology.owl` contains the ontology we use to represent 
-Web Things. The Classes are
-1. `Thing`
-2. `InteractionPattern`, superclass for `Action`, `Event`, `Property`
-3. `DataSchema`
-4. `FieldSchema`
+### 1. The SWoT Ontology
+Before using Cocktail, we suggest to have a look to the SWoT ontology.
 
 ### 2. Cocktail python3 framework
 ##### Basic setup
-To run, and use, the APIs for the Semantic Web of Things, you need 
-[Sepy](https://github.com/arces-wot/SEPA-python3-APIs.git). Cocktail uses 
-those APIs to post Things and their descriptions. In particular, you may 
-want to have a look to the `Sepa.py` python3 class.
+To run, and use, the APIs for the Semantic Web of Things, you need
+- A running [SEPA]() instance
+- The SEPA python3 APIs, available in [sepy](https://github.com/arces-wot/SEPA-python3-APIs/tree/dev-0.9.5) repository. *Be Careful! Use the branch dev-0.9.5*
 
-A `Sepa` instance is required in almost every method within Cocktail. 
-Therefore, the first thing to do is to have clear in mind the `Sepa` 
-constructor:
-```
-myEngine = Sepa( ip="localhost",
-                 http_port=8000,
-                 ws_port=9000,
-                 security={"secure": False, "tokenURI": None, "registerURI": None})
-```
+Cocktail uses those APIs to post Things and their descriptions. In particular, you may 
+want to have a look to the `SEPA.py` python3 class.
 
-Once the `Sepa` has been declared, you may want to define your first WebThing. 
+As Cocktail builds up in SEPA's RDF knowledge base a Semantic WebThing Environment, a SEPA instance is required in almost every method within Cocktail. 
+
+Therefore, here an example of how to instantiate a SEPA:
+1. run the SEPA instance
+2. create a Cocktail SAP file. The SAP file is an entity related to SEPA, where all the information about how the application will interact with it is contained (IP-port, SPARQLs,...). Have a look to the tools available in this repository to create an YSAP (which stands for YAML-SAP).
+3. Code your application
+```
+with open(path_to_ysap_file, "r") as ysap_file:
+    ysap = SAPObject(yaml.load(ysap_file))
+engine = SEPA(sapObject=ysap, logLevel=logging.ERROR)
+```
+For more complex situations, please refer to sepy repo documentation or the various example available in this repository.
+
+Once SEPA has been declared, you may want to define your first WebThing. 
 A WebThing is made up of some Actions, some Events, some Properties. 
-Additionally, there may be the possibility to declare their parameter 
+Additionally, there may be the possibility to declare their parameter's
 `DataSchema` and `FieldSchema`. Therefore,
 
 ##### Building WebThings
@@ -50,14 +50,11 @@ bindings = {
     "newTD":""
 }
 ```
-`superthing` might be left unused, if your WebThing is not represented 
-on the Web by another WebThing. In such case, you would put here the URI 
-of that WebThing.
 2. Declare your Actions, calling 
 ```
 myAction = Action(myEngine,bindings,action_task,forProperties=[],force_type=None)
 ```
-`bindings`, in this case, have to be formatted according to the `.sparql`
+`bindings`, in this case, has to be formatted according to the `.sparql`
 available in the `updates` folder. For instance, if you are creating an
 `IO` Action, you would have
 ```
@@ -158,7 +155,7 @@ itself. This is possible by querying the knowledge base, and by building
 up an image of the Action. An image of an Action is an Action that has the
 inferred flag to True. 
 Internally, a call to `isInferred()` checks if there is a handler connected to
-that Action. If not, it is an image.
+that Action. If not, it is an image (i.e., you are not the Action owner, but some external entity that what to interact with it).
 You can retrieve an Action image with the following static method:
 ```
 myActionImage = Action.buildFromQuery(myEngine,actionUri)
@@ -211,11 +208,11 @@ where `handler` is as usual a lambda, or a full handler for subscription
 notification.
 
 ### 3. Install Cocktail
-_TODO_
+First of all clone this repository. Then `cd` to the `cocktail_swot_framework` folder.
 ```
 $ python3 setup.py build
 $ python3 setup.py sdist
-$ sudo python3 setup.py \[install|develop\]
+$ sudo python3 setup.py install
 ```
 
 ### 4. Tests
@@ -226,39 +223,10 @@ $ python3 setup.py test
 
 ### 5. Other Examples
 ##### _Coding_
-To have an example on how to make a WebThing, have a look to the following files.
-1. `new_thing_example.py`
-2. `tools/observe_event.py`
-3. `tools/request_action.py`
-and in the tests of the cocktail package.
-Notice that (1) is also useful to see what happens when you start using 
-the `wotMonitor.py` tool.
-(2) is a nice runnable script to observe a specific event notifications. 
+Some examples on how to build Semantic WebThings and how to make them interact are available in `SWTE_example` folder! There is a README to help you run the experiment of the [paper]() (being submitted now).
 
 ##### _Available tools and experiments_
-While `tools/observe_event.py` and `tools/request_action.py` are useful to learn how to program with Cocktail, they are also invokable from the python command line.
-Please refer to their -h argument to see how to invoke them.
-
-There is also `tools/wotMonitor.py`. A typical experiment with `wotMonitor.py` consists in
-0. Run the SEPA
-1. open a terminal, and run
-```
-$ cd tools
-$ python3 ../new_thing_example.py
-```
-2. Open another terminal, and run 
-```
-$ python3 wotMonitor.py
-```
-3. call `discover`
-4. call `events`
-5. choose `http://MyFirstWebThing.com/Event1`
-6. see that `tools/observe_event.py` is called from `wotMonitor.py`
-7. again from `wotMonitor.py`, call `discover`
-8. call `actions`
-9. choose an action available
-10. see that `tools/request_action.py` is called from `wotMonitor.py` and that it prompts you for some input, if the action needs it.
-11. enjoy
+In `tools` folder a ysap generation tool and a discovery tool are available as well. A README is provided.
 
 ### Contribute
 Feel free to get in touch, if you have any question or suggestions

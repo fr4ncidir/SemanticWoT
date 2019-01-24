@@ -206,7 +206,7 @@ class Action(InteractionPattern):
         d_output = sepa.query("DESCRIBE_ACTION",
                               forcedBindings={"action_uri": action})
         if nice_output:
-            tablify(d_output, prefix_file=sepa.get_namespaces(stringList=True))
+            d_output = tablify(d_output, prefix_file=sepa.sap.get_namespaces(stringList=True), destination=None)
         if (action != "UNDEF") and (len(d_output["results"]["bindings"]) > 1):
             raise Exception("Action discovery gave more than one result")
         return d_output

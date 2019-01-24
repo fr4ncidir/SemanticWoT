@@ -131,7 +131,7 @@ class Event(InteractionPattern):
         d_output = sepa.query("DESCRIBE_EVENT",
                               forcedBindings={"event_uri": event})
         if nice_output:
-            tablify(d_output, prefix_file=sepa.get_namespaces(stringList=True))
+            d_output = tablify(d_output, prefix_file=sepa.sap.get_namespaces(stringList=True), destination=None)
         if (event != "UNDEF") and (len(d_output["results"]["bindings"]) > 1):
             raise Exception("Event discovery gave more than one result")
         return d_output

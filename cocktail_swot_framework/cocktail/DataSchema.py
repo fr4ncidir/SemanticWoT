@@ -79,9 +79,8 @@ class DataSchema:
         """
         d_output = sepa.query("GET_DATASCHEMAS", forcedBindings={"ds_force": ds})
         if nice_output:
-            tablify(d_output, prefix_file=sepa.get_namespaces(stringList=True))
+            d_output = tablify(d_output, prefix_file=sepa.sap.get_namespaces(stringList=True), destination=None)
         return d_output
 
     def delete(self):
-        # TODO
-        pass
+        raise NotImplementedError

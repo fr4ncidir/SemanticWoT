@@ -131,7 +131,7 @@ class Thing:
         """
         d_output = sepa.query("DISCOVER_THINGS", bindings)
         if nice_output:
-            tablify(d_output, prefix_file=sepa.sap.get_namespaces(stringList=True))
+            d_output = tablify(d_output, prefix_file=sepa.sap.get_namespaces(stringList=True), destination=None)
         return d_output
         
     @property

@@ -92,7 +92,7 @@ class Property(InteractionPattern):
         d_output = sepa.query(
             "DESCRIBE_PROPERTY", forcedBindings={"property_uri": prop})
         if nice_output:
-            tablify(d_output, prefix_file=sepa.get_namespaces(stringList=True))
+            d_output = tablify(d_output, prefix_file=sepa.sap.get_namespaces(stringList=True), destination=None)
         if (prop != "UNDEF") and (len(d_output["results"]["bindings"]) > 1):
             raise Exception("Property discovery gave more than one result")
         return d_output

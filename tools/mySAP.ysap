@@ -1,0 +1,469 @@
+host: localhost
+sparql11protocol:
+    protocol: http
+    port: 8000
+    query:
+        path: /query
+        method: POST
+        format: JSON
+    update:
+        path: /update
+        method: POST
+        format: JSON
+sparql11seprotocol:
+    protocol: ws
+    availableProtocols:
+        ws: 
+            port: 9000
+            path: /subscribe
+        wss: 
+            port: 9443
+            path: /secure/subscribe
+namespaces:
+    xsd: http://www.w3.org/2001/XMLSchema#
+    rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+    swot: http://wot.arces.unibo.it/ontology/web_of_things#
+queries:
+    DESCRIBE_PROPERTY: 
+        sparql:  select ?property ?pName ?pStability ?pWritability ?pDS ?pData ?pValue ?pFS ?pFS_type (group_concat(?ip; separator='; ') as ?ipattern) where { ?property   rdf:type swot:Property; swot:hasName ?pName; swot:hasStability ?pStability; swot:isWritable ?pWritability; swot:hasPropertyDataSchema ?pDS; swot:hasPropertyData ?pData. optional {?pData swot:hasValue ?pValue}. ?pDS swot:hasFieldSchema ?pFS. ?pFS rdf:type ?pFS_type. optional {?ip swot:forProperty ?property}. filter (?pFS_type != swot:FieldSchema). values (?property) {(?property_uri)} } group by ?property ?pName ?pStability ?pWritability ?pDS ?pData ?pValue ?pFS ?pFS_type
+        forcedBindings: 
+            property_uri: 
+                type: uri
+                value: UNDEF
+    GET_DATASCHEMAS: 
+        sparql:  select * where { ?ds rdf:type swot:DataSchema. optional {?ip rdf:type swot:InteractionPattern; ?dataschema_type ?ds}. ?ds swot:hasFieldSchema ?fs. ?fs rdf:type ?fs_type. values (?ip ?ds ?fs) {(?ip_force ?ds_force ?fs_force)} filter (?fs_type != swot:FieldSchema) values (?fs_type) {(?fs_type_force)} }
+        forcedBindings: 
+            dataschema_type: 
+                type: uri
+                value: swot:hasInputDataSchema|swot:hasOutputDataSchema|swot:hasPropertyDataSchema
+            ip_force: 
+                type: uri
+                value: UNDEF
+            ds_force: 
+                type: uri
+                value: UNDEF
+            fs_force: 
+                type: uri
+                value: UNDEF
+            fs_type_force: 
+                type: uri
+                value: UNDEF
+    DESCRIBE_EVENT: 
+        sparql:  select * where { ?event  rdf:type swot:Event; swot:hasName ?eName. optional { ?event swot:hasOutputDataSchema ?oDS. ?oDS swot:hasFieldSchema ?oFS. ?oFS rdf:type ?oFS_type. filter (?oFS_type != swot:FieldSchema) }. optional {?event swot:forProperty ?property}. values (?event) {(?event_uri)} }
+        forcedBindings: 
+            event_uri: 
+                type: uri
+                value: UNDEF
+    DISCOVER_THINGS: 
+        sparql:  select * where { ?thing  rdf:type swot:Thing; swot:hasName ?name; swot:hasThingDescription ?td. optional {?thing swot:hasSubThing ?subThing}. values (?thing ?name ?td) {(?thing_uri ?name_literal ?td_uri)}. }
+        forcedBindings: 
+            thing_uri: 
+                type: uri
+                value: UNDEF
+            name_literal: 
+                type: literal
+                value: UNDEF
+            td_uri: 
+                type: uri
+                value: UNDEF
+    GET_THING_DESCRIPTION: 
+        sparql:  select * where { ?thing  rdf:type swot:Thing; swot:hasThingDescription ?td; swot:hasName ?tName. optional {?thing swot:hasSubThing ?subThing}. ?td swot:hasInteractionPattern ?ip. ?ip rdf:type ?ip_type. optional{?ip swot:forProperty ?pTarget}. filter (?ip_type != swot:InteractionPattern) values (?thing) {(?thingURI)} }
+        forcedBindings: 
+            thingURI: 
+                type: uri
+                value: UNDEF
+    DISCOVER_INTERACTION_PATTERNS: 
+        sparql:  select * where { ?td swot:hasInteractionPattern ?ipattern. ?ipattern   rdf:type ?ipatterntype; swot:hasName ?ipatternName. filter (?ipatterntype != swot:InteractionPattern) values (?td ?ipatterntype) {(?td_uri ?ipattern_type_specific)} }
+        forcedBindings: 
+            td_uri: 
+                type: uri
+                value: UNDEF
+            ipattern_type_specific: 
+                type: uri
+                value: UNDEF
+    JSONLD_CONSTRUCT: 
+        sparql:  construct { ?thing  rdf:type swot:Thing; swot:hasThingDescription ?td; swot:hasName ?tName; swot:hasSubThing ?subThing. ?td swot:hasInteractionPattern ?ip; rdf:type swot:ThingDescription. ?ip rdf:type ?ip_type; swot:hasName ?ipatternName. ?ip ?allDSrelation ?DS. ?DS rdf:type swot:DataSchema; swot:hasFieldSchema ?FS. ?FS rdf:type ?FS_type. ?ip swot:hasStability ?pStability; swot:isWritable ?pWritability; swot:hasPropertyData ?pData. ?pData swot:hasValue ?pValue. ?ip swot:forProperty ?pTarget } where { ?thing  rdf:type swot:Thing; swot:hasThingDescription ?td; swot:hasName ?tName. optional {?thing swot:hasSubThing ?subThing}. ?td swot:hasInteractionPattern ?ip; rdf:type swot:ThingDescription. ?ip rdf:type ?ip_type; swot:hasName ?ipatternName. optional { ?ip ?allDSrelation ?DS. ?DS rdf:type swot:DataSchema; swot:hasFieldSchema ?FS. ?FS rdf:type ?FS_type. } optional { ?ip swot:hasStability ?pStability; swot:isWritable ?pWritability; swot:hasPropertyData ?pData. optional {?pData swot:hasValue ?pValue}} optional{?ip swot:forProperty ?pTarget} values (?allDSrelation) {(swot:hasDataSchema) (swot:hasInputDataSchema) (swot:hasOutputDataSchema) (swot:hasPropertyDataSchema)} }
+        forcedBindings: 
+            thing: 
+                type: uri
+                value: 
+    DESCRIBE_ACTION: 
+        sparql:  select ?action ?aName ?iDS ?iFS ?iFS_type ?oDS ?oFS ?oFS_type (group_concat(?props; separator='; ') as ?property) where { ?action rdf:type swot:Action; swot:hasName ?aName. optional { ?action swot:hasInputDataSchema ?iDS. ?iDS swot:hasFieldSchema ?iFS. ?iFS rdf:type ?iFS_type. filter (?iFS_type != swot:FieldSchema) }. optional { ?action swot:hasOutputDataSchema ?oDS. ?oDS swot:hasFieldSchema ?oFS. ?oFS rdf:type ?oFS_type. filter (?oFS_type != swot:FieldSchema) }. optional {?action swot:forProperty ?props} values (?action) {(?action_uri)} } group by ?action ?aName ?iDS ?iFS ?iFS_type ?oDS ?oFS ?oFS_type
+        forcedBindings: 
+            action_uri: 
+                type: uri
+                value: UNDEF
+    SUBSCRIBE_EVENT_INSTANCE: 
+        sparql:  select * where { ?thing swot:hasThingDescription/swot:hasEvent ?event. ?event swot:hasEventInstance ?eInstance. ?eInstance  swot:occurredAt ?eTS. optional { ?eInstance swot:hasOutputData ?oData. optional{?oData swot:hasValue ?oValue} ?oData  swot:hasOutputDataSchema ?oDS. ?event swot:hasOutputDataSchema ?oDS. ?oDS swot:hasFieldSchema ?oFS. ?oFS rdf:type ?oFS_type. filter (?oFS_type != swot:FieldSchema) } }
+        forcedBindings: 
+            thing: 
+                type: uri
+                value: 
+            event: 
+                type: uri
+                value: 
+    SUBSCRIBE_CONFIRMATION_TS: 
+        sparql:  select * where { ?aInstance rdf:type swot:ActionInstance; swot:hasConfirmationTimeStamp ?ts }
+        forcedBindings: 
+            aInstance: 
+                type: uri
+                value: 
+    SUBSCRIBE_COMPLETION_TS: 
+        sparql:  select * where { ?aInstance rdf:type swot:ActionInstance; swot:hasCompletionTimeStamp ?ts }
+        forcedBindings: 
+            aInstance: 
+                type: uri
+                value: 
+    SUBSCRIBE_INSTANCE_OUTPUT: 
+        sparql:  select * where { ?instance   swot:hasOutputData ?od. optional{ ?od  swot:hasValue ?oValue } ?od swot:hasOutputDataSchema ?oDS }
+        forcedBindings: 
+            instance: 
+                type: uri
+                value: 
+    SUBSCRIBE_ACTION_INSTANCE: 
+        sparql:  select * where { ?thing swot:hasThingDescription/swot:hasAction ?action. ?action swot:hasActionInstance ?aInstance. ?aInstance  rdf:type swot:ActionInstance; swot:hasRequestTimeStamp ?aTS; swot:requestedBy ?author. optional { ?aInstance swot:hasInputData ?iData. optional{?iData swot:hasValue ?iValue} ?iData swot:hasInputDataSchema ?iDS. ?action swot:hasInputDataSchema ?iDS. ?iDS swot:hasFieldSchema ?iFS. ?iFS rdf:type ?iFS_type. filter (?iFS_type != swot:FieldSchema) } }
+        forcedBindings: 
+            thing: 
+                type: uri
+                value: 
+            action: 
+                type: uri
+                value: 
+updates:
+    ADD_O_ACTION: 
+        sparql:  insert { ?td swot:hasInteractionPattern ?action; swot:hasAction ?action. ?action rdf:type swot:InteractionPattern, swot:Action; swot:hasName ?newName; swot:hasDataSchema ?ods; swot:hasOutputDataSchema ?ods} where { ?td rdf:type swot:ThingDescription. ?ods rdf:type swot:DataSchema. }
+        forcedBindings: 
+            td: 
+                type: uri
+                value: 
+            action: 
+                type: uri
+                value: 
+            newName: 
+                type: literal
+                value: 
+            ods: 
+                type: uri
+                value: 
+    NEW_ACTION_INSTANCE_OUTPUT: 
+        sparql:  insert { ?instance   swot:hasOutputData ?oData. ?oData   swot:hasValue ?oValue; swot:hasOutputDataSchema ?oDS} where { ?instance rdf:type swot:ActionInstance } 
+        forcedBindings: 
+            instance: 
+                type: uri
+                value: 
+            oData: 
+                type: uri
+                value: 
+            oValue: 
+                type: literal
+                value: 
+            oDS: 
+                type: uri
+                value: 
+    ADD_CONFIRMATION_TIMESTAMP: 
+        sparql:  insert {?aInstance swot:hasConfirmationTimeStamp ?ts} where { ?aInstance rdf:type swot:ActionInstance. bind (now() as ?ts) }
+        forcedBindings: 
+            aInstance: 
+                type: uri
+                value: 
+    ADD_EMPTY_ACTION: 
+        sparql:  insert { ?td swot:hasInteractionPattern ?action; swot:hasAction ?action. ?action rdf:type swot:InteractionPattern, swot:Action; swot:hasName ?newName} where { ?td rdf:type swot:ThingDescription }
+        forcedBindings: 
+            td: 
+                type: uri
+                value: 
+            action: 
+                type: uri
+                value: 
+            newName: 
+                type: literal
+                value: 
+    ADD_IO_ACTION: 
+        sparql:  insert { ?td swot:hasInteractionPattern ?action; swot:hasAction ?action. ?action rdf:type swot:InteractionPattern, swot:Action; swot:hasName ?newName; swot:hasDataSchema ?ids; swot:hasInputDataSchema ?ids; swot:hasDataSchema ?ods; swot:hasOutputDataSchema ?ods} where { ?td rdf:type swot:ThingDescription. ?ids rdf:type swot:DataSchema. ?ods rdf:type swot:DataSchema. }
+        forcedBindings: 
+            td: 
+                type: uri
+                value: 
+            action: 
+                type: uri
+                value: 
+            newName: 
+                type: literal
+                value: 
+            ids: 
+                type: uri
+                value: 
+            ods: 
+                type: uri
+                value: 
+    NEW_I_ACTION_INSTANCE: 
+        sparql:  delete { ?action swot:hasActionInstance ?oldAInstance. ?oldAInstance   rdf:type swot:ActionInstance, swot:Instance; swot:hasRequestTimeStamp ?oldATS; swot:hasConfirmationTimeStamp ?oldCTS; swot:hasCompletionTimeStamp ?oldCCTS; swot:requestedBy ?oldAuthor; swot:hasInputData ?oldIData. ?oldIData   swot:hasValue ?oldIValue; swot:hasInputDataSchema ?oldIDS} insert { ?action swot:hasActionInstance ?newAInstance. ?newAInstance   rdf:type swot:ActionInstance, swot:Instance; swot:hasRequestTimeStamp ?newATS; swot:requestedBy ?newAuthor; swot:hasInputData ?newIData. ?newIData   swot:hasValue ?newIValue; swot:hasInputDataSchema ?newIDS} where { ?action rdf:type swot:Action. optional { ?action swot:hasActionInstance ?oldAInstance. ?oldAInstance   rdf:type swot:ActionInstance, swot:Instance; swot:hasRequestTimeStamp ?oldATS; swot:hasConfirmationTimeStamp ?oldCTS; swot:hasCompletionTimeStamp ?oldCCTS; swot:requestedBy ?oldAuthor; swot:hasInputData ?oldIData. ?oldIData   swot:hasValue ?oldIValue; swot:hasInputDataSchema ?oldIDS } bind (now() as ?newATS) } 
+        forcedBindings: 
+            action: 
+                type: uri
+                value: 
+            newAInstance: 
+                type: uri
+                value: 
+            newAuthor: 
+                type: uri
+                value: 
+            newIData: 
+                type: uri
+                value: 
+            newIValue: 
+                type: literal
+                value: 
+            newIDS: 
+                type: uri
+                value: 
+    ADD_FORPROPERTY: 
+        sparql:  insert { ?ip swot:forProperty ?property } where { {?ip rdf:type swot:Action} UNION {?ip rdf:type swot:Event}. ?property a swot:Property } 
+        forcedBindings: 
+            ip: 
+                type: uri
+                value: 
+            property: 
+                type: uri
+                value: 
+    ADD_COMPLETION_TIMESTAMP: 
+        sparql:  insert {?aInstance swot:hasCompletionTimeStamp ?ts} where { ?aInstance rdf:type swot:ActionInstance. bind (now() as ?ts) }
+        forcedBindings: 
+            aInstance: 
+                type: uri
+                value: 
+    NEW_SUBTHING: 
+        sparql:  insert { ?superthing swot:hasSubThing ?subthing } where { ?superthing rdf:type swot:Thing. ?subthing rdf:type swot:Thing }
+        forcedBindings: 
+            superthing: 
+                type: uri
+                value: 
+            subthing: 
+                type: uri
+                value: 
+    NEW_EMPTY_EVENT_INSTANCE: 
+        sparql:  delete { ?event swot:hasEventInstance ?oldEInstance. ?oldEInstance   rdf:type swot:EventInstance, swot:Instance; swot:occurredAt ?oldTS} insert { ?event swot:hasEventInstance ?newEInstance. ?newEInstance   rdf:type swot:EventInstance, swot:Instance; swot:occurredAt ?newTS} where { ?event rdf:type swot:Event. optional { ?event swot:hasEventInstance ?oldEInstance. ?oldEInstance   rdf:type swot:EventInstance, swot:Instance; swot:occurredAt ?oldTS } bind (now() as ?newTS) } 
+        forcedBindings: 
+            event: 
+                type: uri
+                value: 
+            newEInstance: 
+                type: uri
+                value: 
+    NEW_O_EVENT_INSTANCE: 
+        sparql:  delete { ?event swot:hasEventInstance ?oldEInstance. ?oldEInstance   rdf:type swot:EventInstance, swot:Instance; swot:occurredAt ?oldTS; swot:hasOutputData ?oldOData. ?oldOData   swot:hasValue ?oldValue; swot:hasOutputDataSchema ?oldDS} insert { ?event swot:hasEventInstance ?newEInstance. ?newEInstance   rdf:type swot:EventInstance, swot:Instance; swot:occurredAt ?newTS; swot:hasOutputData ?newOData. ?newOData   swot:hasValue ?newValue; swot:hasOutputDataSchema ?newDS} where { ?event rdf:type swot:Event. optional { ?event swot:hasEventInstance ?oldEInstance. ?oldEInstance   rdf:type swot:EventInstance, swot:Instance; swot:occurredAt ?oldTS; swot:hasOutputData ?oldOData. ?oldOData   swot:hasValue ?oldValue; swot:hasOutputDataSchema ?oldDS} bind (now() as ?newTS) } 
+        forcedBindings: 
+            event: 
+                type: uri
+                value: 
+            newEInstance: 
+                type: uri
+                value: 
+            newOData: 
+                type: uri
+                value: 
+            newValue: 
+                type: literal
+                value: 
+            newDS: 
+                type: uri
+                value: 
+    NEW_EMPTY_ACTION_INSTANCE: 
+        sparql:  delete { ?action swot:hasActionInstance ?oldAInstance. ?oldAInstance   rdf:type swot:ActionInstance, swot:Instance; swot:hasRequestTimeStamp ?oldATS; swot:hasConfirmationTimeStamp ?oldCTS; swot:hasCompletionTimeStamp ?oldCCTS; swot:requestedBy ?oldAuthor } insert { ?action swot:hasActionInstance ?newAInstance. ?newAInstance   rdf:type swot:ActionInstance, swot:Instance; swot:hasRequestTimeStamp ?newATS; swot:requestedBy ?newAuthor } where { ?action rdf:type swot:Action. optional { ?action swot:hasActionInstance ?oldAInstance. ?oldAInstance   rdf:type swot:ActionInstance, swot:Instance; swot:hasRequestTimeStamp ?oldATS; swot:hasConfirmationTimeStamp ?oldCTS; swot:hasCompletionTimeStamp ?oldCCTS; swot:requestedBy ?oldAuthor } bind (now() as ?newATS) } 
+        forcedBindings: 
+            action: 
+                type: uri
+                value: 
+            newAInstance: 
+                type: uri
+                value: 
+            newAuthor: 
+                type: uri
+                value: 
+    NEW_DATASCHEMA: 
+        sparql:  insert data { ?ds_uri rdf:type swot:DataSchema; swot:hasFieldSchema ?fs_uri. ?fs_uri rdf:type ?fs_types. }
+        forcedBindings: 
+            ds_uri: 
+                type: uri
+                value: 
+            fs_uri: 
+                type: uri
+                value: 
+            fs_types: 
+                type: uri
+                value: 
+    NEW_I_ACTION_INSTANCE_NOVALUE: 
+        sparql:  delete { ?action swot:hasActionInstance ?oldAInstance. ?oldAInstance   rdf:type swot:ActionInstance, swot:Instance; swot:hasRequestTimeStamp ?oldATS; swot:hasConfirmationTimeStamp ?oldCTS; swot:hasCompletionTimeStamp ?oldCCTS; swot:requestedBy ?oldAuthor; swot:hasInputData ?oldIData. ?oldIData   swot:hasInputDataSchema ?oldIDS} insert { ?action swot:hasActionInstance ?newAInstance. ?newAInstance   rdf:type swot:ActionInstance, swot:Instance; swot:hasRequestTimeStamp ?newATS; swot:requestedBy ?newAuthor; swot:hasInputData ?newIData. ?newIData   swot:hasInputDataSchema ?newIDS} where { ?action rdf:type swot:Action. optional { ?action swot:hasActionInstance ?oldAInstance. ?oldAInstance   rdf:type swot:ActionInstance, swot:Instance; swot:hasRequestTimeStamp ?oldATS; swot:hasConfirmationTimeStamp ?oldCTS; swot:hasCompletionTimeStamp ?oldCCTS; swot:requestedBy ?oldAuthor; swot:hasInputData ?oldIData. ?oldIData   swot:hasInputDataSchema ?oldIDS } bind (now() as ?newATS) } 
+        forcedBindings: 
+            action: 
+                type: uri
+                value: 
+            newAInstance: 
+                type: uri
+                value: 
+            newAuthor: 
+                type: uri
+                value: 
+            newIData: 
+                type: uri
+                value: 
+            newIDS: 
+                type: uri
+                value: 
+    ADD_O_EVENT: 
+        sparql:  insert { ?td swot:hasInteractionPattern ?event; swot:hasEvent ?event. ?event  rdf:type swot:InteractionPattern, swot:Event; swot:hasName ?eName; swot:hasDataSchema ?ods; swot:hasOutputDataSchema ?ods} where { ?td rdf:type swot:ThingDescription. ?ods rdf:type swot:DataSchema. }
+        forcedBindings: 
+            td: 
+                type: uri
+                value: 
+            event: 
+                type: uri
+                value: 
+            ods: 
+                type: uri
+                value: 
+            eName: 
+                type: literal
+                value: 
+    ADD_UPDATE_PROPERTY_NOVALUE: 
+        sparql:  delete { ?property   swot:hasName ?oldName; swot:hasStability ?oldStability; swot:isWritable ?oldWritability; swot:hasDataSchema ?oldPDS; swot:hasPropertyDataSchema ?oldPDS; swot:hasData ?oldPData; swot:hasPropertyData ?oldPData. ?oldPData   rdf:type swot:PropertyData, swot:Data} insert { ?td swot:hasInteractionPattern ?property; swot:hasProperty ?property. ?property   rdf:type swot:Property, swot:InteractionPattern; swot:hasName ?newName; swot:hasStability ?newStability; swot:isWritable ?newWritability; swot:hasDataSchema ?newDS; swot:hasPropertyDataSchema ?newDS; swot:hasData ?newPD; swot:hasPropertyData ?newPD. ?newPD  rdf:type swot:PropertyData, swot:Data} where { ?td rdf:type swot:ThingDescription. optional { ?property   swot:hasName ?oldName; swot:hasStability ?oldStability; swot:isWritable ?oldWritability; swot:hasDataSchema ?oldPDS; swot:hasPropertyDataSchema ?oldPDS; swot:hasData ?oldPData; swot:hasPropertyData ?oldPData. ?oldPData   rdf:type swot:PropertyData, swot:Data } }
+        forcedBindings: 
+            td: 
+                type: uri
+                value: 
+            property: 
+                type: uri
+                value: 
+            newName: 
+                type: literal
+                value: 
+            newStability: 
+                type: literal
+                value: 
+            newWritability: 
+                type: literal
+                value: 
+            newDS: 
+                type: uri
+                value: 
+            newPD: 
+                type: uri
+                value: 
+    NEW_O_EVENT_INSTANCE_NOVALUE: 
+        sparql:  delete { ?event swot:hasEventInstance ?oldEInstance. ?oldEInstance   rdf:type swot:EventInstance, swot:Instance; swot:occurredAt ?oldTS; swot:hasOutputData ?oldOData. ?oldOData   swot:hasOutputDataSchema ?oldDS} insert { ?event swot:hasEventInstance ?newEInstance. ?newEInstance   rdf:type swot:EventInstance, swot:Instance; swot:occurredAt ?newTS; swot:hasOutputData ?newOData. ?newOData   swot:hasOutputDataSchema ?newDS} where { ?event rdf:type swot:Event. optional { ?event swot:hasEventInstance ?oldEInstance. ?oldEInstance   rdf:type swot:EventInstance, swot:Instance; swot:occurredAt ?oldTS; swot:hasOutputData ?oldOData. ?oldOData   swot:hasOutputDataSchema ?oldDS} bind (now() as ?newTS) } 
+        forcedBindings: 
+            event: 
+                type: uri
+                value: 
+            newEInstance: 
+                type: uri
+                value: 
+            newOData: 
+                type: uri
+                value: 
+            newDS: 
+                type: uri
+                value: 
+    NEW_ACTION_INSTANCE_OUTPUT_NOVALUE: 
+        sparql:  insert { ?instance   swot:hasOutputData ?oData. ?oData   swot:hasOutputDataSchema ?oDS} where { ?instance rdf:type swot:ActionInstance } 
+        forcedBindings: 
+            instance: 
+                type: uri
+                value: 
+            oData: 
+                type: uri
+                value: 
+            oDS: 
+                type: uri
+                value: 
+    ADD_I_ACTION: 
+        sparql:  insert { ?td swot:hasInteractionPattern ?action; swot:hasAction ?action. ?action rdf:type swot:InteractionPattern, swot:Action; swot:hasName ?newName; swot:hasDataSchema ?ids; swot:hasInputDataSchema ?ids} where { ?td rdf:type swot:ThingDescription. ?ids rdf:type swot:DataSchema. }
+        forcedBindings: 
+            td: 
+                type: uri
+                value: 
+            action: 
+                type: uri
+                value: 
+            newName: 
+                type: literal
+                value: 
+            ids: 
+                type: uri
+                value: 
+    ADD_EMPTY_EVENT: 
+        sparql:  insert { ?td swot:hasInteractionPattern ?event; swot:hasEvent ?event. ?event  rdf:type swot:InteractionPattern, swot:Event; swot:hasName ?eName } where { ?td rdf:type swot:ThingDescription }
+        forcedBindings: 
+            td: 
+                type: uri
+                value: 
+            event: 
+                type: uri
+                value: 
+            eName: 
+                type: literal
+                value: 
+    ADD_UPDATE_PROPERTY: 
+        sparql:  delete { ?property   swot:hasName ?oldName; swot:hasStability ?oldStability; swot:isWritable ?oldWritability; swot:hasDataSchema ?oldPDS; swot:hasPropertyDataSchema ?oldPDS; swot:hasData ?oldPData; swot:hasPropertyData ?oldPData. ?oldPData   rdf:type swot:PropertyData, swot:Data; swot:hasValue ?oldValue } insert { ?td swot:hasInteractionPattern ?property; swot:hasProperty ?property. ?property   rdf:type swot:Property, swot:InteractionPattern; swot:hasName ?newName; swot:hasStability ?newStability; swot:isWritable ?newWritability; swot:hasDataSchema ?newDS; swot:hasPropertyDataSchema ?newDS; swot:hasData ?newPD; swot:hasPropertyData ?newPD. ?newPD  rdf:type swot:PropertyData, swot:Data; swot:hasValue ?newValue } where { ?td rdf:type swot:ThingDescription. optional { ?property   swot:hasName ?oldName; swot:hasStability ?oldStability; swot:isWritable ?oldWritability; swot:hasDataSchema ?oldPDS; swot:hasPropertyDataSchema ?oldPDS; swot:hasData ?oldPData; swot:hasPropertyData ?oldPData. ?oldPData   rdf:type swot:PropertyData, swot:Data; swot:hasValue ?oldValue } }
+        forcedBindings: 
+            td: 
+                type: uri
+                value: 
+            property: 
+                type: uri
+                value: 
+            newName: 
+                type: literal
+                value: 
+            newStability: 
+                type: literal
+                value: 
+            newWritability: 
+                type: literal
+                value: 
+            newDS: 
+                type: uri
+                value: 
+            newPD: 
+                type: uri
+                value: 
+            newValue: 
+                type: literal
+                value: 
+    NEW_THING: 
+        sparql:  delete { ?thing  swot:hasName ?oldName; swot:hasThingDescription ?oldTD } insert { ?thing  rdf:type swot:Thing; swot:hasName ?newName; swot:hasThingDescription ?newTD. ?newTD rdf:type swot:ThingDescription } where { optional {?thing swot:hasName ?oldName; swot:hasThingDescription ?oldTD } }
+        forcedBindings: 
+            thing: 
+                type: uri
+                value: 
+            newName: 
+                type: literal
+                value: 
+            newTD: 
+                type: uri
+                value: 
+    DELETE_INTERACTION_PATTERN: 
+        sparql:  delete { ?td swot:hasInteractionPattern ?ip; swot:hasAction ?ip; swot:hasEvent ?ip; swot:hasProperty ?ip. ?ip rdf:type swot:InteractionPattern. ?ip rdf:type swot:Property; swot:hasPropertyData ?pd. ?pd ?any_pd_predicate ?any_pd_object . ?ip ?any_ip_predicate ?any_ip_object } where { ?td swot:hasInteractionPattern ?ip. optional {?td swot:hasAction|swot:hasEvent|swot:hasProperty ?ip}. ?ip rdf:type swot:InteractionPattern. optional { ?ip rdf:type swot:Property; swot:hasPropertyData ?pd. ?pd ?any_pd_predicate ?any_pd_object }. ?ip ?any_ip_predicate ?any_ip_object }
+        forcedBindings: 
+            ip: 
+                type: uri
+                value: 
+    DELETE_EVENT_INSTANCE: 
+        sparql:  delete { ?event swot:hasEventInstance ?eInstance. ?eInstance  rdf:type swot:EventInstance, swot:Instance; swot:occurredAt ?eTS; swot:hasOutputData ?oData. ?oData  swot:hasValue ?oValue; swot:hasOutputDataSchema ?oDS } where { ?event swot:hasEventInstance ?eInstance. ?eInstance  rdf:type swot:EventInstance, swot:Instance; swot:occurredAt ?eTS. optional { ?eInstance swot:hasOutputData ?oData. optional {?oData swot:hasValue ?oValue} ?oData swot:hasOutputDataSchema ?oDS} }
+        forcedBindings: 
+            eInstance: 
+                type: uri
+                value: 
+    DELETE_THING: 
+        sparql:  delete { ?thing swot:hasThingDescription ?td. ?td ?any_td_predicate ?any_td_object. ?any_super_subject ?any_super_predicate ?thing. ?thing ?any_thing_predicate ?any_thing_object } where { ?thing swot:hasThingDescription ?td. optional {?td ?any_td_predicate ?any_td_object}. optional {?any_super_subject ?any_super_predicate ?thing}. optional {?thing ?any_thing_predicate ?any_thing_object }}
+        forcedBindings: 
+            thing: 
+                type: uri
+                value: 
+    DELETE_ACTION_INSTANCE: 
+        sparql:  delete { ?action swot:hasActionInstance ?aInstance. ?aInstance   rdf:type swot:ActionInstance, swot:Instance; swot:hasRequestTimeStamp ?reqTS; swot:hasCompletionTimeStamp ?comTS; swot:hasConfirmationTimeStamp ?confTS; swot:requestedBy ?author; swot:hasInputData ?IData. ?IData   swot:hasValue ?IValue; swot:hasInputDataSchema ?IDS. ?aInstance swot:hasOutputData ?OData. ?OData swot:hasValue ?OValue; swot:hasOutputDataSchema ?ODS} where { ?action swot:hasActionInstance ?aInstance. ?aInstance   rdf:type swot:ActionInstance, swot:Instance; swot:hasRequestTimeStamp ?reqTS; swot:hasCompletionTimeStamp ?comTS; swot:hasConfirmationTimeStamp ?confTS; swot:requestedBy ?author. optional {?aInstance swot:hasInputData ?IData. optional {?IData   swot:hasValue ?IValue} ?IData swot:hasInputDataSchema ?IDS}. optional {?aInstance swot:hasOutputData ?OData. optional {?OData swot:hasValue ?OValue} ?OData swot:hasOutputDataSchema ?ODS} }
+        forcedBindings: 
+            aInstance: 
+                type: uri
+                value: 
+
