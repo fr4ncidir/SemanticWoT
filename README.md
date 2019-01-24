@@ -1,4 +1,19 @@
-# Cocktail
+# The Semantic Web of Things
+1. [SWoT ontology]()
+2. [Cocktail]()
+	1. [Before coding...]()
+	2. [Building WebThings]()
+	3. [Discovery]()
+	4. [Action request]()
+	5. [Event notification]()
+3. [Installing Cocktail]()
+4. [Tests]()
+5. [Examples]()
+6. [Tools]()
+7. [Contribute]()
+
+## The SWoT ontology
+## Cocktail
 Within this repository we store all the necessary to start with a Semantic 
 Web Of Things implementation. 
 
@@ -6,7 +21,7 @@ Web Of Things implementation.
 Before using Cocktail, we suggest to have a look to the SWoT ontology.
 
 ### 2. Cocktail python3 framework
-##### Basic setup
+##### Before coding...
 To run, and use, the APIs for the Semantic Web of Things, you need
 - A running [SEPA]() instance
 - The SEPA python3 APIs, available in [sepy](https://github.com/arces-wot/SEPA-python3-APIs/tree/dev-0.9.5) repository. *Be Careful! Use the branch dev-0.9.5*
@@ -222,10 +237,9 @@ $ python3 setup.py test
 ```
 
 ### 5. Other Examples
-##### _Coding_
 Some examples on how to build Semantic WebThings and how to make them interact are available in `SWTE_example` folder! There is a README to help you run the experiment of the [paper]() (being submitted now).
 
-##### _Available tools and experiments_
+### 6. Available tools and experiments
 In `tools` folder a ysap generation tool and a discovery tool are available as well. A README is provided.
 
 ### Contribute
