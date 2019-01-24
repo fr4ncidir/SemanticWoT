@@ -1,0 +1,5 @@
+cocktail/build
+cocktail/dist
+__pycache__/
+*.pyc
+cocktail/catalog-v001.xml

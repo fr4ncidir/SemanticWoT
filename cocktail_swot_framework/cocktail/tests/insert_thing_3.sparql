@@ -1,0 +1,41 @@
+#	 _   _     _             _____
+#	| |_| |__ (_)_ __   __ _|___ /
+#	| __| '_ \| | '_ \ / _` | |_ \
+#	| |_| | | | | | | | (_| |___) |
+#    \__|_| |_|_|_| |_|\__, |____/
+#	                   |___/
+#	This example inserts a thing into the store.
+#	URI: 										<http://MyThirdWebThing.com>
+#	Name: 										'Thing3'
+#	Thing-Description URI: 						<http://MyThirdWebThingDescription.com>
+#	Number of Actions: 							1
+#	Number of Events: 							1
+#	Number of Properties: 						0
+#	Action URI: 								<http://MyThirdWebThing.com/Action1>
+#	Action Name: 								'Thing3_Action1'
+#	Event 1 URI: 								<http://MyThirdWebThing.com/Event1>
+#	Event 1 Name: 								'Thing3_Event1'
+
+
+prefix swot: <http://wot.arces.unibo.it/ontology/web_of_things#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+insert data {
+	# BASIC INFORMATION
+  <http://MyThirdWebThing.com> 	rdf:type swot:Thing;
+									swot:hasName 'Thing3';
+									swot:hasThingDescription <http://MyThirdWebThingDescription.com>.
+  <http://MyThirdWebThingDescription.com> 	rdf:type swot:ThingDescription;
+											swot:hasInteractionPattern 	<http://MyThirdWebThing.com/Action1>, 
+																	<http://MyThirdWebThing.com/Event1>;
+											swot:hasAction <http://MyThirdWebThing.com/Action1>;
+											swot:hasEvent <http://MyThirdWebThing.com/Event1>.
+	
+	# ACTION TRIPLES
+  <http://MyThirdWebThing.com/Action1> 	rdf:type swot:InteractionPattern, swot:Action;
+											swot:hasName 'Thing3_Action1'.
+  
+	# EVENT 1 TRIPLES
+  <http://MyThirdWebThing.com/Event1> 	rdf:type swot:InteractionPattern, swot:Event;
+										swot:hasName 'Thing3_Event1'.
+  }

@@ -1,0 +1,33 @@
+#                          _   _     _             
+#     _ __   _____      __| |_| |__ (_)_ __   __ _ 
+#    | '_ \ / _ \ \ /\ / /| __| '_ \| | '_ \ / _` |
+#    | | | |  __/\ V  V / | |_| | | | | | | | (_| |
+#    |_| |_|\___| \_/\_/___\__|_| |_|_|_| |_|\__, |
+#                     |_____|                |___/ 
+#    
+#   Adds a new thing and thing descriptor or updates them. Nothing else.
+
+NEW_THING:
+    sparql: "
+        delete {
+            ?thing  swot:hasName ?oldName;
+                    swot:hasThingDescription ?oldTD }
+        insert {
+            ?thing  rdf:type swot:Thing;
+                    swot:hasName ?newName;
+                    swot:hasThingDescription ?newTD.
+            ?newTD rdf:type swot:ThingDescription }
+        where {
+            optional {?thing swot:hasName ?oldName;
+                    swot:hasThingDescription ?oldTD }
+        }"
+    forcedBindings:
+        thing:
+            type: uri
+            value: ""
+        newName:
+            type: literal
+            value: ""
+        newTD:
+            type: uri
+            value: ""

@@ -1,0 +1,1 @@
+{"head": {"vars": ["eInstance", "eTS", "oData", "oValue", "oDS", "oFS", "oFS_type"]}, "results": {"bindings": [{"eInstance": {"type": "uri", "value": "http://MyThirdWebThing.com/Event1/instance2"}, "eTS": {"datatype": "http://www.w3.org/2001/XMLSchema#dateTime", "type": "literal", "value": "2018-12-13T19:13:04.202Z"}}]}}

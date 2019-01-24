@@ -1,0 +1,38 @@
+#         _       _                     _                          
+#      __| | __ _| |_ __ _     ___  ___| |__   ___ _ __ ___   __ _ 
+#     / _` |/ _` | __/ _` |   / __|/ __| '_ \ / _ \ '_ ` _ \ / _` |
+#    | (_| | (_| | || (_| |   \__ \ (__| | | |  __/ | | | | | (_| |
+#     \__,_|\__,_|\__\__,_|___|___/\___|_| |_|\___|_| |_| |_|\__,_|
+#                        |_____|                                   
+#   
+#   DataSchema discovery
+
+GET_DATASCHEMAS:
+    sparql: "
+        select * 
+        where {
+            ?ds rdf:type swot:DataSchema.
+            optional {?ip rdf:type swot:InteractionPattern;
+                ?dataschema_type ?ds}.
+            ?ds swot:hasFieldSchema ?fs.
+            ?fs rdf:type ?fs_type.
+            values (?ip ?ds ?fs) {(?ip_force ?ds_force ?fs_force)} 
+            filter (?fs_type != swot:FieldSchema)
+            values (?fs_type) {(?fs_type_force)} 
+        }"
+    forcedBindings:
+        dataschema_type:
+            type: uri
+            value: swot:hasInputDataSchema|swot:hasOutputDataSchema|swot:hasPropertyDataSchema
+        ip_force:
+            type: uri
+            value: UNDEF
+        ds_force:
+            type: uri
+            value: UNDEF
+        fs_force:
+            type: uri
+            value: UNDEF
+        fs_type_force:
+            type: uri
+            value: UNDEF

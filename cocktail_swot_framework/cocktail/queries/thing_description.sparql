@@ -1,0 +1,26 @@
+#     _   _     _                    _                     _       _   _       
+#    | |_| |__ (_)_ __   __ _     __| | ___  ___  ___ _ __(_)_ __ | |_(_) ___  _ __  
+#    | __| '_ \| | '_ \ / _` |   / _` |/ _ \/ __|/ __| '__| | '_ \| __| |/ _ \| '_ \ 
+#    | |_| | | | | | | | (_| |  | (_| |  __/\__ \ (__| |  | | |_) | |_| | (_) | | | |
+#     \__|_| |_|_|_| |_|\__, |___\__,_|\___||___/\___|_|  |_| .__/ \__|_|\___/|_| |_| 
+#                       |___/_____|                         |_|                
+#           
+
+GET_THING_DESCRIPTION:
+    sparql: "
+        select * 
+        where {
+            ?thing  rdf:type swot:Thing;
+                    swot:hasThingDescription ?td;
+                    swot:hasName ?tName.
+            optional {?thing swot:hasSubThing ?subThing}.
+            ?td swot:hasInteractionPattern ?ip.
+            ?ip rdf:type ?ip_type.
+            optional{?ip swot:forProperty ?pTarget}.
+            filter (?ip_type != swot:InteractionPattern)
+            values (?thing) {(?thingURI)}
+        }"
+    forcedBindings:
+        thingURI:
+            type: uri
+            value: UNDEF

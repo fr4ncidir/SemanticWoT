@@ -1,0 +1,41 @@
+#         _      _     _       _                      _   _                        
+#      __| | ___| |   (_)_ __ | |_ ___ _ __ __ _  ___| |_(_) ___  _ __       _ __  
+#     / _` |/ _ \ |   | | '_ \| __/ _ \ '__/ _` |/ __| __| |/ _ \| '_ \     | '_ \ 
+#    | (_| |  __/ |   | | | | | ||  __/ | | (_| | (__| |_| | (_) | | | |    | |_) |
+#     \__,_|\___|_|___|_|_| |_|\__\___|_|  \__,_|\___|\__|_|\___/|_| |_|____| .__/ 
+#                |_____|                                              |_____|_|    
+#           _   _                  
+#      __ _| |_| |_ ___ _ __ _ __  
+#     / _` | __| __/ _ \ '__| '_ \ 
+#    | (_| | |_| ||  __/ |  | | | |
+#     \__,_|\__|\__\___|_|  |_| |_|
+#                                  
+#    Deletes an InteractionPattern
+
+DELETE_INTERACTION_PATTERN:
+    sparql: "
+        delete {
+			?td swot:hasInteractionPattern ?ip;
+				swot:hasAction ?ip;
+				swot:hasEvent ?ip;
+				swot:hasProperty ?ip.
+            ?ip rdf:type swot:InteractionPattern.
+                ?ip rdf:type swot:Property;
+                    swot:hasPropertyData ?pd.
+                ?pd ?any_pd_predicate ?any_pd_object .
+            ?ip ?any_ip_predicate ?any_ip_object
+		}
+		where {
+            ?td swot:hasInteractionPattern ?ip.
+            optional {?td swot:hasAction|swot:hasEvent|swot:hasProperty ?ip}.
+            ?ip rdf:type swot:InteractionPattern.
+            optional {
+                ?ip rdf:type swot:Property;
+                    swot:hasPropertyData ?pd.
+                ?pd ?any_pd_predicate ?any_pd_object }.
+            ?ip ?any_ip_predicate ?any_ip_object
+        }"
+    forcedBindings:
+        ip:
+            type: uri
+            value: ""

@@ -1,0 +1,65 @@
+host: localhost
+sparql11protocol:
+    protocol: http
+    port: 8000
+    query:
+        path: /query
+        method: POST
+        format: JSON
+    update:
+        path: /update
+        method: POST
+        format: JSON
+sparql11seprotocol:
+    protocol: ws
+    availableProtocols:
+        ws: 
+            port: 9000
+            path: /subscribe
+        wss: 
+            port: 9443
+            path: /secure/subscribe
+namespaces:
+    xsd: http://www.w3.org/2001/XMLSchema#
+    rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+    swot: http://wot.arces.unibo.it/ontology/web_of_things#
+    ns: http://wot.arces.unibo.it/localNamespace#
+    sosa: http://www.w3.org/ns/sosa/
+queries:
+    HOTCOLD_SMART_DISCOVERY:
+        sparql: "
+            select ?event where { 
+                ?thing  rdf:type swot:Thing, sosa:Sensor;
+                        sosa:observes ns:Temperature;
+                        swot:hasThingDescription/swot:hasEvent ?event.
+                ?event swot:hasOutputDataSchema ?ds }"
+        forcedBindings:
+            ds:
+                type: uri
+                value: ""
+    THERMOSTAT_SMART_DISCOVERY:
+        sparql: "
+            select ?action where {
+                ?thing  rdf:type swot:Thing, sosa:Actuator;
+                        sosa:actsOnProperty ns:Temperature;
+                        swot:hasThingDescription/swot:hasAction ?action.
+                ?action swot:hasInputDataSchema ?ds }"
+        forcedBindings:
+            ds:
+                type: uri
+                value: ""
+updates:
+    ADD_CONTEXT_TRIPLES:
+        sparql: insert data { ns:Temperature rdf:type sosa:ActuatableProperty, sosa:ObservableProperty }
+    ADD_HOTCOLD_CONTEXT_TRIPLES:
+        sparql: insert data { ?hc rdf:type sosa:Actuator. ?hc sosa:actsOnProperty ns:Temperature }
+        forcedBindings: 
+            hc:
+                type: uri
+                value: ""
+    ADD_THERMOSTAT_CONTEXT_TRIPLES:
+        sparql: insert data { ?th rdf:type sosa:Sensor. ?th sosa:observes ns:Temperature }
+        forcedBindings:
+            th:
+                type: uri
+                value: ""

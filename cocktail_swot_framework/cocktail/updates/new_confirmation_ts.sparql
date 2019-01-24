@@ -1,0 +1,19 @@
+#                                           __ _                      _   _                _
+#     _ __   _____      __  ___ ___  _ __  / _(_)_ __ _ __ ___   __ _| |_(_) ___  _ __    | |_ ___ 
+#    | '_ \ / _ \ \ /\ / / / __/ _ \| '_ \| |_| | '__| '_ ` _ \ / _` | __| |/ _ \| '_ \   | __/ __| 
+#    | | | |  __/\ V  V / | (_| (_) | | | |  _| | |  | | | | | | (_| | |_| | (_) | | | |  | |_\__ \
+#    |_| |_|\___| \_/\_/___\___\___/|_| |_|_| |_|_|  |_| |_| |_|\__,_|\__|_|\___/|_| |_|___\__|___/ 
+#                     |_____|                                                         |_____| 
+#    
+
+ADD_CONFIRMATION_TIMESTAMP:
+    sparql: "
+        insert {?aInstance swot:hasConfirmationTimeStamp ?ts}
+        where {
+            ?aInstance rdf:type swot:ActionInstance.
+            bind (now() as ?ts)
+        }"
+    forcedBindings:
+        aInstance:
+            type: uri
+            value: ""
