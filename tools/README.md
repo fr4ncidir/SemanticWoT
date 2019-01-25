@@ -7,7 +7,7 @@
 - [SAP](http://mml.arces.unibo.it/TR/jsap.html) file
 - [SEPA](https://github.com/arces-wot/SEPABins)
 - [sepy](https://github.com/arces-wot/SEPA-python3-APIs/tree/dev-0.9.5) APISs (branch dev-0.9.5)
-- [SWoT ontology]() concepts
+- [SWoT ontology](https://github.com/fr4ncidir/SemanticWoT/blob/master/swot.owl) concepts
 
 ### How-To `sapGenerate.py`
 The use of `sapGenerate.py` is needed, most of the time, if you want to create new applications that work with Cocktail. The SAP file is a necessary entity used with SEPA. 
