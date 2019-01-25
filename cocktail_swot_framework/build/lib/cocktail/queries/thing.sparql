@@ -1,0 +1,29 @@
+#     _   _     _             
+#    | |_| |__ (_)_ __   __ _ 
+#    | __| '_ \| | '_ \ / _` |
+#    | |_| | | | | | | | (_| |
+#     \__|_| |_|_|_| |_|\__, |
+#                       |___/ 
+#   
+#   Thing discovery query.
+
+DISCOVER_THINGS:
+    sparql: "
+    select *
+    where {
+        ?thing  rdf:type swot:Thing;
+                swot:hasName ?name;
+                swot:hasThingDescription ?td.
+		optional {?thing swot:hasSubThing ?subThing}.
+        values (?thing ?name ?td) {(?thing_uri ?name_literal ?td_uri)}.
+    }"
+    forcedBindings:
+        thing_uri:
+            type: uri
+            value: UNDEF
+        name_literal:
+            type: literal
+            value: UNDEF
+        td_uri:
+            type: uri
+            value: UNDEF

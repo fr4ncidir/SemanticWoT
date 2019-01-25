@@ -1,0 +1,35 @@
+#                                                       _   
+#     _ __   _____      __  ___     _____   _____ _ __ | |_ 
+#    | '_ \ / _ \ \ /\ / / / _ \   / _ \ \ / / _ \ '_ \| __|
+#    | | | |  __/\ V  V / | (_) | |  __/\ V /  __/ | | | |_ 
+#    |_| |_|\___| \_/\_/___\___/___\___| \_/ \___|_| |_|\__|
+#                     |_____| |_____|                       
+#  
+#   Adds an event with output DataSchema that must be already present
+
+ADD_O_EVENT:
+    sparql: "
+        insert {
+            ?td swot:hasInteractionPattern ?event;
+                swot:hasEvent ?event.
+            ?event  rdf:type swot:InteractionPattern, swot:Event;
+                    swot:hasName ?eName;
+                    swot:hasDataSchema ?ods;
+                    swot:hasOutputDataSchema ?ods}
+        where { 
+            ?td rdf:type swot:ThingDescription.
+            ?ods rdf:type swot:DataSchema.
+        }"
+    forcedBindings:
+        td:
+            type: uri
+            value: ""
+        event:
+            type: uri
+            value: ""
+        ods:
+            type: uri
+            value: ""
+        eName:
+            type: literal
+            value: ""

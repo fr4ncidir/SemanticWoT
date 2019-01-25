@@ -1,0 +1,28 @@
+#         _      _    _   _     _             
+#      __| | ___| |  | |_| |__ (_)_ __   __ _ 
+#     / _` |/ _ \ |  | __| '_ \| | '_ \ / _` |
+#    | (_| |  __/ |  | |_| | | | | | | | (_| |
+#     \__,_|\___|_|___\__|_| |_|_|_| |_|\__, |
+#                |_____|                |___/ 
+#    
+#   Deletes thing, subthing relationships and thing descriptor with
+#   interaction pattern relationships.
+#   Subthing and interaction pattern are left.
+
+DELETE_THING:
+    sparql: "
+        delete {
+  ?thing swot:hasThingDescription ?td.
+            ?td ?any_td_predicate ?any_td_object.
+            ?any_super_subject ?any_super_predicate ?thing.
+            ?thing ?any_thing_predicate ?any_thing_object
+  }
+where {
+            ?thing swot:hasThingDescription ?td.
+            optional {?td ?any_td_predicate ?any_td_object}.
+            optional {?any_super_subject ?any_super_predicate ?thing}.
+            optional {?thing ?any_thing_predicate ?any_thing_object }}"
+    forcedBindings:
+        thing:
+            type: uri
+            value: ""

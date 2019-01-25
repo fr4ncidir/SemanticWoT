@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: cocktail
+Version: 1
+Summary: Cocktail package
+Home-page: https://github.com/fr4ncidir/SemanticWoT.git
+Author: Francesco Antoniazzi
+Author-email: francesco.antoniazzi@unibo.it
+License: GNU GPL3
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent

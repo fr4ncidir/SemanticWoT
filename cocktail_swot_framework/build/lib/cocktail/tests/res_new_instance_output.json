@@ -1,0 +1,1 @@
+{"head": {"vars": ["od", "oValue", "oDS"]}, "results": {"bindings": [{"od": {"type": "uri", "value": "http://MyFirstWebThing.com/Action1/instance2/OutputData"}, "oDS": {"type": "uri", "value": "http://XSDstringDataSchema.org"}, "oValue": {"type": "literal", "value": "my output value"}}]}}

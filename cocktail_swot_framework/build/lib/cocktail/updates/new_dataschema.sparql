@@ -1,0 +1,30 @@
+#                              _       _                 _                          
+#     _ __   _____      __  __| | __ _| |_ __ _ ___  ___| |__   ___ _ __ ___   __ _ 
+#    | '_ \ / _ \ \ /\ / / / _` |/ _` | __/ _` / __|/ __| '_ \ / _ \ '_ ` _ \ / _` |
+#    | | | |  __/\ V  V / | (_| | (_| | || (_| \__ \ (__| | | |  __/ | | | | | (_| |
+#    |_| |_|\___| \_/\_/___\__,_|\__,_|\__\__,_|___/\___|_| |_|\___|_| |_| |_|\__,_|
+#                     |_____|                                                       
+#    
+#   Adds a new dataschema together with fieldschemas.
+#   Binding of ?fs_types should be made in the form
+#   swot:FieldSchema, swot:OntologyURI
+#   swot:FieldSchema, swot:ResourceURI
+#   swot:FieldSchema, xsd:_
+
+NEW_DATASCHEMA:
+    sparql: "
+        insert data {
+            ?ds_uri rdf:type swot:DataSchema;
+                    swot:hasFieldSchema ?fs_uri.
+            ?fs_uri rdf:type ?fs_types.
+        }"
+    forcedBindings:
+        ds_uri:
+            type: uri
+            value: ""
+        fs_uri:
+            type: uri
+            value: ""
+        fs_types:
+            type: uri
+            value: ""

@@ -1,0 +1,23 @@
+#                                     _     _   _     _             
+#     _ __   _____      __  ___ _   _| |__ | |_| |__ (_)_ __   __ _ 
+#    | '_ \ / _ \ \ /\ / / / __| | | | '_ \| __| '_ \| | '_ \ / _` |
+#    | | | |  __/\ V  V /  \__ \ |_| | |_) | |_| | | | | | | | (_| |
+#    |_| |_|\___| \_/\_/___|___/\__,_|_.__/ \__|_| |_|_|_| |_|\__, |
+#                     |_____|                                 |___/ 
+#   
+#   Appends to a preexistent thing a subthing relationship to another
+#   preexistent thing
+
+NEW_SUBTHING:
+    sparql: "
+        insert { ?superthing swot:hasSubThing ?subthing }
+        where { 
+            ?superthing rdf:type swot:Thing.
+            ?subthing rdf:type swot:Thing }"
+    forcedBindings:
+        superthing:
+            type: uri
+            value: ""
+        subthing:
+            type: uri
+            value: ""

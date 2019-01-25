@@ -1,0 +1,72 @@
+#                                                           _                   
+#    _ __   _____      __   _ __  _ __ ___  _ __   ___ _ __| |_ _   _     _ __  
+#   | '_ \ / _ \ \ /\ / /  | '_ \| '__/ _ \| '_ \ / _ \ '__| __| | | |   | '_ \ 
+#   | | | |  __/\ V  V /   | |_) | | | (_) | |_) |  __/ |  | |_| |_| |   | | | |
+#   |_| |_|\___| \_/\_/____| .__/|_|  \___/| .__/ \___|_|   \__|\__, |___|_| |_|
+#                    |_____|_|             |_|                  |___/_____|     
+#                    _            
+#     _____   ____ _| |_   _  ___ 
+#    / _ \ \ / / _` | | | | |/ _ \
+#   | (_) \ V / (_| | | |_| |  __/
+#    \___/ \_/ \__,_|_|\__,_|\___|
+#
+#   Adds property or updates a property value (no literal included here)
+
+ADD_UPDATE_PROPERTY_NOVALUE:
+    sparql: "
+        delete {
+            ?property   swot:hasName ?oldName;
+                        swot:hasStability ?oldStability;
+                        swot:isWritable ?oldWritability;
+                        swot:hasDataSchema ?oldPDS;
+                        swot:hasPropertyDataSchema ?oldPDS;
+                        swot:hasData ?oldPData;
+                        swot:hasPropertyData ?oldPData.
+            ?oldPData   rdf:type swot:PropertyData, swot:Data}
+        insert {
+            ?td swot:hasInteractionPattern ?property;
+                swot:hasProperty ?property.
+            ?property   rdf:type swot:Property, swot:InteractionPattern;
+                        swot:hasName ?newName;
+                        swot:hasStability ?newStability;
+                        swot:isWritable ?newWritability;
+                        swot:hasDataSchema ?newDS;
+                        swot:hasPropertyDataSchema ?newDS;
+                        swot:hasData ?newPD;
+                        swot:hasPropertyData ?newPD.
+            ?newPD  rdf:type swot:PropertyData, swot:Data}
+        where {
+            ?td rdf:type swot:ThingDescription.
+            optional {
+                ?property   swot:hasName ?oldName;
+                            swot:hasStability ?oldStability;
+                            swot:isWritable ?oldWritability;
+                            swot:hasDataSchema ?oldPDS;
+                            swot:hasPropertyDataSchema ?oldPDS;
+                            swot:hasData ?oldPData;
+                            swot:hasPropertyData ?oldPData.
+                ?oldPData   rdf:type swot:PropertyData, swot:Data
+            }
+        }"
+    forcedBindings:
+        td:
+            type: uri
+            value: ""
+        property:
+            type: uri
+            value: ""
+        newName:
+            type: literal
+            value: ""
+        newStability:
+            type: literal
+            value: ""
+        newWritability:
+            type: literal
+            value: ""
+        newDS:
+            type: uri
+            value: ""
+        newPD:
+            type: uri
+            value: ""

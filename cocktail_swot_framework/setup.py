@@ -25,17 +25,12 @@
 import setuptools
 import yaml
 
-with open("README.md","r") as fh:
-    long_description = fh.read()
-
 setuptools.setup(
     name="cocktail",
     version="1",
     author="Francesco Antoniazzi",
     author_email="francesco.antoniazzi@unibo.it",
     description="Cocktail package",
-    long_description=long_description,
-    long_description_content_type="text/markdown",
     url="https://github.com/fr4ncidir/SemanticWoT.git",
     packages=setuptools.find_packages(),
     license="GNU GPL3",
@@ -45,7 +40,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ),
     install_requires=[
-        "sepy"
+        "sepy", "jinja2", "rdflib", "rdflib-jsonld", "pyld"
     ],
     dependency_links=[
         "git+https://github.com/arces-wot/SEPA-python3-APIs.git"

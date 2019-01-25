@@ -1,0 +1,41 @@
+#        _       _                 _                              
+#     __| | __ _| |_ __ _ ___  ___| |__   ___ _ __ ___   __ _ ___ 
+#    / _` |/ _` | __/ _` / __|/ __| '_ \ / _ \ '_ ` _ \ / _` / __|
+#   | (_| | (_| | || (_| \__ \ (__| | | |  __/ | | | | | (_| \__ \
+#    \__,_|\__,_|\__\__,_|___/\___|_| |_|\___|_| |_| |_|\__,_|___/
+#
+#   Here we insert dataschemas
+#
+
+prefix swot: <http://wot.arces.unibo.it/ontology/web_of_things#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+
+insert data {
+    <http://foafDataSchema.org> rdf:type swot:DataSchema;
+                                swot:hasFieldSchema foaf: .
+    foaf: rdf:type swot:FieldSchema, swot:OntologyURI.
+    
+    <http://XSDstringDataSchema.org> rdf:type swot:DataSchema;
+                                     swot:hasFieldSchema _:XSDstringFieldSchemaBN.
+    _:XSDstringFieldSchemaBN rdf:type swot:FieldSchema, xsd:string.
+    
+    <http://XSDintegerDataSchema.org> rdf:type swot:DataSchema;
+                                     swot:hasFieldSchema _:XSDintegerFieldSchemaBN.
+    _:XSDintegerFieldSchemaBN rdf:type swot:FieldSchema, xsd:integer.
+
+    <http://GenericWebResourceDataSchema.org> rdf:type swot:DataSchema;
+                                     swot:hasFieldSchema _:GenericWebResourceFieldSchemaBN.
+    _:GenericWebResourceFieldSchemaBN rdf:type swot:FieldSchema, swot:ResourceURI.
+    
+    <http://jsonDataSchema.org> rdf:type swot:DataSchema;
+                                swot:hasFieldSchema <http://localhost:9876>.
+    <http://localhost:9876> rdf:type swot:FieldSchema, xsd:Literal.
+    
+    <http://XSDdateTimeStampDataSchema.org> rdf:type swot:DataSchema;
+                                     swot:hasFieldSchema _:XSDdateTimeStampFieldSchemaBN.
+    _:XSDdateTimeStampFieldSchemaBN rdf:type swot:FieldSchema, xsd:dateTimeStamp.
+}
