@@ -228,11 +228,12 @@ where `handler` is as usual a lambda, or a full handler for subscription
 notification.
 
 ### 3. Install Cocktail
-First of all clone this repository. Then `cd` to the `cocktail_swot_framework` folder.
+The usage of [virtualenv](https://virtualenv.pypa.io/en/latest/) might be a good idea, in that case :)
+First of all clone this repository. Install also sepy (for the future we aim to do this automatically).
 ```
-$ python3 setup.py build
-$ python3 setup.py sdist
-$ sudo python3 setup.py install
+$ cd path_to_repo_folder
+$ cd ./cocktail_swot_framework/dist
+$ pip3 install cocktail-1.tar.gz
 ```
 
 ### 4. Tests

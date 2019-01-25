@@ -1,5 +1,5 @@
+sepy
 jinja2
-pyld
 rdflib
 rdflib-jsonld
-sepy
+pyld
