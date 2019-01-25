@@ -1,0 +1,510 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#"
+     xml:base="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:swot="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot">
+        <dc:creator>Francesco Antoniazzi</dc:creator>
+        <terms:created>16 January 2019</terms:created>
+        <terms:title>Semantic Web of Things Ontology</terms:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#forProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#forProperty">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasAction">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInteractionPattern"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasActionInstance -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasActionInstance">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInstance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasData">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Instance"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasDataSchema -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasDataSchema">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEvent">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInteractionPattern"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEventInstance -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEventInstance">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInstance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasFieldSchema -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasFieldSchema">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#FieldSchema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputData">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasData"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputDataSchema -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputDataSchema">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasDataSchema"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInstance -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInstance">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInteractionPattern -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInteractionPattern">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputData">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasData"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputDataSchema -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputDataSchema">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasDataSchema"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInteractionPattern"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyData">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasData"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyDataSchema -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyDataSchema">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasDataSchema"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasSubThing -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasSubThing">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing"/>
+        <rdfs:comment>Semantic WebThings proxying each other</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasThingDescription -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasThingDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#requestedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#requestedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing"/>
+        <rdfs:comment>Action request authorship</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasCompletionTimeStamp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasCompletionTimeStamp">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasTimeStamp"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:comment>Time location of Action performance end</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasConfirmationTimeStamp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasConfirmationTimeStamp">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasTimeStamp"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:comment>Time location of Action performance beeing started</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasName">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasRequestTimeStamp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasRequestTimeStamp">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasTimeStamp"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:comment>Time location and identification of the Action request</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasStability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasStability">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+        <rdfs:comment>In milliseconds, mean time in which the Property value is usually stable</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasTimeStamp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasTimeStamp">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Instance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isWritable -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isWritable">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Flag for Property data writability from outside</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#occurredAt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#occurredAt">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasTimeStamp"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:comment>Used for Event notification time location.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern"/>
+        <rdfs:comment>Something that takes a finite time to perform and can be requested with or without input</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Instance"/>
+        <rdfs:comment>Adding an ActionInstance means requesting the Action to perform</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data">
+        <rdfs:comment>Actual and current valid data as input, output, or Property value</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema">
+        <rdfs:comment>Resource for data formatting</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern"/>
+        <rdfs:comment>Asynchronous interaction</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Instance"/>
+        <rdfs:comment>An Event notification is thrown when an EventInstance is inserted in the Knowledge Base</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#FieldSchema -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#FieldSchema">
+        <rdfs:comment>General FieldSchema superclass, to be used for instance when there is a simple datatype</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Instance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Instance">
+        <rdfs:comment>Action-Event instance superclass</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern">
+        <rdfs:comment>Static Property-Action-Event superclass</rdfs:comment>
+        <rdfs:label>Interaction Pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#OntologyURI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#OntologyURI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#FieldSchema"/>
+        <rdfs:comment>FieldSchemas that are pointers to Ontologies</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern"/>
+        <rdfs:comment>Neither Action, neither Event. It represent an internal status or pure information on the Semantic WebThing</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ResourceURI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ResourceURI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#FieldSchema"/>
+        <rdfs:comment>FieldSchemas that are pointers to web resources</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing">
+        <rdfs:comment>Abstraction for the Semantic WebThing</rdfs:comment>
+        <rdfs:label>Semantic WebThing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription">
+        <rdfs:comment>Resource representing the Thing Description of the Semantic WebThing. This resource should be a real resource, reachable from the Web and answer to a GET request through a JSON-LD.</rdfs:comment>
+        <rdfs:label>Thing Description</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
