@@ -1,29 +1,28 @@
 # The Semantic Web of Things
-1. [SWoT ontology]()
-2. [Cocktail]()
-	1. [Before coding...]()
-	2. [Building WebThings]()
-	3. [Discovery]()
-	4. [Action request]()
-	5. [Event notification]()
-3. [Installing Cocktail]()
-4. [Tests]()
-5. [Examples]()
-6. [Tools]()
-7. [Contribute]()
+1. [SWoT ontology](https://github.com/fr4ncidir/SemanticWoT#the-swot-ontology)
+2. [Cocktail](https://github.com/fr4ncidir/SemanticWoT#cocktail)
+	1. [Before coding...](https://github.com/fr4ncidir/SemanticWoT#before-coding)
+	2. [Building WebThings](https://github.com/fr4ncidir/SemanticWoT#building-webthings)
+	3. [Discovery](https://github.com/fr4ncidir/SemanticWoT#cocktail-discovery)
+	4. [Action request](https://github.com/fr4ncidir/SemanticWoT#requesting-actions)
+	5. [Event notification](https://github.com/fr4ncidir/SemanticWoT#being-notified-of-events)
+3. [Installing Cocktail](https://github.com/fr4ncidir/SemanticWoT#3-install-cocktail)
+4. [Tests](https://github.com/fr4ncidir/SemanticWoT#4-tests)
+5. [Examples](https://github.com/fr4ncidir/SemanticWoT#5-other-examples)
+6. [Tools](https://github.com/fr4ncidir/SemanticWoT#6-available-tools-and-experiments)
+7. [Contribute](https://github.com/fr4ncidir/SemanticWoT#contribute)
 
 ## The SWoT ontology
+Before using Cocktail, we suggest to have a look to the [SWoT ontology]().
+
 ## Cocktail
 Within this repository we store all the necessary to start with a Semantic 
 Web Of Things implementation. 
 
-### 1. The SWoT Ontology
-Before using Cocktail, we suggest to have a look to the SWoT ontology.
-
 ### 2. Cocktail python3 framework
 ##### Before coding...
 To run, and use, the APIs for the Semantic Web of Things, you need
-- A running [SEPA]() instance
+- A running [SEPA](https://github.com/arces-wot/SEPABins) instance
 - The SEPA python3 APIs, available in [sepy](https://github.com/arces-wot/SEPA-python3-APIs/tree/dev-0.9.5) repository. *Be Careful! Use the branch dev-0.9.5*
 
 Cocktail uses those APIs to post Things and their descriptions. In particular, you may 
@@ -33,12 +32,18 @@ As Cocktail builds up in SEPA's RDF knowledge base a Semantic WebThing Environme
 
 Therefore, here an example of how to instantiate a SEPA:
 1. run the SEPA instance
-2. create a Cocktail SAP file. The SAP file is an entity related to SEPA, where all the information about how the application will interact with it is contained (IP-port, SPARQLs,...). Have a look to the tools available in this repository to create an YSAP (which stands for YAML-SAP).
+2. create a Cocktail [SAP](http://mml.arces.unibo.it/TR/jsap.html) file. The SAP file is an entity related to SEPA, where all the information about how the application will interact with it is contained (IP-port, SPARQLs,...). Have a look to the tools available in this repository to create an YSAP (which stands for YAML-SAP).
 3. Code your application
 ```
 with open(path_to_ysap_file, "r") as ysap_file:
     ysap = SAPObject(yaml.load(ysap_file))
 engine = SEPA(sapObject=ysap, logLevel=logging.ERROR)
+```
+or, if you prefer to use JSAP (which stands for JSON-SAP)
+```
+with open(path_to_jsap_file, "r") as jsap_file:
+    jsap = SAPObject(json.load(jsap_file))
+engine = SEPA(sapObject=jsap, logLevel=logging.ERROR)
 ```
 For more complex situations, please refer to sepy repo documentation or the various example available in this repository.
 
@@ -235,7 +240,10 @@ For now, tests are available only to check ontology consistency.
 ```
 $ python3 setup.py test
 ```
-
+Notice that, if some SPARQL in the repo changes, it may be useful to reset the tests background. This is done by going to `test` folder and running
+```
+$ python3 reset_results.py
+```
 ### 5. Other Examples
 Some examples on how to build Semantic WebThings and how to make them interact are available in `SWTE_example` folder! There is a README to help you run the experiment of the [paper]() (being submitted now).
 
@@ -243,4 +251,4 @@ Some examples on how to build Semantic WebThings and how to make them interact a
 In `tools` folder a ysap generation tool and a discovery tool are available as well. A README is provided.
 
 ### Contribute
-Feel free to get in touch, if you have any question or suggestions
+Feel free to get in touch, if you have any question or suggestions, or if you find bugs!

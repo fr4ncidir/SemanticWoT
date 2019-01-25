@@ -94,14 +94,13 @@ def main(args):
         forcedBindings={"ds": ds_lambda}, 
         handler=available_sensors)
     
-    while True:
-        try:
+    try:
+        while True:
             sleep(10)
             print("Device status is currently {}".format(HC_Property.value))
-        except KeyboardInterrupt:
-            print("Got KeyboardInterrupt!")
-            mainHC_Action.disable()
-            break
+    except KeyboardInterrupt:
+        print("Got KeyboardInterrupt!")
+    mainHC_Action.disable()
     return 0
     
 

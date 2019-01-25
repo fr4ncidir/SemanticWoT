@@ -4,8 +4,9 @@
 - `discovery.py`
 
 ##### Prerequisites
-- [SAP file]()
-- [SEPA]()
+- [SAP](http://mml.arces.unibo.it/TR/jsap.html) file
+- [SEPA](https://github.com/arces-wot/SEPABins)
+- [sepy](https://github.com/arces-wot/SEPA-python3-APIs/tree/dev-0.9.5) APISs (branch dev-0.9.5)
 - [SWoT ontology]() concepts
 
 ### How-To `sapGenerate.py`

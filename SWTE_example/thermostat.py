@@ -98,12 +98,13 @@ def main(args):
     
     # temperature Event triggering logic
     event_bindings = {"event": temperature_Event.uri, "newDS": ds_lambda}
-    while True:
-        try:
+    try:
+        while True:
             sleep(2)
             unique_id = uuid4()
             event_bindings["newEInstance"] = "<http://MyThermostat.swot/TemperatureEvent/Instance_{}>".format(unique_id)
             event_bindings["newOData"] = "<http://MyThermostat.swot/TemperatureEvent/Data_{}>".format(unique_id)
+            # in the real world this simulate() call would be a read to a temperature sensor!
             event_bindings["newValue"] = str(simulate())
             temperature_Event.notify(event_bindings)
             with thresholdLock:
@@ -113,16 +114,12 @@ def main(args):
                 elif float(event_bindings["newValue"]) > T_high:
                     message = '{{"target": {}, "now": "cooling"}}'.format(T_high)
                     trigger_action(message)
-        except KeyboardInterrupt:
-            print("Got KeyboardInterrupt!")
-            threshold_Action.disable()
-            thermostat.stopTD_Server()
-            break
-        except:
-            print("Temperature simulation failed! Check the simulation server")
-            threshold_Action.disable()
-            thermostat.stopTD_Server()
-            break
+    except KeyboardInterrupt:
+        print("Got KeyboardInterrupt!")
+    except Exception as ex:
+        print("Temperature simulation failed! Check the simulation server: {}".format(ex))
+    threshold_Action.disable()
+    thermostat.stopTD_Server()
     return 0
 
 
