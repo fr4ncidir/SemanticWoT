@@ -42,6 +42,9 @@ setuptools.setup(
     install_requires=[
         "sepy", "jinja2", "rdflib", "rdflib-jsonld", "pyld"
     ],
+    setup_requires=[
+        "sepy", "jinja2", "rdflib", "rdflib-jsonld", "pyld"
+    ],
     dependency_links=[
         "git+https://github.com/arces-wot/SEPA-python3-APIs.git"
     ],

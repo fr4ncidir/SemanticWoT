@@ -29,7 +29,7 @@ from dataschemas import ds_datetime, ds_lambda, YSAPEngine
 from time import sleep, time
 from datetime import datetime
 from uuid import uuid4
-from temperature2 import simulate
+from temperature import simulate
 
 import sys
 
