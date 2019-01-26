@@ -22,7 +22,7 @@ Web Of Things implementation.
 ### 2. Cocktail python3 framework
 ##### Before coding...
 To run, and use, the APIs for the Semantic Web of Things, you need
-- A running [SEPA](https://github.com/arces-wot/SEPABins) instance
+- A running [SEPA](https://github.com/arces-wot/SEPA) instance
 - The SEPA python3 APIs, available in [sepy](https://github.com/arces-wot/SEPA-python3-APIs/tree/dev-0.9.5) repository. *Be Careful! Use the branch dev-0.9.5*
 
 Cocktail uses those APIs to post Things and their descriptions. In particular, you may 
