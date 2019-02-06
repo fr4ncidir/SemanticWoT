@@ -16,8 +16,9 @@
 Before using Cocktail, we suggest to have a look to the [SWoT ontology](https://github.com/fr4ncidir/SemanticWoT/blob/master/swot.owl).
 
 ## Cocktail
-Within this repository we store all the necessary to start with a Semantic 
-Web Of Things implementation. 
+Within this repository we store all the necessary to start with a Semantic Web Of Things implementation. 
+
+Why Cocktail? Because you can prepare a cocktail with plenty of ingredients, which is what we do here: we prepare semantic systems with our ingredients, the interaction patterns.
 
 ### 2. Cocktail python3 framework
 ##### Before coding...
