@@ -29,6 +29,7 @@ from cocktail.DataSchema import DataSchema
 
 from sepy.SEPA import SEPA
 from sepy.SAPObject import SAPObject
+from time import sleep
 
 
 ds_threshold = "<http://ThresholdJSON-DS>"
@@ -54,24 +55,41 @@ def main(args):
         {"ds_uri": ds_threshold,
          "fs_uri": "<http://localhost:9876/threshold>",
          "fs_types": "swot:FieldSchema, xsd:Literal"}).post()
+    threshold_dataschema.dsServer_start("localhost", 8322)
          
     hotcold_dataschema = DataSchema(
         engine,
         {"ds_uri": ds_psi,
          "fs_uri": "<http://localhost:9876/hotcold>",
          "fs_types": "swot:FieldSchema, xsd:Literal"}).post()
+    hotcold_dataschema.dsServer_start("localhost", 8323)
          
     temperature_dataschema = DataSchema(
         engine,
         {"ds_uri": ds_lambda,
          "fs_uri": "_:FloatFS-BlankNode",
          "fs_types": "swot:FieldSchema, xsd:float"}).post()
+    temperature_dataschema.dsServer_start("localhost", 8324)
          
     datetime_dataschema = DataSchema(
         engine,
         {"ds_uri": ds_datetime,
          "fs_uri": "_:DatetuneFS-BlankNode",
          "fs_types": "swot:FieldSchema, xsd:dateTime"}).post()
+    datetime_dataschema.dsServer_start("localhost", 8325)
+    
+    print("Ctrl-C to stop servers...")
+    try:
+        while True:
+            sleep(10)
+    except KeyboardInterrupt:
+        print("Ctrl-C caught, stopping servers...")
+    
+    threshold_dataschema.dsServer_stop()
+    hotcold_dataschema.dsServer_stop()
+    temperature_dataschema.dsServer_stop()
+    datetime_dataschema.dsServer_stop()
+    
     return 0
 
 if __name__ == '__main__':

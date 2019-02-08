@@ -1,0 +1,59 @@
+#      _                 _     _       _      _                           _        
+#     (_)___  ___  _ __ | | __| |     | |_ __| |       ___ ___  _ __  ___| |_ _ __ 
+#     | / __|/ _ \| '_ \| |/ _` |_____| __/ _` |_____ / __/ _ \| '_ \/ __| __| '__|
+#     | \__ \ (_) | | | | | (_| |_____| || (_| |_____| (_| (_) | | | \__ \ |_| |   
+#    _/ |___/\___/|_| |_|_|\__,_|      \__\__,_|      \___\___/|_| |_|___/\__|_|   
+#   |__/                                                                           
+#               _   
+#    _   _  ___| |_ 
+#   | | | |/ __| __|
+#   | |_| | (__| |_ 
+#    \__,_|\___|\__|
+#   
+
+JSONLD_TD_CONSTRUCT:
+    sparql: "
+        construct {
+            ?thing  rdf:type swot:Thing;
+                swot:hasThingDescription ?td;
+                swot:hasName ?tName;
+                swot:hasSubThing ?subThing.
+            ?td swot:hasInteractionPattern ?ip;
+                rdf:type swot:ThingDescription.
+            ?ip rdf:type ?ip_type;
+                swot:hasName ?ipatternName.
+            ?ip ?allDSrelation ?DS.
+            ?DS rdf:type swot:DataSchema;
+                swot:hasFieldSchema ?FS.
+            ?FS rdf:type ?FS_type.
+            ?ip swot:hasStability ?pStability;
+                swot:isWritable ?pWritability;
+                swot:hasPropertyData ?pData.
+            ?pData swot:hasValue ?pValue.
+            ?ip swot:forProperty ?pTarget }
+        where {
+            ?thing  rdf:type swot:Thing;
+                swot:hasThingDescription ?td;
+                swot:hasName ?tName.
+            optional {?thing swot:hasSubThing ?subThing}.
+            ?td swot:hasInteractionPattern ?ip;
+                rdf:type swot:ThingDescription.
+            ?ip rdf:type ?ip_type;
+                swot:hasName ?ipatternName.
+            optional {
+                ?ip ?allDSrelation ?DS.
+                ?DS rdf:type swot:DataSchema;
+                    swot:hasFieldSchema ?FS.
+                ?FS rdf:type ?FS_type. }
+            optional {
+                ?ip swot:hasStability ?pStability;
+                    swot:isWritable ?pWritability;
+                    swot:hasPropertyData ?pData.
+                optional {?pData swot:hasValue ?pValue}}
+            optional{?ip swot:forProperty ?pTarget}
+            values (?allDSrelation) {(swot:hasDataSchema) (swot:hasInputDataSchema) (swot:hasOutputDataSchema) (swot:hasPropertyDataSchema)}
+        }"
+    forcedBindings:
+        thing:
+            type: uri
+            value: ""

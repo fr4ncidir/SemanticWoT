@@ -48,6 +48,12 @@ queries:
             fs_type_force: 
                 type: uri
                 value: UNDEF
+    JSONLD_DS_CONSTRUCT: 
+        sparql:  construct { ?ds rdf:type swot:DataSchema; swot:hasFieldSchema ?fs. ?fs rdf:type ?fs_type} where { ?ds rdf:type swot:DataSchema; swot:hasFieldSchema ?fs. ?fs rdf:type ?fs_type. }
+        forcedBindings: 
+            ds: 
+                type: uri
+                value: 
     DESCRIBE_EVENT: 
         sparql:  select * where { ?event  rdf:type swot:Event; swot:hasName ?eName. optional { ?event swot:hasOutputDataSchema ?oDS. ?oDS swot:hasFieldSchema ?oFS. ?oFS rdf:type ?oFS_type. filter (?oFS_type != swot:FieldSchema) }. optional {?event swot:forProperty ?property}. values (?event) {(?event_uri)} }
         forcedBindings: 
@@ -72,6 +78,12 @@ queries:
             thingURI: 
                 type: uri
                 value: UNDEF
+    JSONLD_TD_CONSTRUCT: 
+        sparql:  construct { ?thing  rdf:type swot:Thing; swot:hasThingDescription ?td; swot:hasName ?tName; swot:hasSubThing ?subThing. ?td swot:hasInteractionPattern ?ip; rdf:type swot:ThingDescription. ?ip rdf:type ?ip_type; swot:hasName ?ipatternName. ?ip ?allDSrelation ?DS. ?DS rdf:type swot:DataSchema; swot:hasFieldSchema ?FS. ?FS rdf:type ?FS_type. ?ip swot:hasStability ?pStability; swot:isWritable ?pWritability; swot:hasPropertyData ?pData. ?pData swot:hasValue ?pValue. ?ip swot:forProperty ?pTarget } where { ?thing  rdf:type swot:Thing; swot:hasThingDescription ?td; swot:hasName ?tName. optional {?thing swot:hasSubThing ?subThing}. ?td swot:hasInteractionPattern ?ip; rdf:type swot:ThingDescription. ?ip rdf:type ?ip_type; swot:hasName ?ipatternName. optional { ?ip ?allDSrelation ?DS. ?DS rdf:type swot:DataSchema; swot:hasFieldSchema ?FS. ?FS rdf:type ?FS_type. } optional { ?ip swot:hasStability ?pStability; swot:isWritable ?pWritability; swot:hasPropertyData ?pData. optional {?pData swot:hasValue ?pValue}} optional{?ip swot:forProperty ?pTarget} values (?allDSrelation) {(swot:hasDataSchema) (swot:hasInputDataSchema) (swot:hasOutputDataSchema) (swot:hasPropertyDataSchema)} }
+        forcedBindings: 
+            thing: 
+                type: uri
+                value: 
     DISCOVER_INTERACTION_PATTERNS: 
         sparql:  select * where { ?td swot:hasInteractionPattern ?ipattern. ?ipattern   rdf:type ?ipatterntype; swot:hasName ?ipatternName. filter (?ipatterntype != swot:InteractionPattern) values (?td ?ipatterntype) {(?td_uri ?ipattern_type_specific)} }
         forcedBindings: 

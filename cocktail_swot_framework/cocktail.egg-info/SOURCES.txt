@@ -7,6 +7,7 @@ cocktail/InteractionPattern.py
 cocktail/Property.py
 cocktail/Thing.py
 cocktail/__init__.py
+cocktail/cocktail_jld.py
 cocktail/utils.py
 cocktail.egg-info/PKG-INFO
 cocktail.egg-info/SOURCES.txt
@@ -23,7 +24,8 @@ cocktail/queries/action.sparql
 cocktail/queries/data_schema.sparql
 cocktail/queries/event.sparql
 cocktail/queries/interaction_pattern.sparql
-cocktail/queries/jsonld-construct.sparql
+cocktail/queries/jsonld-ds-construct.sparql
+cocktail/queries/jsonld-td-construct.sparql
 cocktail/queries/property.sparql
 cocktail/queries/thing.sparql
 cocktail/queries/thing_description.sparql
@@ -43,7 +45,8 @@ cocktail/tests/res_action.json
 cocktail/tests/res_data_schema.json
 cocktail/tests/res_event.json
 cocktail/tests/res_interaction_pattern.json
-cocktail/tests/res_jsonld-construct.json
+cocktail/tests/res_jsonld-ds-construct.json
+cocktail/tests/res_jsonld-td-construct.json
 cocktail/tests/res_new_actions_create.json
 cocktail/tests/res_new_completion_ts.json
 cocktail/tests/res_new_confirmation_ts.json

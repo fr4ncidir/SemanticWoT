@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-#  InteractionPattern.py
+#  DataSchema.py
 #  
 #  Copyright 2018 Francesco Antoniazzi <francesco.antoniazzi@unibo.it>
 #  
@@ -25,6 +25,7 @@
 from sepy.SAPObject import SAPObject
 from sepy.tablaze import tablify
 from .utils import generate_cocktail_sap
+from .cocktail_jld import JLDServer, jldFileBuilder
 
 import logging
 import yaml
@@ -84,3 +85,37 @@ class DataSchema:
 
     def delete(self):
         raise NotImplementedError
+        
+    def toJsonLD(self, destination=None, nice_output=False):
+        """
+        Method that exports the descriptor of a WebThing in a JSON-LD file 
+        pointed to by 'destination', if available.
+        The output can be also seen as table on stdout, if 'nice_output' is True.
+        """
+        result = self._sepa.query(
+            "JSONLD_DS_CONSTRUCT", forcedBindings={"ds": self.uri},
+            destination=destination)
+        
+        if nice_output:
+            tablify(result, prefix_file=self._sepa.sap.get_namespaces(stringList=True))
+        
+        jld_result = jldFileBuilder(result)
+        if destination is not None:
+            try:
+                if isinstance(destination, TextIOBase):
+                    print(jld_result, file=destination)
+                else:
+                    with open(destination, "w") as jld_output:
+                        print(jld_result, file=jld_output)
+            except Exception as e:
+                logger.error("Unable to export json-ld file: {}".format(e))
+        
+        return jld_result
+        
+    def dsServer_start(self, ip, port):
+        self._TDserver = JLDServer(ip, port, self.toJsonLD())
+        self._TDserver.daemon = True
+        self._TDserver.start()
+        
+    def dsServer_stop(self):
+        self._TDserver.kill()

@@ -81,7 +81,7 @@ def main(args):
     
     local_engine = YSAPEngine("./example.ysap")
     
-    thermostat.setupTD_Server("localhost",8321)
+    thermostat.tdServer_start("localhost",8321)
     
     # adding context triples
     local_engine.update("ADD_THERMOSTAT_CONTEXT_TRIPLES", forcedBindings={"th": ThermostatURI})
@@ -119,7 +119,7 @@ def main(args):
     except Exception as ex:
         print("Temperature simulation failed! Check the simulation server: {}".format(ex))
     threshold_Action.disable()
-    thermostat.stopTD_Server()
+    thermostat.tdServer_stop()
     return 0
 
 
