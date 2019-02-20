@@ -230,7 +230,7 @@ notification.
 
 ### 3. Install Cocktail
 The usage of [virtualenv](https://virtualenv.pypa.io/en/latest/) might be a good idea, in that case :)
-First of all clone this repository. Install also sepy (for the future we aim to do this automatically).
+First of all clone this repository. Install also [sepy](https://github.com/arces-wot/SEPA-python3-APIs/tree/dev-0.9.5) (for the future we aim to do this automatically).
 ```
 $ cd path_to_repo_folder
 $ cd ./cocktail_swot_framework/dist
