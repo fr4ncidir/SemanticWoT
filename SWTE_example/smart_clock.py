@@ -43,6 +43,10 @@ def main(args):
     if "clear" in args:
         engine.clear()
     
+    #
+    # IDENTIFICATION AND DESCRIPTION OF INTERACTION PATTERNS
+    # DEFINITION OF ACTIONS' BEHAVIOUR
+    #
     def timeActionHandler(added, removed):
         print(added)
         if added != []:
@@ -77,7 +81,10 @@ def main(args):
          "newName": "WhatsTheTemperature",
          "ods": ds_lambda},
          temperatureActionHandler)
-         
+    
+    #
+    # POSTING THE TRIPLES TO THE SWTE
+    #
     # Setup and post the WebThing
     smartClock = Thing(
         engine,
@@ -92,6 +99,9 @@ def main(args):
     # adding context triples
     local_engine.update("ADD_THERMOSTAT_CONTEXT_TRIPLES", forcedBindings={"th": ClockURI})
     
+    #
+    # DEVICE LOOP
+    #
     while True:
         try:
             sleep(10)

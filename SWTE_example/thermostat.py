@@ -54,6 +54,9 @@ def main(args):
     if "clear" in args:
         engine.clear()
     
+    #
+    # IDENTIFICATION OF INTERACTION PATTERNS
+    #
     # Setup the Threshold Action
     threshold_Action = Action(
         engine,
@@ -71,6 +74,9 @@ def main(args):
          "eName": "TemperatureEvent",
          "ods": ds_lambda})
     
+    #
+    # POSTING TRIPLES TO THE SWTE
+    #
     # Setup and post the WebThing
     thermostat = Thing(
         engine,
@@ -81,6 +87,9 @@ def main(args):
     
     local_engine = YSAPEngine("./example.ysap")
     
+    #
+    # OPTIONAL THING DESCRIPTION JSON-LD
+    #
     thermostat.tdServer_start("localhost",8321)
     
     # adding context triples
@@ -96,6 +105,9 @@ def main(args):
         forcedBindings={"ds": ds_psi}, 
         handler=available_actuators)
     
+    #
+    # DEVICE LOOP
+    #
     # temperature Event triggering logic
     event_bindings = {"event": temperature_Event.uri, "newDS": ds_lambda}
     try:
@@ -124,6 +136,9 @@ def main(args):
 
 
 def threshold_update(added, removed):
+    #
+    # DEFINITION OF ACTION'S BEHAVIOUR
+    #
     with thresholdLock:
         print("threshold_update added: {}".format(added))
         print("threshold_update removed: {}".format(removed))

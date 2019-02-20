@@ -54,7 +54,10 @@ def main(args):
     engine = YSAPEngine("./cocktail_sap.ysap")
     if "clear" in args:
         engine.clear()
-        
+    
+    #
+    # IDENTIFICATION AND DESCRIPTION OF INTERACTION PATTERNS
+    #
     # Setup the Hot/Cold Action
     mainHC_Action = Action(
         engine,
@@ -74,6 +77,9 @@ def main(args):
          "newValue": '{"now": "off", "target": "15"}'}
     HC_Property = Property(engine, HC_Property_bindings)
     
+    #
+    # POSTING TRIPLES TO THE SWTE
+    #
     # Setup and post the WebThing
     thermostat = Thing(
         engine,
@@ -94,6 +100,9 @@ def main(args):
         forcedBindings={"ds": ds_lambda}, 
         handler=available_sensors)
     
+    #
+    # DEVICE LOOP
+    #
     try:
         while True:
             sleep(10)
@@ -113,6 +122,9 @@ def updatePropertyValWithLock(newVal):
         HC_Property = Property(engine, HC_Property_bindings).post()
 
 def mainHotColdActionLogic(added, removed):
+    #
+    # DEFINITIO OF ACTION'S BEHAVIOUR
+    #
     for item in added:
         parameter = json.loads(item["iValue"]["value"])
         author = item["author"]["value"]
