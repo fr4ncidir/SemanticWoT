@@ -1,5 +1,6 @@
 # MIRO report for the SWoT ontology
 We here report the documentation for the [SWoT ontology](https://github.com/fr4ncidir/SemanticWoT/blob/master/swot.owl) according to the guidelines available in [1].
+This version of the report may not be updated. Please refer to the version in the paper.
 
 ## A. Basics
 1. **Ontology name (MUST)**
