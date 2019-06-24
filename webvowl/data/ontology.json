@@ -1,0 +1,1427 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot", "http://www.w3.org/2001/XMLSchema" ],
+    "title" : {
+      "undefined" : "Semantic Web of Things Ontology"
+    },
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "author" : [ "Francesco Antoniazzi" ],
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Francesco Antoniazzi",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "16 January 2019",
+        "type" : "label"
+      } ],
+      "rights" : [ {
+        "identifier" : "rights",
+        "language" : "undefined",
+        "value" : "https://www.gnu.org/licenses/gpl.html",
+        "type" : "iri"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Semantic Web of Things Ontology",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://github.com/fr4ncidir/SemanticWoT",
+        "type" : "iri"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "31",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "50",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "13",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "55",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "56",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "57",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "43",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "58",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "59",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "96",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "88",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "89",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#FieldSchema",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FieldSchema",
+      "undefined" : "FieldSchema"
+    },
+    "subClasses" : [ "1", "2" ],
+    "comment" : {
+      "undefined" : "General FieldSchema superclass, to be used for instance when there is a simple datatype"
+    },
+    "id" : "0"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EventInstance",
+      "undefined" : "Event Instance"
+    },
+    "comment" : {
+      "undefined" : "An Event notification is thrown when an EventInstance is inserted in the Knowledge Base"
+    },
+    "id" : "3",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#OntologyURI",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OntologyURI",
+      "undefined" : "Ontology URI"
+    },
+    "comment" : {
+      "undefined" : "FieldSchemas that are pointers to Ontologies"
+    },
+    "id" : "2",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "24",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "27",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "dateTimeStamp"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "dateTimeStamp"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "19",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#Name",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "30",
+    "label" : {
+      "IRI-based" : "Name"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "32", "33" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#unsignedLong",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "unsignedLong"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "37",
+    "label" : {
+      "IRI-based" : "dateTimeStamp"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Property",
+      "undefined" : "Property"
+    },
+    "comment" : {
+      "undefined" : "Neither Action, neither Event. It represent an internal status or pure information on the Semantic WebThing"
+    },
+    "id" : "18",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "49",
+    "label" : {
+      "IRI-based" : "dateTimeStamp"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "8", "51" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "50"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "54",
+    "label" : {
+      "IRI-based" : "dateTimeStamp"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "39", "32" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "13"
+  }, {
+    "instances" : 0,
+    "union" : [ "8", "51" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "55"
+  }, {
+    "instances" : 0,
+    "union" : [ "8", "51" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "56"
+  }, {
+    "instances" : 0,
+    "union" : [ "3", "7" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "57"
+  }, {
+    "instances" : 0,
+    "union" : [ "3", "7" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "43"
+  }, {
+    "instances" : 0,
+    "union" : [ "3", "7" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "58"
+  }, {
+    "instances" : 0,
+    "union" : [ "8", "51" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataSchema",
+      "undefined" : "DataSchema"
+    },
+    "comment" : {
+      "undefined" : "Resource for data formatting"
+    },
+    "id" : "12"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InteractionPattern",
+      "undefined" : "Interaction Pattern"
+    },
+    "subClasses" : [ "18", "8", "51" ],
+    "comment" : {
+      "undefined" : "Static Property-Action-Event superclass"
+    },
+    "id" : "32"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Data",
+      "undefined" : "Data"
+    },
+    "comment" : {
+      "undefined" : "Actual and current valid data as input, output, or Property value"
+    },
+    "id" : "39"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Action",
+      "undefined" : "Action"
+    },
+    "comment" : {
+      "undefined" : "Something that takes a finite time to perform and can be requested with or without input"
+    },
+    "id" : "8",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Instance",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Instance",
+      "undefined" : "Instance"
+    },
+    "subClasses" : [ "3", "7" ],
+    "comment" : {
+      "undefined" : "Action-Event instance superclass"
+    },
+    "id" : "4"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ThingDescription",
+      "undefined" : "Thing Description"
+    },
+    "comment" : {
+      "undefined" : "Resource representing the Thing Description of the Semantic WebThing. This resource should be a real resource, reachable from the Web and answer to a GET request through a JSON-LD."
+    },
+    "id" : "22"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Thing",
+      "undefined" : "Semantic WebThing"
+    },
+    "comment" : {
+      "undefined" : "Abstraction for the Semantic WebThing"
+    },
+    "id" : "33"
+  }, {
+    "instances" : 0,
+    "union" : [ "8", "51" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "70"
+  }, {
+    "instances" : 0,
+    "union" : [ "39", "32" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "96"
+  }, {
+    "instances" : 0,
+    "union" : [ "8", "51" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "88"
+  }, {
+    "instances" : 0,
+    "union" : [ "3", "7" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "89"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActionInstance",
+      "undefined" : "Action Instance"
+    },
+    "comment" : {
+      "undefined" : "Adding an ActionInstance means requesting the Action to perform"
+    },
+    "id" : "7",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Event",
+      "undefined" : "Event"
+    },
+    "comment" : {
+      "undefined" : "Asynchronous interaction"
+    },
+    "id" : "51",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ResourceURI",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ResourceURI",
+      "undefined" : "Resource URI"
+    },
+    "comment" : {
+      "undefined" : "FieldSchemas that are pointers to web resources"
+    },
+    "id" : "1",
+    "superClasses" : [ "0" ]
+  } ],
+  "property" : [ {
+    "id" : "5",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "35",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "47",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "41",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "69",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "72",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "73",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "75",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "80",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "82",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "81",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "83",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "85",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "87",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "66",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "90",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "91",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "93",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "94",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "95",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "79",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "40",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "97",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "98",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "99",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "71",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "36",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "0",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstanceOf",
+    "inverse" : "9",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "ActionInstanceOf"
+    },
+    "superproperty" : [ "10" ],
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "Defines which is the Action that originates this ActionInstance"
+    },
+    "attributes" : [ "object" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataSchemaOf",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "isDataSchemaOf"
+    },
+    "domain" : "12",
+    "subproperty" : [ "14", "15", "16" ],
+    "comment" : {
+      "undefined" : "Connects the DataSchema to the Interaction Pattern or Data resource, in order to refer how it has to be interpreted"
+    },
+    "attributes" : [ "object" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isWritable",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "isWritable"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Flag for Property data writability from outside"
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyDataSchemaOf",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "isPropertyDataSchemaOf"
+    },
+    "superproperty" : [ "11" ],
+    "domain" : "12",
+    "comment" : {
+      "undefined" : "Connects the Property DataSchema to the Property Data resource, in order to refer how it has to be interpreted"
+    },
+    "attributes" : [ "object" ],
+    "id" : "14"
+  }, {
+    "range" : "0",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyFor",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "isPropertyFor"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Defines the Thing owner of the Property"
+    },
+    "attributes" : [ "object" ],
+    "id" : "21"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "topObjectProperty"
+    },
+    "domain" : "24",
+    "subproperty" : [ "26" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputDataSchema",
+    "inverse" : "15",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasInputDataSchema"
+    },
+    "superproperty" : [ "36" ],
+    "domain" : "8",
+    "comment" : {
+      "undefined" : "Objectproperty connecting the dataschema expected as input of an action"
+    },
+    "attributes" : [ "object" ],
+    "id" : "35"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputData",
+    "inverse" : "40",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "hasInputData"
+    },
+    "superproperty" : [ "41" ],
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "Objectproperty connecting an input to an action instance"
+    },
+    "attributes" : [ "object" ],
+    "id" : "38"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputData",
+    "inverse" : "44",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "hasOutputData"
+    },
+    "superproperty" : [ "41" ],
+    "domain" : "43",
+    "comment" : {
+      "undefined" : "Objectproperty connecting an output to an action or event instance"
+    },
+    "attributes" : [ "object" ],
+    "id" : "42"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasProperty",
+    "inverse" : "21",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "hasProperty"
+    },
+    "superproperty" : [ "46" ],
+    "domain" : "22",
+    "comment" : {
+      "undefined" : "Object property connecting the thing description to the interaction pattern Property"
+    },
+    "attributes" : [ "object" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasAction",
+    "inverse" : "48",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "hasAction"
+    },
+    "superproperty" : [ "46" ],
+    "domain" : "22",
+    "comment" : {
+      "undefined" : "Object property connecting the thing description to the interaction pattern Action"
+    },
+    "attributes" : [ "object" ],
+    "id" : "47"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInputDataSchemaOf",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "isInputDataSchemaOf"
+    },
+    "superproperty" : [ "11" ],
+    "domain" : "12",
+    "comment" : {
+      "undefined" : "Connects the DataSchema to the Action Input Data resource, in order to refer how it has to be interpreted"
+    },
+    "attributes" : [ "object" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEvent",
+    "inverse" : "53",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "hasEvent"
+    },
+    "superproperty" : [ "46" ],
+    "domain" : "22",
+    "comment" : {
+      "undefined" : "Object property connecting the thing description to the interaction pattern Event"
+    },
+    "attributes" : [ "object" ],
+    "id" : "52"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isFieldSchemaFor",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "isFieldSchemaFor"
+    },
+    "domain" : "0",
+    "comment" : {
+      "undefined" : "Determines to which DataSchemas the FieldSchema belongs to"
+    },
+    "attributes" : [ "object" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasSubThing",
+    "inverse" : "26",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "hasSubThing"
+    },
+    "domain" : "33",
+    "comment" : {
+      "undefined" : "Semantic WebThings proxying each other"
+    },
+    "attributes" : [ "irreflexive", "object" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#instanceOf",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "instanceOf"
+    },
+    "domain" : "58",
+    "subproperty" : [ "6", "62" ],
+    "comment" : {
+      "undefined" : "Defines which is the Interaction Pattern that originates this Instance"
+    },
+    "attributes" : [ "object" ],
+    "id" : "10"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isOutputDataFor",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "57",
+    "label" : {
+      "IRI-based" : "isOutputDataFor"
+    },
+    "superproperty" : [ "63" ],
+    "domain" : "39",
+    "comment" : {
+      "undefined" : "Connects Output Data to the relevant Instance of Interaction Pattern"
+    },
+    "attributes" : [ "object" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyDataSchema",
+    "inverse" : "14",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasPropertyDataSchema"
+    },
+    "superproperty" : [ "36" ],
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Objectproperty connecting the dataschema related to a property data"
+    },
+    "attributes" : [ "object" ],
+    "id" : "64"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEventInstance",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "hasEventInstance"
+    },
+    "superproperty" : [ "66" ],
+    "domain" : "51",
+    "comment" : {
+      "undefined" : "Objectproperty connecting the event to its instance"
+    },
+    "attributes" : [ "object" ],
+    "id" : "65"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#occurredAt",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "occurredAt"
+    },
+    "domain" : "3",
+    "comment" : {
+      "undefined" : "Used for Event notification time location."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "67"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasData",
+    "inverse" : "63",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "hasData"
+    },
+    "domain" : "4",
+    "subproperty" : [ "38", "42", "68" ],
+    "comment" : {
+      "undefined" : "Generic objectproperty for connecting data to instances or properties."
+    },
+    "attributes" : [ "object" ],
+    "id" : "41"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#forProperty",
+    "inverse" : "71",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "forProperty"
+    },
+    "domain" : "70",
+    "comment" : {
+      "undefined" : "This objectproperty identifies the Property target of actions and events."
+    },
+    "attributes" : [ "object" ],
+    "id" : "69"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasValue",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "hasValue"
+    },
+    "domain" : "39",
+    "comment" : {
+      "undefined" : "Dataproperty for Data having Literal value."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "72"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasRequestTimeStamp",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "hasRequestTimeStamp"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "Time location and identification of the Action request"
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "73"
+  }, {
+    "range" : "4",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "74"
+  }, {
+    "range" : "32",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "75"
+  }, {
+    "range" : "32",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "76"
+  }, {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "77"
+  }, {
+    "range" : "32",
+    "domain" : "51",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "78"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataFor",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "isDataFor"
+    },
+    "domain" : "39",
+    "subproperty" : [ "40", "44", "79" ],
+    "comment" : {
+      "undefined" : "Connects Data to the relevant Instance of Interaction Pattern"
+    },
+    "attributes" : [ "object" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasThingDescription",
+    "inverse" : "81",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "hasThingDescription"
+    },
+    "domain" : "33",
+    "comment" : {
+      "undefined" : "Object property connecting a thing with its thing description"
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "80"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasName",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "hasName"
+    },
+    "domain" : "31",
+    "comment" : {
+      "undefined" : "Naming dataproperty"
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "82"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInteractionPattern",
+    "inverse" : "23",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "hasInteractionPattern"
+    },
+    "domain" : "22",
+    "subproperty" : [ "52", "45", "47" ],
+    "comment" : {
+      "undefined" : "Generic objectproperty connecting the thing description to all the interaction patterns belonging to the thing"
+    },
+    "attributes" : [ "object" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isThingDescriptionOf",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "isThingDescriptionOf"
+    },
+    "domain" : "22",
+    "comment" : {
+      "undefined" : "Pointer from a Thing Description to its Thing"
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "81"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasConfirmationTimeStamp",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "hasConfirmationTimeStamp"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "Time location of Action performance beeing started"
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "83"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isRequestAuthor",
+    "inverse" : "85",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "isRequestAuthor"
+    },
+    "domain" : "33",
+    "comment" : {
+      "undefined" : "The Entity requesting an Action"
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "84"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputDataSchema",
+    "inverse" : "16",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasOutputDataSchema"
+    },
+    "superproperty" : [ "36" ],
+    "domain" : "59",
+    "comment" : {
+      "undefined" : "Objectproperty connecting the dataschema expected as output of an action or an event"
+    },
+    "attributes" : [ "object" ],
+    "id" : "86"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#requestedBy",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "requestedBy"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "Action request authorship"
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "85"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasTimeStamp",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "hasTimeStamp"
+    },
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "Generic timestamp association dataproperty"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "87"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasActionInstance",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasActionInstance"
+    },
+    "superproperty" : [ "66" ],
+    "domain" : "8",
+    "comment" : {
+      "undefined" : "Objectproperty connecting the action to its instance"
+    },
+    "attributes" : [ "object" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isOutputDataSchemaOf",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "isOutputDataSchemaOf"
+    },
+    "superproperty" : [ "11" ],
+    "domain" : "12",
+    "comment" : {
+      "undefined" : "Connects the DataSchema to the Action or Event Output Data resource, in order to refer how it has to be interpreted"
+    },
+    "attributes" : [ "object" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstanceOf",
+    "inverse" : "65",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "EventInstanceOf"
+    },
+    "superproperty" : [ "10" ],
+    "domain" : "3",
+    "comment" : {
+      "undefined" : "Defines which is the Event that originates this EventInstance"
+    },
+    "attributes" : [ "object" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInstance",
+    "inverse" : "10",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "89",
+    "label" : {
+      "IRI-based" : "hasInstance"
+    },
+    "domain" : "88",
+    "subproperty" : [ "65", "9" ],
+    "comment" : {
+      "undefined" : "Generic objectproperty connecting the interaction pattern to its instance"
+    },
+    "attributes" : [ "object" ],
+    "id" : "66"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isActionFor",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "isActionFor"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "8",
+    "comment" : {
+      "undefined" : "Defines the Thing owner of the Action"
+    },
+    "attributes" : [ "object" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasFieldSchema",
+    "inverse" : "60",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "hasFieldSchema"
+    },
+    "domain" : "12",
+    "comment" : {
+      "undefined" : "Object property connecting the dataschema to (some) fieldschemas"
+    },
+    "attributes" : [ "object" ],
+    "id" : "90"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasStability",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "hasStability"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "In milliseconds, mean time in which the Property value is usually stable"
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "91"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyData",
+    "inverse" : "79",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "hasPropertyData"
+    },
+    "superproperty" : [ "41" ],
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Objectproperty connecting property data to the property itself"
+    },
+    "attributes" : [ "object" ],
+    "id" : "68"
+  }, {
+    "range" : "18",
+    "domain" : "51",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "92"
+  }, {
+    "range" : "3",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "93"
+  }, {
+    "range" : "0",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "94"
+  }, {
+    "range" : "22",
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "95"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyDataFor",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "isPropertyDataFor"
+    },
+    "superproperty" : [ "63" ],
+    "domain" : "39",
+    "comment" : {
+      "undefined" : "Connects Property Data to the relevant Instance of Interaction Pattern"
+    },
+    "attributes" : [ "object" ],
+    "id" : "79"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInteractionPatternFor",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "isInteractionPatternFor"
+    },
+    "domain" : "32",
+    "subproperty" : [ "53", "21", "48" ],
+    "comment" : {
+      "undefined" : "Defines the Thing owner of the Interaction Pattern"
+    },
+    "attributes" : [ "object" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInputDataFor",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "isInputDataFor"
+    },
+    "superproperty" : [ "63" ],
+    "domain" : "39",
+    "comment" : {
+      "undefined" : "Connects Input Data to the relevant Instance of Interaction Pattern"
+    },
+    "attributes" : [ "object" ],
+    "id" : "40"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasCompletionTimeStamp",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "hasCompletionTimeStamp"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "Time location of Action performance end"
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "97"
+  }, {
+    "range" : "51",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "98"
+  }, {
+    "range" : "18",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "99"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isTargetPropertyFor",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "isTargetPropertyFor"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Inverse of forProperty, this object property defines that the Domain is target on which an Action or an Event are evolving"
+    },
+    "attributes" : [ "object" ],
+    "id" : "71"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasSuperThing",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "hasSuperThing"
+    },
+    "superproperty" : [ "25" ],
+    "domain" : "33",
+    "comment" : {
+      "undefined" : "Pointer to the superThing"
+    },
+    "attributes" : [ "irreflexive", "object" ],
+    "id" : "26"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasDataSchema",
+    "inverse" : "11",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasDataSchema"
+    },
+    "domain" : "96",
+    "subproperty" : [ "86", "64", "35" ],
+    "comment" : {
+      "undefined" : "Generic property connecting data or interaction patterns to their dataschema"
+    },
+    "attributes" : [ "object" ],
+    "id" : "36"
+  }, {
+    "iri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isEventFor",
+    "baseIri" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "isEventFor"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "51",
+    "comment" : {
+      "undefined" : "Defines the Thing owner of the Event"
+    },
+    "attributes" : [ "object" ],
+    "id" : "53"
+  } ]
+}
