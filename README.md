@@ -13,7 +13,7 @@
 7. [Contribute](https://github.com/fr4ncidir/SemanticWoT#contribute)
 
 ## The SWoT ontology
-Before using Cocktail, we suggest to have a look to the [SWoT ontology](https://github.com/fr4ncidir/SemanticWoT/blob/master/swot.owl).
+Before using Cocktail, we suggest to have a look to the [documentation](https://fr4ncidir.github.io/SemanticWoT/) .
 
 ## Cocktail
 Within this repository we store all the necessary to start with a Semantic Web Of Things implementation. 
