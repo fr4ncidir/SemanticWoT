@@ -3,9 +3,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action"
+      "@id" : "http://purl.org/ontology/swot#Action"
     }, {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event"
+      "@id" : "http://purl.org/ontology/swot#Event"
     } ]
   } ]
 }, {
@@ -13,9 +13,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance"
+      "@id" : "http://purl.org/ontology/swot#ActionInstance"
     }, {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance"
+      "@id" : "http://purl.org/ontology/swot#EventInstance"
     } ]
   } ]
 }, {
@@ -23,9 +23,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance"
+      "@id" : "http://purl.org/ontology/swot#ActionInstance"
     }, {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance"
+      "@id" : "http://purl.org/ontology/swot#EventInstance"
     } ]
   } ]
 }, {
@@ -33,9 +33,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action"
+      "@id" : "http://purl.org/ontology/swot#Action"
     }, {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event"
+      "@id" : "http://purl.org/ontology/swot#Event"
     } ]
   } ]
 }, {
@@ -43,9 +43,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance"
+      "@id" : "http://purl.org/ontology/swot#ActionInstance"
     }, {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance"
+      "@id" : "http://purl.org/ontology/swot#EventInstance"
     } ]
   } ]
 }, {
@@ -53,9 +53,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action"
+      "@id" : "http://purl.org/ontology/swot#Action"
     }, {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event"
+      "@id" : "http://purl.org/ontology/swot#Event"
     } ]
   } ]
 }, {
@@ -63,9 +63,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data"
+      "@id" : "http://purl.org/ontology/swot#Data"
     }, {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern"
+      "@id" : "http://purl.org/ontology/swot#InteractionPattern"
     } ]
   } ]
 }, {
@@ -73,9 +73,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance"
+      "@id" : "http://purl.org/ontology/swot#ActionInstance"
     }, {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance"
+      "@id" : "http://purl.org/ontology/swot#EventInstance"
     } ]
   } ]
 }, {
@@ -83,9 +83,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action"
+      "@id" : "http://purl.org/ontology/swot#Action"
     }, {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event"
+      "@id" : "http://purl.org/ontology/swot#Event"
     } ]
   } ]
 }, {
@@ -93,9 +93,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action"
+      "@id" : "http://purl.org/ontology/swot#Action"
     }, {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event"
+      "@id" : "http://purl.org/ontology/swot#Event"
     } ]
   } ]
 }, {
@@ -103,9 +103,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern"
+      "@id" : "http://purl.org/ontology/swot#InteractionPattern"
     }, {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing"
+      "@id" : "http://purl.org/ontology/swot#Thing"
     } ]
   } ]
 }, {
@@ -113,9 +113,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data"
+      "@id" : "http://purl.org/ontology/swot#Data"
     }, {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern"
+      "@id" : "http://purl.org/ontology/swot#InteractionPattern"
     } ]
   } ]
 }, {
@@ -123,11 +123,11 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action"
+      "@id" : "http://purl.org/ontology/swot#Action"
     }, {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event"
+      "@id" : "http://purl.org/ontology/swot#Event"
     }, {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property"
+      "@id" : "http://purl.org/ontology/swot#Property"
     } ]
   } ]
 }, {
@@ -135,11 +135,11 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointProperties" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasAction"
+      "@id" : "http://purl.org/ontology/swot#hasAction"
     }, {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEvent"
+      "@id" : "http://purl.org/ontology/swot#hasEvent"
     }, {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasProperty"
+      "@id" : "http://purl.org/ontology/swot#hasProperty"
     } ]
   } ]
 }, {
@@ -147,11 +147,11 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointProperties" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputData"
+      "@id" : "http://purl.org/ontology/swot#hasInputData"
     }, {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputData"
+      "@id" : "http://purl.org/ontology/swot#hasOutputData"
     }, {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyData"
+      "@id" : "http://purl.org/ontology/swot#hasPropertyData"
     } ]
   } ]
 }, {
@@ -159,11 +159,11 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointProperties" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputDataSchema"
+      "@id" : "http://purl.org/ontology/swot#hasInputDataSchema"
     }, {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputDataSchema"
+      "@id" : "http://purl.org/ontology/swot#hasOutputDataSchema"
     }, {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyDataSchema"
+      "@id" : "http://purl.org/ontology/swot#hasPropertyDataSchema"
     } ]
   } ]
 }, {
@@ -171,11 +171,11 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointProperties" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isActionFor"
+      "@id" : "http://purl.org/ontology/swot#isActionFor"
     }, {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isEventFor"
+      "@id" : "http://purl.org/ontology/swot#isEventFor"
     }, {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyFor"
+      "@id" : "http://purl.org/ontology/swot#isPropertyFor"
     } ]
   } ]
 }, {
@@ -183,13 +183,19 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action"
+      "@id" : "http://purl.org/ontology/swot#Action"
     }, {
-      "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event"
+      "@id" : "http://purl.org/ontology/swot#Event"
     } ]
   } ]
 }, {
+  "@id" : "http://purl.org/dc/elements/1.1/contributor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/rights",
@@ -201,10 +207,17 @@
   "@id" : "http://purl.org/dc/terms/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot",
+  "@id" : "http://purl.org/ontology/swot",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/contributor" : [ {
+    "@value" : "Fabio Viola"
+  } ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Francesco Antoniazzi"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "The Web of Things (WoT) has recently appeared as the latest evolution of the Internet of Things and, as the name suggests, requires that devices interoperate through the Internet using Web protocols and standards. Currently, only a few theoretical approaches have been presented by researchers and industry, to fight the fragmentation of the IoT world through the adoption of semantics. This further evolution is known as Semantic WoT and relies on a WoT implementation crafted on the technologies proposed by the Semantic Web stack. This article presents a working implementation of the WoT declined in its Semantic flavor through the adoption of a shared ontology for describing devices. In addition to that, the ontology includes patterns for dynamic interactions between devices, and therefore we define it as dynamic ontology. A practical example will give a proof of concept and overall evaluation, showing how the dynamic setup proposed can foster interoperability at information level allowing on the one hand smart discovery, enabling on the other hand orchestration and automatic interaction through the semantic information available."
   } ],
   "http://purl.org/dc/elements/1.1/rights" : [ {
     "@id" : "https://www.gnu.org/licenses/gpl.html"
@@ -217,12 +230,14 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://github.com/fr4ncidir/SemanticWoT"
+  }, {
+    "@value" : "https://ieeexplore.ieee.org/document/8826285"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot/0.10"
+    "@id" : "http://purl.org/ontology/swot/0.1"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action",
+  "@id" : "http://purl.org/ontology/swot#Action",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Something that takes a finite time to perform and can be requested with or without input"
@@ -231,10 +246,10 @@
     "@value" : "Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern"
+    "@id" : "http://purl.org/ontology/swot#InteractionPattern"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance",
+  "@id" : "http://purl.org/ontology/swot#ActionInstance",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Adding an ActionInstance means requesting the Action to perform"
@@ -243,31 +258,31 @@
     "@value" : "Action Instance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Instance"
+    "@id" : "http://purl.org/ontology/swot#Instance"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance"
+    "@id" : "http://purl.org/ontology/swot#EventInstance"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstanceOf",
+  "@id" : "http://purl.org/ontology/swot#ActionInstanceOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Defines which is the Action that originates this ActionInstance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance"
+    "@id" : "http://purl.org/ontology/swot#ActionInstance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action"
+    "@id" : "http://purl.org/ontology/swot#Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#instanceOf"
+    "@id" : "http://purl.org/ontology/swot#instanceOf"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasActionInstance"
+    "@id" : "http://purl.org/ontology/swot#hasActionInstance"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data",
+  "@id" : "http://purl.org/ontology/swot#Data",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Actual and current valid data as input, output, or Property value"
@@ -276,7 +291,7 @@
     "@value" : "Data"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema",
+  "@id" : "http://purl.org/ontology/swot#DataSchema",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Resource for data formatting"
@@ -285,10 +300,10 @@
     "@value" : "DataSchema"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#FieldSchema"
+    "@id" : "http://purl.org/ontology/swot#FieldSchema"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event",
+  "@id" : "http://purl.org/ontology/swot#Event",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Asynchronous interaction"
@@ -297,10 +312,10 @@
     "@value" : "Event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern"
+    "@id" : "http://purl.org/ontology/swot#InteractionPattern"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance",
+  "@id" : "http://purl.org/ontology/swot#EventInstance",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An Event notification is thrown when an EventInstance is inserted in the Knowledge Base"
@@ -309,28 +324,28 @@
     "@value" : "Event Instance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Instance"
+    "@id" : "http://purl.org/ontology/swot#Instance"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstanceOf",
+  "@id" : "http://purl.org/ontology/swot#EventInstanceOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Defines which is the Event that originates this EventInstance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance"
+    "@id" : "http://purl.org/ontology/swot#EventInstance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event"
+    "@id" : "http://purl.org/ontology/swot#Event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#instanceOf"
+    "@id" : "http://purl.org/ontology/swot#instanceOf"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEventInstance"
+    "@id" : "http://purl.org/ontology/swot#hasEventInstance"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#FieldSchema",
+  "@id" : "http://purl.org/ontology/swot#FieldSchema",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "General FieldSchema superclass, to be used for instance when there is a simple datatype"
@@ -339,7 +354,7 @@
     "@value" : "FieldSchema"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Instance",
+  "@id" : "http://purl.org/ontology/swot#Instance",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Action-Event instance superclass"
@@ -348,7 +363,7 @@
     "@value" : "Instance"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern",
+  "@id" : "http://purl.org/ontology/swot#InteractionPattern",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Static Property-Action-Event superclass"
@@ -357,7 +372,7 @@
     "@value" : "Interaction Pattern"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#OntologyURI",
+  "@id" : "http://purl.org/ontology/swot#OntologyURI",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "FieldSchemas that are pointers to Ontologies"
@@ -366,10 +381,10 @@
     "@value" : "Ontology URI"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#FieldSchema"
+    "@id" : "http://purl.org/ontology/swot#FieldSchema"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property",
+  "@id" : "http://purl.org/ontology/swot#Property",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Neither Action, neither Event. It represent an internal status or pure information on the Semantic WebThing"
@@ -378,10 +393,10 @@
     "@value" : "Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern"
+    "@id" : "http://purl.org/ontology/swot#InteractionPattern"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ResourceURI",
+  "@id" : "http://purl.org/ontology/swot#ResourceURI",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "FieldSchemas that are pointers to web resources"
@@ -390,10 +405,10 @@
     "@value" : "Resource URI"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#FieldSchema"
+    "@id" : "http://purl.org/ontology/swot#FieldSchema"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing",
+  "@id" : "http://purl.org/ontology/swot#Thing",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Abstraction for the Semantic WebThing"
@@ -402,10 +417,10 @@
     "@value" : "Semantic WebThing"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription"
+    "@id" : "http://purl.org/ontology/swot#ThingDescription"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription",
+  "@id" : "http://purl.org/ontology/swot#ThingDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Resource representing the Thing Description of the Semantic WebThing. This resource should be a real resource, reachable from the Web and answer to a GET request through a JSON-LD."
@@ -414,7 +429,7 @@
     "@value" : "Thing Description"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#forProperty",
+  "@id" : "http://purl.org/ontology/swot#forProperty",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This objectproperty identifies the Property target of actions and events."
@@ -423,94 +438,94 @@
     "@id" : "_:genid1"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property"
+    "@id" : "http://purl.org/ontology/swot#Property"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isTargetPropertyFor"
+    "@id" : "http://purl.org/ontology/swot#isTargetPropertyFor"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasAction",
+  "@id" : "http://purl.org/ontology/swot#hasAction",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Object property connecting the thing description to the interaction pattern Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription"
+    "@id" : "http://purl.org/ontology/swot#ThingDescription"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action"
+    "@id" : "http://purl.org/ontology/swot#Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInteractionPattern"
+    "@id" : "http://purl.org/ontology/swot#hasInteractionPattern"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isActionFor"
+    "@id" : "http://purl.org/ontology/swot#isActionFor"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasActionInstance",
+  "@id" : "http://purl.org/ontology/swot#hasActionInstance",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Objectproperty connecting the action to its instance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action"
+    "@id" : "http://purl.org/ontology/swot#Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance"
+    "@id" : "http://purl.org/ontology/swot#ActionInstance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInstance"
+    "@id" : "http://purl.org/ontology/swot#hasInstance"
   } ],
   "http://www.w3.org/2002/07/owl#propertyDisjointWith" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEventInstance"
+    "@id" : "http://purl.org/ontology/swot#hasEventInstance"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasCompletionTimeStamp",
+  "@id" : "http://purl.org/ontology/swot#hasCompletionTimeStamp",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Time location of Action performance end"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance"
+    "@id" : "http://purl.org/ontology/swot#ActionInstance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasTimeStamp"
+    "@id" : "http://purl.org/ontology/swot#hasTimeStamp"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasConfirmationTimeStamp",
+  "@id" : "http://purl.org/ontology/swot#hasConfirmationTimeStamp",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Time location of Action performance beeing started"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance"
+    "@id" : "http://purl.org/ontology/swot#ActionInstance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasTimeStamp"
+    "@id" : "http://purl.org/ontology/swot#hasTimeStamp"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasData",
+  "@id" : "http://purl.org/ontology/swot#hasData",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Generic objectproperty for connecting data to instances or properties."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Instance"
+    "@id" : "http://purl.org/ontology/swot#Instance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data"
+    "@id" : "http://purl.org/ontology/swot#Data"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataFor"
+    "@id" : "http://purl.org/ontology/swot#isDataFor"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasDataSchema",
+  "@id" : "http://purl.org/ontology/swot#hasDataSchema",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Generic property connecting data or interaction patterns to their dataschema"
@@ -519,97 +534,97 @@
     "@id" : "_:genid4"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema"
+    "@id" : "http://purl.org/ontology/swot#DataSchema"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataSchemaOf"
+    "@id" : "http://purl.org/ontology/swot#isDataSchemaOf"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEvent",
+  "@id" : "http://purl.org/ontology/swot#hasEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Object property connecting the thing description to the interaction pattern Event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription"
+    "@id" : "http://purl.org/ontology/swot#ThingDescription"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event"
+    "@id" : "http://purl.org/ontology/swot#Event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInteractionPattern"
+    "@id" : "http://purl.org/ontology/swot#hasInteractionPattern"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isEventFor"
+    "@id" : "http://purl.org/ontology/swot#isEventFor"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEventInstance",
+  "@id" : "http://purl.org/ontology/swot#hasEventInstance",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Objectproperty connecting the event to its instance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event"
+    "@id" : "http://purl.org/ontology/swot#Event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance"
+    "@id" : "http://purl.org/ontology/swot#EventInstance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInstance"
+    "@id" : "http://purl.org/ontology/swot#hasInstance"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasFieldSchema",
+  "@id" : "http://purl.org/ontology/swot#hasFieldSchema",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Object property connecting the dataschema to (some) fieldschemas"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema"
+    "@id" : "http://purl.org/ontology/swot#DataSchema"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#FieldSchema"
+    "@id" : "http://purl.org/ontology/swot#FieldSchema"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isFieldSchemaFor"
+    "@id" : "http://purl.org/ontology/swot#isFieldSchemaFor"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputData",
+  "@id" : "http://purl.org/ontology/swot#hasInputData",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Objectproperty connecting an input to an action instance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance"
+    "@id" : "http://purl.org/ontology/swot#ActionInstance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data"
+    "@id" : "http://purl.org/ontology/swot#Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasData"
+    "@id" : "http://purl.org/ontology/swot#hasData"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInputDataFor"
+    "@id" : "http://purl.org/ontology/swot#isInputDataFor"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputDataSchema",
+  "@id" : "http://purl.org/ontology/swot#hasInputDataSchema",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Objectproperty connecting the dataschema expected as input of an action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action"
+    "@id" : "http://purl.org/ontology/swot#Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema"
+    "@id" : "http://purl.org/ontology/swot#DataSchema"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasDataSchema"
+    "@id" : "http://purl.org/ontology/swot#hasDataSchema"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInputDataSchemaOf"
+    "@id" : "http://purl.org/ontology/swot#isInputDataSchemaOf"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInstance",
+  "@id" : "http://purl.org/ontology/swot#hasInstance",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Generic objectproperty connecting the interaction pattern to its instance"
@@ -621,25 +636,25 @@
     "@id" : "_:genid10"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#instanceOf"
+    "@id" : "http://purl.org/ontology/swot#instanceOf"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInteractionPattern",
+  "@id" : "http://purl.org/ontology/swot#hasInteractionPattern",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Generic objectproperty connecting the thing description to all the interaction patterns belonging to the thing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription"
+    "@id" : "http://purl.org/ontology/swot#ThingDescription"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern"
+    "@id" : "http://purl.org/ontology/swot#InteractionPattern"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInteractionPatternFor"
+    "@id" : "http://purl.org/ontology/swot#isInteractionPatternFor"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasName",
+  "@id" : "http://purl.org/ontology/swot#hasName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Naming dataproperty"
@@ -651,7 +666,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#Name"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputData",
+  "@id" : "http://purl.org/ontology/swot#hasOutputData",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Objectproperty connecting an output to an action or event instance"
@@ -660,16 +675,16 @@
     "@id" : "_:genid13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data"
+    "@id" : "http://purl.org/ontology/swot#Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasData"
+    "@id" : "http://purl.org/ontology/swot#hasData"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isOutputDataFor"
+    "@id" : "http://purl.org/ontology/swot#isOutputDataFor"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputDataSchema",
+  "@id" : "http://purl.org/ontology/swot#hasOutputDataSchema",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Objectproperty connecting the dataschema expected as output of an action or an event"
@@ -678,166 +693,166 @@
     "@id" : "_:genid16"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema"
+    "@id" : "http://purl.org/ontology/swot#DataSchema"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasDataSchema"
+    "@id" : "http://purl.org/ontology/swot#hasDataSchema"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isOutputDataSchemaOf"
+    "@id" : "http://purl.org/ontology/swot#isOutputDataSchemaOf"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasProperty",
+  "@id" : "http://purl.org/ontology/swot#hasProperty",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Object property connecting the thing description to the interaction pattern Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription"
+    "@id" : "http://purl.org/ontology/swot#ThingDescription"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property"
+    "@id" : "http://purl.org/ontology/swot#Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInteractionPattern"
+    "@id" : "http://purl.org/ontology/swot#hasInteractionPattern"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyFor"
+    "@id" : "http://purl.org/ontology/swot#isPropertyFor"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyData",
+  "@id" : "http://purl.org/ontology/swot#hasPropertyData",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Objectproperty connecting property data to the property itself"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property"
+    "@id" : "http://purl.org/ontology/swot#Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data"
+    "@id" : "http://purl.org/ontology/swot#Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasData"
+    "@id" : "http://purl.org/ontology/swot#hasData"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyDataFor"
+    "@id" : "http://purl.org/ontology/swot#isPropertyDataFor"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyDataSchema",
+  "@id" : "http://purl.org/ontology/swot#hasPropertyDataSchema",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Objectproperty connecting the dataschema related to a property data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property"
+    "@id" : "http://purl.org/ontology/swot#Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema"
+    "@id" : "http://purl.org/ontology/swot#DataSchema"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasDataSchema"
+    "@id" : "http://purl.org/ontology/swot#hasDataSchema"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyDataSchemaOf"
+    "@id" : "http://purl.org/ontology/swot#isPropertyDataSchemaOf"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasRequestTimeStamp",
+  "@id" : "http://purl.org/ontology/swot#hasRequestTimeStamp",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Time location and identification of the Action request"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance"
+    "@id" : "http://purl.org/ontology/swot#ActionInstance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasTimeStamp"
+    "@id" : "http://purl.org/ontology/swot#hasTimeStamp"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasStability",
+  "@id" : "http://purl.org/ontology/swot#hasStability",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "In milliseconds, mean time in which the Property value is usually stable"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property"
+    "@id" : "http://purl.org/ontology/swot#Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#unsignedLong"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasSubThing",
+  "@id" : "http://purl.org/ontology/swot#hasSubThing",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Semantic WebThings proxying each other"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing"
+    "@id" : "http://purl.org/ontology/swot#Thing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing"
+    "@id" : "http://purl.org/ontology/swot#Thing"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasSuperThing"
+    "@id" : "http://purl.org/ontology/swot#hasSuperThing"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasSuperThing",
+  "@id" : "http://purl.org/ontology/swot#hasSuperThing",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Pointer to the superThing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing"
+    "@id" : "http://purl.org/ontology/swot#Thing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing"
+    "@id" : "http://purl.org/ontology/swot#Thing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasThingDescription",
+  "@id" : "http://purl.org/ontology/swot#hasThingDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Object property connecting a thing with its thing description"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing"
+    "@id" : "http://purl.org/ontology/swot#Thing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription"
+    "@id" : "http://purl.org/ontology/swot#ThingDescription"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isThingDescriptionOf"
+    "@id" : "http://purl.org/ontology/swot#isThingDescriptionOf"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasTimeStamp",
+  "@id" : "http://purl.org/ontology/swot#hasTimeStamp",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Generic timestamp association dataproperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Instance"
+    "@id" : "http://purl.org/ontology/swot#Instance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasValue",
+  "@id" : "http://purl.org/ontology/swot#hasValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Dataproperty for Data having Literal value."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data"
+    "@id" : "http://purl.org/ontology/swot#Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#instanceOf",
+  "@id" : "http://purl.org/ontology/swot#instanceOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Defines which is the Interaction Pattern that originates this Instance"
@@ -849,264 +864,264 @@
     "@id" : "_:genid22"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isActionFor",
+  "@id" : "http://purl.org/ontology/swot#isActionFor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Defines the Thing owner of the Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action"
+    "@id" : "http://purl.org/ontology/swot#Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription"
+    "@id" : "http://purl.org/ontology/swot#ThingDescription"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInteractionPatternFor"
+    "@id" : "http://purl.org/ontology/swot#isInteractionPatternFor"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataFor",
+  "@id" : "http://purl.org/ontology/swot#isDataFor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Connects Data to the relevant Instance of Interaction Pattern"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data"
+    "@id" : "http://purl.org/ontology/swot#Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Instance"
+    "@id" : "http://purl.org/ontology/swot#Instance"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataSchemaOf",
+  "@id" : "http://purl.org/ontology/swot#isDataSchemaOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Connects the DataSchema to the Interaction Pattern or Data resource, in order to refer how it has to be interpreted"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema"
+    "@id" : "http://purl.org/ontology/swot#DataSchema"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid25"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isEventFor",
+  "@id" : "http://purl.org/ontology/swot#isEventFor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Defines the Thing owner of the Event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event"
+    "@id" : "http://purl.org/ontology/swot#Event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription"
+    "@id" : "http://purl.org/ontology/swot#ThingDescription"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInteractionPatternFor"
+    "@id" : "http://purl.org/ontology/swot#isInteractionPatternFor"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isFieldSchemaFor",
+  "@id" : "http://purl.org/ontology/swot#isFieldSchemaFor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Determines to which DataSchemas the FieldSchema belongs to"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#FieldSchema"
+    "@id" : "http://purl.org/ontology/swot#FieldSchema"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema"
+    "@id" : "http://purl.org/ontology/swot#DataSchema"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInputDataFor",
+  "@id" : "http://purl.org/ontology/swot#isInputDataFor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Connects Input Data to the relevant Instance of Interaction Pattern"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data"
+    "@id" : "http://purl.org/ontology/swot#Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance"
+    "@id" : "http://purl.org/ontology/swot#ActionInstance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataFor"
+    "@id" : "http://purl.org/ontology/swot#isDataFor"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInputDataSchemaOf",
+  "@id" : "http://purl.org/ontology/swot#isInputDataSchemaOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Connects the DataSchema to the Action Input Data resource, in order to refer how it has to be interpreted"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema"
+    "@id" : "http://purl.org/ontology/swot#DataSchema"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action"
+    "@id" : "http://purl.org/ontology/swot#Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataSchemaOf"
+    "@id" : "http://purl.org/ontology/swot#isDataSchemaOf"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInteractionPatternFor",
+  "@id" : "http://purl.org/ontology/swot#isInteractionPatternFor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Defines the Thing owner of the Interaction Pattern"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern"
+    "@id" : "http://purl.org/ontology/swot#InteractionPattern"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription"
+    "@id" : "http://purl.org/ontology/swot#ThingDescription"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isOutputDataFor",
+  "@id" : "http://purl.org/ontology/swot#isOutputDataFor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Connects Output Data to the relevant Instance of Interaction Pattern"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data"
+    "@id" : "http://purl.org/ontology/swot#Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid28"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataFor"
+    "@id" : "http://purl.org/ontology/swot#isDataFor"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isOutputDataSchemaOf",
+  "@id" : "http://purl.org/ontology/swot#isOutputDataSchemaOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Connects the DataSchema to the Action or Event Output Data resource, in order to refer how it has to be interpreted"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema"
+    "@id" : "http://purl.org/ontology/swot#DataSchema"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid31"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataSchemaOf"
+    "@id" : "http://purl.org/ontology/swot#isDataSchemaOf"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyDataFor",
+  "@id" : "http://purl.org/ontology/swot#isPropertyDataFor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Connects Property Data to the relevant Instance of Interaction Pattern"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data"
+    "@id" : "http://purl.org/ontology/swot#Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property"
+    "@id" : "http://purl.org/ontology/swot#Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataFor"
+    "@id" : "http://purl.org/ontology/swot#isDataFor"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyDataSchemaOf",
+  "@id" : "http://purl.org/ontology/swot#isPropertyDataSchemaOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Connects the Property DataSchema to the Property Data resource, in order to refer how it has to be interpreted"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema"
+    "@id" : "http://purl.org/ontology/swot#DataSchema"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property"
+    "@id" : "http://purl.org/ontology/swot#Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataSchemaOf"
+    "@id" : "http://purl.org/ontology/swot#isDataSchemaOf"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyFor",
+  "@id" : "http://purl.org/ontology/swot#isPropertyFor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Defines the Thing owner of the Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property"
+    "@id" : "http://purl.org/ontology/swot#Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription"
+    "@id" : "http://purl.org/ontology/swot#ThingDescription"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInteractionPatternFor"
+    "@id" : "http://purl.org/ontology/swot#isInteractionPatternFor"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isRequestAuthor",
+  "@id" : "http://purl.org/ontology/swot#isRequestAuthor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The Entity requesting an Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing"
+    "@id" : "http://purl.org/ontology/swot#Thing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance"
+    "@id" : "http://purl.org/ontology/swot#ActionInstance"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#requestedBy"
+    "@id" : "http://purl.org/ontology/swot#requestedBy"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isTargetPropertyFor",
+  "@id" : "http://purl.org/ontology/swot#isTargetPropertyFor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Inverse of forProperty, this object property defines that the Domain is target on which an Action or an Event are evolving"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property"
+    "@id" : "http://purl.org/ontology/swot#Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid34"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isThingDescriptionOf",
+  "@id" : "http://purl.org/ontology/swot#isThingDescriptionOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Pointer from a Thing Description to its Thing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription"
+    "@id" : "http://purl.org/ontology/swot#ThingDescription"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing"
+    "@id" : "http://purl.org/ontology/swot#Thing"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isWritable",
+  "@id" : "http://purl.org/ontology/swot#isWritable",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Flag for Property data writability from outside"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property"
+    "@id" : "http://purl.org/ontology/swot#Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#occurredAt",
+  "@id" : "http://purl.org/ontology/swot#occurredAt",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Used for Event notification time location."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance"
+    "@id" : "http://purl.org/ontology/swot#EventInstance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasTimeStamp"
+    "@id" : "http://purl.org/ontology/swot#hasTimeStamp"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#requestedBy",
+  "@id" : "http://purl.org/ontology/swot#requestedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Action request authorship"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance"
+    "@id" : "http://purl.org/ontology/swot#ActionInstance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing"
+    "@id" : "http://purl.org/ontology/swot#Thing"
   } ]
 } ]

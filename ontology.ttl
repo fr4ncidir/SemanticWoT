@@ -1,25 +1,36 @@
-@prefix : <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#> .
+@prefix : <http://purl.org/ontology/swot#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot> .
+@base <http://purl.org/ontology/swot> .
 
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot> rdf:type owl:Ontology ;
-                                                           owl:versionIRI <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot/0.10> ;
-                                                           <http://purl.org/dc/elements/1.1/creator> "Francesco Antoniazzi" ;
-                                                           <http://purl.org/dc/elements/1.1/rights> <https://www.gnu.org/licenses/gpl.html> ;
-                                                           <http://purl.org/dc/terms/created> "16 January 2019" ;
-                                                           <http://purl.org/dc/terms/title> "Semantic Web of Things Ontology" ;
-                                                           rdfs:seeAlso <https://github.com/fr4ncidir/SemanticWoT> .
+<http://purl.org/ontology/swot> rdf:type owl:Ontology ;
+                                 owl:versionIRI <http://purl.org/ontology/swot/0.1> ;
+                                 <http://purl.org/dc/elements/1.1/contributor> "Fabio Viola" ;
+                                 <http://purl.org/dc/elements/1.1/creator> "Francesco Antoniazzi" ;
+                                 <http://purl.org/dc/elements/1.1/description> "The Web of Things (WoT) has recently appeared as the latest evolution of the Internet of Things and, as the name suggests, requires that devices interoperate through the Internet using Web protocols and standards. Currently, only a few theoretical approaches have been presented by researchers and industry, to fight the fragmentation of the IoT world through the adoption of semantics. This further evolution is known as Semantic WoT and relies on a WoT implementation crafted on the technologies proposed by the Semantic Web stack. This article presents a working implementation of the WoT declined in its Semantic flavor through the adoption of a shared ontology for describing devices. In addition to that, the ontology includes patterns for dynamic interactions between devices, and therefore we define it as dynamic ontology. A practical example will give a proof of concept and overall evaluation, showing how the dynamic setup proposed can foster interoperability at information level allowing on the one hand smart discovery, enabling on the other hand orchestration and automatic interaction through the semantic information available."@en ;
+                                 <http://purl.org/dc/elements/1.1/rights> <https://www.gnu.org/licenses/gpl.html> ;
+                                 <http://purl.org/dc/terms/created> "16 January 2019" ;
+                                 <http://purl.org/dc/terms/title> "Semantic Web of Things Ontology" ;
+                                 rdfs:seeAlso <https://github.com/fr4ncidir/SemanticWoT> ,
+                                              "https://ieeexplore.ieee.org/document/8826285" .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
+###  http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/elements/1.1/creator
 <http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/rights
@@ -38,7 +49,7 @@
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstanceOf
+###  http://purl.org/ontology/swot#ActionInstanceOf
 :ActionInstanceOf rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :instanceOf ;
                   owl:inverseOf :hasActionInstance ;
@@ -47,7 +58,7 @@
                   rdfs:comment "Defines which is the Action that originates this ActionInstance" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstanceOf
+###  http://purl.org/ontology/swot#EventInstanceOf
 :EventInstanceOf rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :instanceOf ;
                  owl:inverseOf :hasEventInstance ;
@@ -56,7 +67,7 @@
                  rdfs:comment "Defines which is the Event that originates this EventInstance" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#forProperty
+###  http://purl.org/ontology/swot#forProperty
 :forProperty rdf:type owl:ObjectProperty ;
              owl:inverseOf :isTargetPropertyFor ;
              rdfs:domain [ rdf:type owl:Class ;
@@ -68,7 +79,7 @@
              rdfs:comment "This objectproperty identifies the Property target of actions and events." .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasAction
+###  http://purl.org/ontology/swot#hasAction
 :hasAction rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :hasInteractionPattern ;
            owl:inverseOf :isActionFor ;
@@ -77,7 +88,7 @@
            rdfs:comment "Object property connecting the thing description to the interaction pattern Action" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasActionInstance
+###  http://purl.org/ontology/swot#hasActionInstance
 :hasActionInstance rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :hasInstance ;
                    rdfs:domain :Action ;
@@ -86,7 +97,7 @@
                    rdfs:comment "Objectproperty connecting the action to its instance" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasData
+###  http://purl.org/ontology/swot#hasData
 :hasData rdf:type owl:ObjectProperty ;
          owl:inverseOf :isDataFor ;
          rdfs:domain :Instance ;
@@ -94,7 +105,7 @@
          rdfs:comment "Generic objectproperty for connecting data to instances or properties." .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasDataSchema
+###  http://purl.org/ontology/swot#hasDataSchema
 :hasDataSchema rdf:type owl:ObjectProperty ;
                owl:inverseOf :isDataSchemaOf ;
                rdfs:domain [ rdf:type owl:Class ;
@@ -106,7 +117,7 @@
                rdfs:comment "Generic property connecting data or interaction patterns to their dataschema" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEvent
+###  http://purl.org/ontology/swot#hasEvent
 :hasEvent rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :hasInteractionPattern ;
           owl:inverseOf :isEventFor ;
@@ -115,7 +126,7 @@
           rdfs:comment "Object property connecting the thing description to the interaction pattern Event" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEventInstance
+###  http://purl.org/ontology/swot#hasEventInstance
 :hasEventInstance rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :hasInstance ;
                   rdfs:domain :Event ;
@@ -123,7 +134,7 @@
                   rdfs:comment "Objectproperty connecting the event to its instance" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasFieldSchema
+###  http://purl.org/ontology/swot#hasFieldSchema
 :hasFieldSchema rdf:type owl:ObjectProperty ;
                 owl:inverseOf :isFieldSchemaFor ;
                 rdfs:domain :DataSchema ;
@@ -131,7 +142,7 @@
                 rdfs:comment "Object property connecting the dataschema to (some) fieldschemas" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputData
+###  http://purl.org/ontology/swot#hasInputData
 :hasInputData rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf :hasData ;
               owl:inverseOf :isInputDataFor ;
@@ -140,7 +151,7 @@
               rdfs:comment "Objectproperty connecting an input to an action instance" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputDataSchema
+###  http://purl.org/ontology/swot#hasInputDataSchema
 :hasInputDataSchema rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :hasDataSchema ;
                     owl:inverseOf :isInputDataSchemaOf ;
@@ -149,7 +160,7 @@
                     rdfs:comment "Objectproperty connecting the dataschema expected as input of an action" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInstance
+###  http://purl.org/ontology/swot#hasInstance
 :hasInstance rdf:type owl:ObjectProperty ;
              owl:inverseOf :instanceOf ;
              rdfs:domain [ rdf:type owl:Class ;
@@ -165,7 +176,7 @@
              rdfs:comment "Generic objectproperty connecting the interaction pattern to its instance" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInteractionPattern
+###  http://purl.org/ontology/swot#hasInteractionPattern
 :hasInteractionPattern rdf:type owl:ObjectProperty ;
                        owl:inverseOf :isInteractionPatternFor ;
                        rdfs:domain :ThingDescription ;
@@ -173,7 +184,7 @@
                        rdfs:comment "Generic objectproperty connecting the thing description to all the interaction patterns belonging to the thing" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputData
+###  http://purl.org/ontology/swot#hasOutputData
 :hasOutputData rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf :hasData ;
                owl:inverseOf :isOutputDataFor ;
@@ -186,7 +197,7 @@
                rdfs:comment "Objectproperty connecting an output to an action or event instance" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputDataSchema
+###  http://purl.org/ontology/swot#hasOutputDataSchema
 :hasOutputDataSchema rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf :hasDataSchema ;
                      owl:inverseOf :isOutputDataSchemaOf ;
@@ -199,7 +210,7 @@
                      rdfs:comment "Objectproperty connecting the dataschema expected as output of an action or an event" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasProperty
+###  http://purl.org/ontology/swot#hasProperty
 :hasProperty rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :hasInteractionPattern ;
              owl:inverseOf :isPropertyFor ;
@@ -208,7 +219,7 @@
              rdfs:comment "Object property connecting the thing description to the interaction pattern Property" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyData
+###  http://purl.org/ontology/swot#hasPropertyData
 :hasPropertyData rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :hasData ;
                  owl:inverseOf :isPropertyDataFor ;
@@ -217,7 +228,7 @@
                  rdfs:comment "Objectproperty connecting property data to the property itself" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyDataSchema
+###  http://purl.org/ontology/swot#hasPropertyDataSchema
 :hasPropertyDataSchema rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf :hasDataSchema ;
                        owl:inverseOf :isPropertyDataSchemaOf ;
@@ -226,7 +237,7 @@
                        rdfs:comment "Objectproperty connecting the dataschema related to a property data" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasSubThing
+###  http://purl.org/ontology/swot#hasSubThing
 :hasSubThing rdf:type owl:ObjectProperty ;
              owl:inverseOf :hasSuperThing ;
              rdf:type owl:IrreflexiveProperty ;
@@ -235,7 +246,7 @@
              rdfs:comment "Semantic WebThings proxying each other" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasSuperThing
+###  http://purl.org/ontology/swot#hasSuperThing
 :hasSuperThing rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf owl:topObjectProperty ;
                rdf:type owl:IrreflexiveProperty ;
@@ -244,7 +255,7 @@
                rdfs:comment "Pointer to the superThing" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasThingDescription
+###  http://purl.org/ontology/swot#hasThingDescription
 :hasThingDescription rdf:type owl:ObjectProperty ;
                      owl:inverseOf :isThingDescriptionOf ;
                      rdf:type owl:FunctionalProperty ;
@@ -253,7 +264,7 @@
                      rdfs:comment "Object property connecting a thing with its thing description" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#instanceOf
+###  http://purl.org/ontology/swot#instanceOf
 :instanceOf rdf:type owl:ObjectProperty ;
             rdfs:domain [ rdf:type owl:Class ;
                           owl:unionOf ( :ActionInstance
@@ -268,7 +279,7 @@
             rdfs:comment "Defines which is the Interaction Pattern that originates this Instance" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isActionFor
+###  http://purl.org/ontology/swot#isActionFor
 :isActionFor rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :isInteractionPatternFor ;
              rdfs:domain :Action ;
@@ -276,14 +287,14 @@
              rdfs:comment "Defines the Thing owner of the Action" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataFor
+###  http://purl.org/ontology/swot#isDataFor
 :isDataFor rdf:type owl:ObjectProperty ;
            rdfs:domain :Data ;
            rdfs:range :Instance ;
            rdfs:comment "Connects Data to the relevant Instance of Interaction Pattern" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataSchemaOf
+###  http://purl.org/ontology/swot#isDataSchemaOf
 :isDataSchemaOf rdf:type owl:ObjectProperty ;
                 rdfs:domain :DataSchema ;
                 rdfs:range [ rdf:type owl:Class ;
@@ -294,7 +305,7 @@
                 rdfs:comment "Connects the DataSchema to the Interaction Pattern or Data resource, in order to refer how it has to be interpreted" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isEventFor
+###  http://purl.org/ontology/swot#isEventFor
 :isEventFor rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf :isInteractionPatternFor ;
             rdfs:domain :Event ;
@@ -302,14 +313,14 @@
             rdfs:comment "Defines the Thing owner of the Event" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isFieldSchemaFor
+###  http://purl.org/ontology/swot#isFieldSchemaFor
 :isFieldSchemaFor rdf:type owl:ObjectProperty ;
                   rdfs:domain :FieldSchema ;
                   rdfs:range :DataSchema ;
                   rdfs:comment "Determines to which DataSchemas the FieldSchema belongs to" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInputDataFor
+###  http://purl.org/ontology/swot#isInputDataFor
 :isInputDataFor rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :isDataFor ;
                 rdfs:domain :Data ;
@@ -317,7 +328,7 @@
                 rdfs:comment "Connects Input Data to the relevant Instance of Interaction Pattern" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInputDataSchemaOf
+###  http://purl.org/ontology/swot#isInputDataSchemaOf
 :isInputDataSchemaOf rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf :isDataSchemaOf ;
                      rdfs:domain :DataSchema ;
@@ -325,14 +336,14 @@
                      rdfs:comment "Connects the DataSchema to the Action Input Data resource, in order to refer how it has to be interpreted" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInteractionPatternFor
+###  http://purl.org/ontology/swot#isInteractionPatternFor
 :isInteractionPatternFor rdf:type owl:ObjectProperty ;
                          rdfs:domain :InteractionPattern ;
                          rdfs:range :ThingDescription ;
                          rdfs:comment "Defines the Thing owner of the Interaction Pattern" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isOutputDataFor
+###  http://purl.org/ontology/swot#isOutputDataFor
 :isOutputDataFor rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :isDataFor ;
                  rdfs:domain :Data ;
@@ -344,7 +355,7 @@
                  rdfs:comment "Connects Output Data to the relevant Instance of Interaction Pattern" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isOutputDataSchemaOf
+###  http://purl.org/ontology/swot#isOutputDataSchemaOf
 :isOutputDataSchemaOf rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf :isDataSchemaOf ;
                       rdfs:domain :DataSchema ;
@@ -356,7 +367,7 @@
                       rdfs:comment "Connects the DataSchema to the Action or Event Output Data resource, in order to refer how it has to be interpreted" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyDataFor
+###  http://purl.org/ontology/swot#isPropertyDataFor
 :isPropertyDataFor rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :isDataFor ;
                    rdfs:domain :Data ;
@@ -364,7 +375,7 @@
                    rdfs:comment "Connects Property Data to the relevant Instance of Interaction Pattern" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyDataSchemaOf
+###  http://purl.org/ontology/swot#isPropertyDataSchemaOf
 :isPropertyDataSchemaOf rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf :isDataSchemaOf ;
                         rdfs:domain :DataSchema ;
@@ -372,7 +383,7 @@
                         rdfs:comment "Connects the Property DataSchema to the Property Data resource, in order to refer how it has to be interpreted" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyFor
+###  http://purl.org/ontology/swot#isPropertyFor
 :isPropertyFor rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf :isInteractionPatternFor ;
                rdfs:domain :Property ;
@@ -380,7 +391,7 @@
                rdfs:comment "Defines the Thing owner of the Property" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isRequestAuthor
+###  http://purl.org/ontology/swot#isRequestAuthor
 :isRequestAuthor rdf:type owl:ObjectProperty ;
                  owl:inverseOf :requestedBy ;
                  rdf:type owl:FunctionalProperty ;
@@ -389,7 +400,7 @@
                  rdfs:comment "The Entity requesting an Action" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isTargetPropertyFor
+###  http://purl.org/ontology/swot#isTargetPropertyFor
 :isTargetPropertyFor rdf:type owl:ObjectProperty ;
                      rdfs:domain :Property ;
                      rdfs:range [ rdf:type owl:Class ;
@@ -400,7 +411,7 @@
                      rdfs:comment "Inverse of forProperty, this object property defines that the Domain is target on which an Action or an Event are evolving" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isThingDescriptionOf
+###  http://purl.org/ontology/swot#isThingDescriptionOf
 :isThingDescriptionOf rdf:type owl:ObjectProperty ,
                                owl:FunctionalProperty ;
                       rdfs:domain :ThingDescription ;
@@ -408,7 +419,7 @@
                       rdfs:comment "Pointer from a Thing Description to its Thing" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#requestedBy
+###  http://purl.org/ontology/swot#requestedBy
 :requestedBy rdf:type owl:ObjectProperty ,
                       owl:FunctionalProperty ;
              rdfs:domain :ActionInstance ;
@@ -420,7 +431,7 @@
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasCompletionTimeStamp
+###  http://purl.org/ontology/swot#hasCompletionTimeStamp
 :hasCompletionTimeStamp rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf :hasTimeStamp ;
                         rdf:type owl:FunctionalProperty ;
@@ -429,7 +440,7 @@
                         rdfs:comment "Time location of Action performance end" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasConfirmationTimeStamp
+###  http://purl.org/ontology/swot#hasConfirmationTimeStamp
 :hasConfirmationTimeStamp rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf :hasTimeStamp ;
                           rdf:type owl:FunctionalProperty ;
@@ -438,7 +449,7 @@
                           rdfs:comment "Time location of Action performance beeing started" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasName
+###  http://purl.org/ontology/swot#hasName
 :hasName rdf:type owl:DatatypeProperty ,
                   owl:FunctionalProperty ;
          rdfs:domain [ rdf:type owl:Class ;
@@ -450,7 +461,7 @@
          rdfs:comment "Naming dataproperty" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasRequestTimeStamp
+###  http://purl.org/ontology/swot#hasRequestTimeStamp
 :hasRequestTimeStamp rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :hasTimeStamp ;
                      rdf:type owl:FunctionalProperty ;
@@ -459,7 +470,7 @@
                      rdfs:comment "Time location and identification of the Action request" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasStability
+###  http://purl.org/ontology/swot#hasStability
 :hasStability rdf:type owl:DatatypeProperty ,
                        owl:FunctionalProperty ;
               rdfs:domain :Property ;
@@ -467,14 +478,14 @@
               rdfs:comment "In milliseconds, mean time in which the Property value is usually stable" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasTimeStamp
+###  http://purl.org/ontology/swot#hasTimeStamp
 :hasTimeStamp rdf:type owl:DatatypeProperty ;
               rdfs:domain :Instance ;
               rdfs:range xsd:dateTimeStamp ;
               rdfs:comment "Generic timestamp association dataproperty" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasValue
+###  http://purl.org/ontology/swot#hasValue
 :hasValue rdf:type owl:DatatypeProperty ,
                    owl:FunctionalProperty ;
           rdfs:domain :Data ;
@@ -482,7 +493,7 @@
           rdfs:comment "Dataproperty for Data having Literal value." .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isWritable
+###  http://purl.org/ontology/swot#isWritable
 :isWritable rdf:type owl:DatatypeProperty ,
                      owl:FunctionalProperty ;
             rdfs:domain :Property ;
@@ -490,7 +501,7 @@
             rdfs:comment "Flag for Property data writability from outside" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#occurredAt
+###  http://purl.org/ontology/swot#occurredAt
 :occurredAt rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :hasTimeStamp ;
             rdf:type owl:FunctionalProperty ;
@@ -503,14 +514,14 @@
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action
+###  http://purl.org/ontology/swot#Action
 :Action rdf:type owl:Class ;
         rdfs:subClassOf :InteractionPattern ;
         rdfs:comment "Something that takes a finite time to perform and can be requested with or without input" ;
         rdfs:label "Action" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance
+###  http://purl.org/ontology/swot#ActionInstance
 :ActionInstance rdf:type owl:Class ;
                 rdfs:subClassOf :Instance ;
                 owl:disjointWith :EventInstance ;
@@ -518,80 +529,80 @@
                 rdfs:label "Action Instance" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data
+###  http://purl.org/ontology/swot#Data
 :Data rdf:type owl:Class ;
       rdfs:comment "Actual and current valid data as input, output, or Property value" ;
       rdfs:label "Data" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema
+###  http://purl.org/ontology/swot#DataSchema
 :DataSchema rdf:type owl:Class ;
             owl:disjointWith :FieldSchema ;
             rdfs:comment "Resource for data formatting" ;
             rdfs:label "DataSchema" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event
+###  http://purl.org/ontology/swot#Event
 :Event rdf:type owl:Class ;
        rdfs:subClassOf :InteractionPattern ;
        rdfs:comment "Asynchronous interaction" ;
        rdfs:label "Event" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance
+###  http://purl.org/ontology/swot#EventInstance
 :EventInstance rdf:type owl:Class ;
                rdfs:subClassOf :Instance ;
                rdfs:comment "An Event notification is thrown when an EventInstance is inserted in the Knowledge Base" ;
                rdfs:label "Event Instance" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#FieldSchema
+###  http://purl.org/ontology/swot#FieldSchema
 :FieldSchema rdf:type owl:Class ;
              rdfs:comment "General FieldSchema superclass, to be used for instance when there is a simple datatype" ;
              rdfs:label "FieldSchema" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Instance
+###  http://purl.org/ontology/swot#Instance
 :Instance rdf:type owl:Class ;
           rdfs:comment "Action-Event instance superclass" ;
           rdfs:label "Instance" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern
+###  http://purl.org/ontology/swot#InteractionPattern
 :InteractionPattern rdf:type owl:Class ;
                     rdfs:comment "Static Property-Action-Event superclass" ;
                     rdfs:label "Interaction Pattern" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#OntologyURI
+###  http://purl.org/ontology/swot#OntologyURI
 :OntologyURI rdf:type owl:Class ;
              rdfs:subClassOf :FieldSchema ;
              rdfs:comment "FieldSchemas that are pointers to Ontologies" ;
              rdfs:label "Ontology URI" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property
+###  http://purl.org/ontology/swot#Property
 :Property rdf:type owl:Class ;
           rdfs:subClassOf :InteractionPattern ;
           rdfs:comment "Neither Action, neither Event. It represent an internal status or pure information on the Semantic WebThing" ;
           rdfs:label "Property" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ResourceURI
+###  http://purl.org/ontology/swot#ResourceURI
 :ResourceURI rdf:type owl:Class ;
              rdfs:subClassOf :FieldSchema ;
              rdfs:comment "FieldSchemas that are pointers to web resources" ;
              rdfs:label "Resource URI" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing
+###  http://purl.org/ontology/swot#Thing
 :Thing rdf:type owl:Class ;
        owl:disjointWith :ThingDescription ;
        rdfs:comment "Abstraction for the Semantic WebThing" ;
        rdfs:label "Semantic WebThing" .
 
 
-###  http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription
+###  http://purl.org/ontology/swot#ThingDescription
 :ThingDescription rdf:type owl:Class ;
                   rdfs:comment "Resource representing the Thing Description of the Semantic WebThing. This resource should be a real resource, reachable from the Web and answer to a GET request through a JSON-LD." ;
                   rdfs:label "Thing Description" .
@@ -641,4 +652,4 @@
 ] .
 
 
-###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
+###  Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/

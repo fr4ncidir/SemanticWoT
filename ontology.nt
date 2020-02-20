@@ -1,10 +1,13 @@
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot> <http://www.w3.org/2002/07/owl#versionIRI> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot/0.10> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot> <http://purl.org/dc/elements/1.1/creator> "Francesco Antoniazzi" .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot> <http://purl.org/dc/elements/1.1/rights> <https://www.gnu.org/licenses/gpl.html> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot> <http://purl.org/dc/terms/created> "16 January 2019" .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot> <http://purl.org/dc/terms/title> "Semantic Web of Things Ontology" .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/fr4ncidir/SemanticWoT> .
+<http://purl.org/ontology/swot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/ontology/swot> <http://www.w3.org/2002/07/owl#versionIRI> <http://purl.org/ontology/swot/0.1> .
+<http://purl.org/ontology/swot> <http://purl.org/dc/elements/1.1/contributor> "Fabio Viola" .
+<http://purl.org/ontology/swot> <http://purl.org/dc/elements/1.1/creator> "Francesco Antoniazzi" .
+<http://purl.org/ontology/swot> <http://purl.org/dc/elements/1.1/description> "The Web of Things (WoT) has recently appeared as the latest evolution of the Internet of Things and, as the name suggests, requires that devices interoperate through the Internet using Web protocols and standards. Currently, only a few theoretical approaches have been presented by researchers and industry, to fight the fragmentation of the IoT world through the adoption of semantics. This further evolution is known as Semantic WoT and relies on a WoT implementation crafted on the technologies proposed by the Semantic Web stack. This article presents a working implementation of the WoT declined in its Semantic flavor through the adoption of a shared ontology for describing devices. In addition to that, the ontology includes patterns for dynamic interactions between devices, and therefore we define it as dynamic ontology. A practical example will give a proof of concept and overall evaluation, showing how the dynamic setup proposed can foster interoperability at information level allowing on the one hand smart discovery, enabling on the other hand orchestration and automatic interaction through the semantic information available."@en .
+<http://purl.org/ontology/swot> <http://purl.org/dc/elements/1.1/rights> <https://www.gnu.org/licenses/gpl.html> .
+<http://purl.org/ontology/swot> <http://purl.org/dc/terms/created> "16 January 2019" .
+<http://purl.org/ontology/swot> <http://purl.org/dc/terms/title> "Semantic Web of Things Ontology" .
+<http://purl.org/ontology/swot> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/fr4ncidir/SemanticWoT> .
+<http://purl.org/ontology/swot> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://ieeexplore.ieee.org/document/8826285" .
 # 
 # 
 # #################################################################
@@ -14,8 +17,14 @@
 # #################################################################
 # 
 # 
+# http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://purl.org/dc/elements/1.1/creator
 <http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/elements/1.1/rights
 <http://purl.org/dc/elements/1.1/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -35,391 +44,391 @@
 # #################################################################
 # 
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstanceOf
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstanceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstanceOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#instanceOf> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstanceOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasActionInstance> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstanceOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstanceOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstanceOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines which is the Action that originates this ActionInstance" .
+# http://purl.org/ontology/swot#ActionInstanceOf
+<http://purl.org/ontology/swot#ActionInstanceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#ActionInstanceOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/swot#instanceOf> .
+<http://purl.org/ontology/swot#ActionInstanceOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/swot#hasActionInstance> .
+<http://purl.org/ontology/swot#ActionInstanceOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#ActionInstance> .
+<http://purl.org/ontology/swot#ActionInstanceOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#Action> .
+<http://purl.org/ontology/swot#ActionInstanceOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines which is the Action that originates this ActionInstance" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstanceOf
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstanceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstanceOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#instanceOf> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstanceOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEventInstance> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstanceOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstanceOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstanceOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines which is the Event that originates this EventInstance" .
+# http://purl.org/ontology/swot#EventInstanceOf
+<http://purl.org/ontology/swot#EventInstanceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#EventInstanceOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/swot#instanceOf> .
+<http://purl.org/ontology/swot#EventInstanceOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/swot#hasEventInstance> .
+<http://purl.org/ontology/swot#EventInstanceOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#EventInstance> .
+<http://purl.org/ontology/swot#EventInstanceOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#Event> .
+<http://purl.org/ontology/swot#EventInstanceOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines which is the Event that originates this EventInstance" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#forProperty
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#forProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#forProperty> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isTargetPropertyFor> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#forProperty> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+# http://purl.org/ontology/swot#forProperty
+<http://purl.org/ontology/swot#forProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#forProperty> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/swot#isTargetPropertyFor> .
+<http://purl.org/ontology/swot#forProperty> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#Action> .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#Event> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#forProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#forProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "This objectproperty identifies the Property target of actions and events." .
+<http://purl.org/ontology/swot#forProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#Property> .
+<http://purl.org/ontology/swot#forProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "This objectproperty identifies the Property target of actions and events." .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasAction
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasAction> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInteractionPattern> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasAction> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isActionFor> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasAction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasAction> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Object property connecting the thing description to the interaction pattern Action" .
+# http://purl.org/ontology/swot#hasAction
+<http://purl.org/ontology/swot#hasAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#hasAction> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/swot#hasInteractionPattern> .
+<http://purl.org/ontology/swot#hasAction> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/swot#isActionFor> .
+<http://purl.org/ontology/swot#hasAction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#ThingDescription> .
+<http://purl.org/ontology/swot#hasAction> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#Action> .
+<http://purl.org/ontology/swot#hasAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Object property connecting the thing description to the interaction pattern Action" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasActionInstance
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasActionInstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasActionInstance> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInstance> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasActionInstance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasActionInstance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasActionInstance> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEventInstance> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasActionInstance> <http://www.w3.org/2000/01/rdf-schema#comment> "Objectproperty connecting the action to its instance" .
+# http://purl.org/ontology/swot#hasActionInstance
+<http://purl.org/ontology/swot#hasActionInstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#hasActionInstance> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/swot#hasInstance> .
+<http://purl.org/ontology/swot#hasActionInstance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#Action> .
+<http://purl.org/ontology/swot#hasActionInstance> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#ActionInstance> .
+<http://purl.org/ontology/swot#hasActionInstance> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://purl.org/ontology/swot#hasEventInstance> .
+<http://purl.org/ontology/swot#hasActionInstance> <http://www.w3.org/2000/01/rdf-schema#comment> "Objectproperty connecting the action to its instance" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasData
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasData> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataFor> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasData> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Instance> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasData> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasData> <http://www.w3.org/2000/01/rdf-schema#comment> "Generic objectproperty for connecting data to instances or properties." .
+# http://purl.org/ontology/swot#hasData
+<http://purl.org/ontology/swot#hasData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#hasData> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/swot#isDataFor> .
+<http://purl.org/ontology/swot#hasData> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#Instance> .
+<http://purl.org/ontology/swot#hasData> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#Data> .
+<http://purl.org/ontology/swot#hasData> <http://www.w3.org/2000/01/rdf-schema#comment> "Generic objectproperty for connecting data to instances or properties." .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasDataSchema
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasDataSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasDataSchema> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataSchemaOf> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasDataSchema> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
+# http://purl.org/ontology/swot#hasDataSchema
+<http://purl.org/ontology/swot#hasDataSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#hasDataSchema> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/swot#isDataSchemaOf> .
+<http://purl.org/ontology/swot#hasDataSchema> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#Data> .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#InteractionPattern> .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasDataSchema> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasDataSchema> <http://www.w3.org/2000/01/rdf-schema#comment> "Generic property connecting data or interaction patterns to their dataschema" .
+<http://purl.org/ontology/swot#hasDataSchema> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#DataSchema> .
+<http://purl.org/ontology/swot#hasDataSchema> <http://www.w3.org/2000/01/rdf-schema#comment> "Generic property connecting data or interaction patterns to their dataschema" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEvent
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEvent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInteractionPattern> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEvent> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isEventFor> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEvent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Object property connecting the thing description to the interaction pattern Event" .
+# http://purl.org/ontology/swot#hasEvent
+<http://purl.org/ontology/swot#hasEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#hasEvent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/swot#hasInteractionPattern> .
+<http://purl.org/ontology/swot#hasEvent> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/swot#isEventFor> .
+<http://purl.org/ontology/swot#hasEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#ThingDescription> .
+<http://purl.org/ontology/swot#hasEvent> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#Event> .
+<http://purl.org/ontology/swot#hasEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Object property connecting the thing description to the interaction pattern Event" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEventInstance
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEventInstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEventInstance> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInstance> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEventInstance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEventInstance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEventInstance> <http://www.w3.org/2000/01/rdf-schema#comment> "Objectproperty connecting the event to its instance" .
+# http://purl.org/ontology/swot#hasEventInstance
+<http://purl.org/ontology/swot#hasEventInstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#hasEventInstance> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/swot#hasInstance> .
+<http://purl.org/ontology/swot#hasEventInstance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#Event> .
+<http://purl.org/ontology/swot#hasEventInstance> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#EventInstance> .
+<http://purl.org/ontology/swot#hasEventInstance> <http://www.w3.org/2000/01/rdf-schema#comment> "Objectproperty connecting the event to its instance" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasFieldSchema
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasFieldSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasFieldSchema> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isFieldSchemaFor> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasFieldSchema> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasFieldSchema> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#FieldSchema> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasFieldSchema> <http://www.w3.org/2000/01/rdf-schema#comment> "Object property connecting the dataschema to (some) fieldschemas" .
+# http://purl.org/ontology/swot#hasFieldSchema
+<http://purl.org/ontology/swot#hasFieldSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#hasFieldSchema> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/swot#isFieldSchemaFor> .
+<http://purl.org/ontology/swot#hasFieldSchema> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#DataSchema> .
+<http://purl.org/ontology/swot#hasFieldSchema> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#FieldSchema> .
+<http://purl.org/ontology/swot#hasFieldSchema> <http://www.w3.org/2000/01/rdf-schema#comment> "Object property connecting the dataschema to (some) fieldschemas" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputData
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputData> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasData> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputData> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInputDataFor> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputData> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputData> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputData> <http://www.w3.org/2000/01/rdf-schema#comment> "Objectproperty connecting an input to an action instance" .
+# http://purl.org/ontology/swot#hasInputData
+<http://purl.org/ontology/swot#hasInputData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#hasInputData> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/swot#hasData> .
+<http://purl.org/ontology/swot#hasInputData> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/swot#isInputDataFor> .
+<http://purl.org/ontology/swot#hasInputData> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#ActionInstance> .
+<http://purl.org/ontology/swot#hasInputData> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#Data> .
+<http://purl.org/ontology/swot#hasInputData> <http://www.w3.org/2000/01/rdf-schema#comment> "Objectproperty connecting an input to an action instance" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputDataSchema
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputDataSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputDataSchema> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasDataSchema> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputDataSchema> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInputDataSchemaOf> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputDataSchema> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputDataSchema> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputDataSchema> <http://www.w3.org/2000/01/rdf-schema#comment> "Objectproperty connecting the dataschema expected as input of an action" .
+# http://purl.org/ontology/swot#hasInputDataSchema
+<http://purl.org/ontology/swot#hasInputDataSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#hasInputDataSchema> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/swot#hasDataSchema> .
+<http://purl.org/ontology/swot#hasInputDataSchema> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/swot#isInputDataSchemaOf> .
+<http://purl.org/ontology/swot#hasInputDataSchema> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#Action> .
+<http://purl.org/ontology/swot#hasInputDataSchema> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#DataSchema> .
+<http://purl.org/ontology/swot#hasInputDataSchema> <http://www.w3.org/2000/01/rdf-schema#comment> "Objectproperty connecting the dataschema expected as input of an action" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInstance
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInstance> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#instanceOf> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInstance> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
+# http://purl.org/ontology/swot#hasInstance
+<http://purl.org/ontology/swot#hasInstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#hasInstance> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/swot#instanceOf> .
+<http://purl.org/ontology/swot#hasInstance> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#Action> .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#Event> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInstance> <http://www.w3.org/2000/01/rdf-schema#range> _:genid10 .
+<http://purl.org/ontology/swot#hasInstance> <http://www.w3.org/2000/01/rdf-schema#range> _:genid10 .
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid12 .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#ActionInstance> .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#EventInstance> .
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInstance> <http://www.w3.org/2000/01/rdf-schema#comment> "Generic objectproperty connecting the interaction pattern to its instance" .
+<http://purl.org/ontology/swot#hasInstance> <http://www.w3.org/2000/01/rdf-schema#comment> "Generic objectproperty connecting the interaction pattern to its instance" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInteractionPattern
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInteractionPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInteractionPattern> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInteractionPatternFor> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInteractionPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInteractionPattern> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInteractionPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Generic objectproperty connecting the thing description to all the interaction patterns belonging to the thing" .
+# http://purl.org/ontology/swot#hasInteractionPattern
+<http://purl.org/ontology/swot#hasInteractionPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#hasInteractionPattern> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/swot#isInteractionPatternFor> .
+<http://purl.org/ontology/swot#hasInteractionPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#ThingDescription> .
+<http://purl.org/ontology/swot#hasInteractionPattern> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#InteractionPattern> .
+<http://purl.org/ontology/swot#hasInteractionPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Generic objectproperty connecting the thing description to all the interaction patterns belonging to the thing" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputData
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputData> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasData> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputData> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isOutputDataFor> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputData> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid13 .
+# http://purl.org/ontology/swot#hasOutputData
+<http://purl.org/ontology/swot#hasOutputData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#hasOutputData> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/swot#hasData> .
+<http://purl.org/ontology/swot#hasOutputData> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/swot#isOutputDataFor> .
+<http://purl.org/ontology/swot#hasOutputData> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid13 .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid13 <http://www.w3.org/2002/07/owl#unionOf> _:genid15 .
 _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#ActionInstance> .
 _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#EventInstance> .
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputData> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputData> <http://www.w3.org/2000/01/rdf-schema#comment> "Objectproperty connecting an output to an action or event instance" .
+<http://purl.org/ontology/swot#hasOutputData> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#Data> .
+<http://purl.org/ontology/swot#hasOutputData> <http://www.w3.org/2000/01/rdf-schema#comment> "Objectproperty connecting an output to an action or event instance" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputDataSchema
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputDataSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputDataSchema> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasDataSchema> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputDataSchema> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isOutputDataSchemaOf> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputDataSchema> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid16 .
+# http://purl.org/ontology/swot#hasOutputDataSchema
+<http://purl.org/ontology/swot#hasOutputDataSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#hasOutputDataSchema> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/swot#hasDataSchema> .
+<http://purl.org/ontology/swot#hasOutputDataSchema> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/swot#isOutputDataSchemaOf> .
+<http://purl.org/ontology/swot#hasOutputDataSchema> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid16 .
 _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid16 <http://www.w3.org/2002/07/owl#unionOf> _:genid18 .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#Action> .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
 _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#Event> .
 _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputDataSchema> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputDataSchema> <http://www.w3.org/2000/01/rdf-schema#comment> "Objectproperty connecting the dataschema expected as output of an action or an event" .
+<http://purl.org/ontology/swot#hasOutputDataSchema> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#DataSchema> .
+<http://purl.org/ontology/swot#hasOutputDataSchema> <http://www.w3.org/2000/01/rdf-schema#comment> "Objectproperty connecting the dataschema expected as output of an action or an event" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasProperty
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInteractionPattern> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasProperty> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyFor> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Object property connecting the thing description to the interaction pattern Property" .
+# http://purl.org/ontology/swot#hasProperty
+<http://purl.org/ontology/swot#hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#hasProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/swot#hasInteractionPattern> .
+<http://purl.org/ontology/swot#hasProperty> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/swot#isPropertyFor> .
+<http://purl.org/ontology/swot#hasProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#ThingDescription> .
+<http://purl.org/ontology/swot#hasProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#Property> .
+<http://purl.org/ontology/swot#hasProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Object property connecting the thing description to the interaction pattern Property" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyData
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyData> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasData> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyData> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyDataFor> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyData> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyData> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyData> <http://www.w3.org/2000/01/rdf-schema#comment> "Objectproperty connecting property data to the property itself" .
+# http://purl.org/ontology/swot#hasPropertyData
+<http://purl.org/ontology/swot#hasPropertyData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#hasPropertyData> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/swot#hasData> .
+<http://purl.org/ontology/swot#hasPropertyData> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/swot#isPropertyDataFor> .
+<http://purl.org/ontology/swot#hasPropertyData> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#Property> .
+<http://purl.org/ontology/swot#hasPropertyData> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#Data> .
+<http://purl.org/ontology/swot#hasPropertyData> <http://www.w3.org/2000/01/rdf-schema#comment> "Objectproperty connecting property data to the property itself" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyDataSchema
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyDataSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyDataSchema> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasDataSchema> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyDataSchema> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyDataSchemaOf> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyDataSchema> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyDataSchema> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyDataSchema> <http://www.w3.org/2000/01/rdf-schema#comment> "Objectproperty connecting the dataschema related to a property data" .
+# http://purl.org/ontology/swot#hasPropertyDataSchema
+<http://purl.org/ontology/swot#hasPropertyDataSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#hasPropertyDataSchema> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/swot#hasDataSchema> .
+<http://purl.org/ontology/swot#hasPropertyDataSchema> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/swot#isPropertyDataSchemaOf> .
+<http://purl.org/ontology/swot#hasPropertyDataSchema> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#Property> .
+<http://purl.org/ontology/swot#hasPropertyDataSchema> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#DataSchema> .
+<http://purl.org/ontology/swot#hasPropertyDataSchema> <http://www.w3.org/2000/01/rdf-schema#comment> "Objectproperty connecting the dataschema related to a property data" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasSubThing
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasSubThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasSubThing> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasSuperThing> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasSubThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasSubThing> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasSubThing> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasSubThing> <http://www.w3.org/2000/01/rdf-schema#comment> "Semantic WebThings proxying each other" .
+# http://purl.org/ontology/swot#hasSubThing
+<http://purl.org/ontology/swot#hasSubThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#hasSubThing> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/swot#hasSuperThing> .
+<http://purl.org/ontology/swot#hasSubThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://purl.org/ontology/swot#hasSubThing> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#Thing> .
+<http://purl.org/ontology/swot#hasSubThing> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#Thing> .
+<http://purl.org/ontology/swot#hasSubThing> <http://www.w3.org/2000/01/rdf-schema#comment> "Semantic WebThings proxying each other" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasSuperThing
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasSuperThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasSuperThing> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasSuperThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasSuperThing> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasSuperThing> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasSuperThing> <http://www.w3.org/2000/01/rdf-schema#comment> "Pointer to the superThing" .
+# http://purl.org/ontology/swot#hasSuperThing
+<http://purl.org/ontology/swot#hasSuperThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#hasSuperThing> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://purl.org/ontology/swot#hasSuperThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://purl.org/ontology/swot#hasSuperThing> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#Thing> .
+<http://purl.org/ontology/swot#hasSuperThing> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#Thing> .
+<http://purl.org/ontology/swot#hasSuperThing> <http://www.w3.org/2000/01/rdf-schema#comment> "Pointer to the superThing" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasThingDescription
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasThingDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasThingDescription> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isThingDescriptionOf> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasThingDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasThingDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasThingDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasThingDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Object property connecting a thing with its thing description" .
+# http://purl.org/ontology/swot#hasThingDescription
+<http://purl.org/ontology/swot#hasThingDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#hasThingDescription> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/swot#isThingDescriptionOf> .
+<http://purl.org/ontology/swot#hasThingDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/ontology/swot#hasThingDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#Thing> .
+<http://purl.org/ontology/swot#hasThingDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#ThingDescription> .
+<http://purl.org/ontology/swot#hasThingDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Object property connecting a thing with its thing description" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#instanceOf
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#instanceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#instanceOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid19 .
+# http://purl.org/ontology/swot#instanceOf
+<http://purl.org/ontology/swot#instanceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#instanceOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid19 .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid19 <http://www.w3.org/2002/07/owl#unionOf> _:genid21 .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#ActionInstance> .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#EventInstance> .
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#instanceOf> <http://www.w3.org/2000/01/rdf-schema#range> _:genid22 .
+<http://purl.org/ontology/swot#instanceOf> <http://www.w3.org/2000/01/rdf-schema#range> _:genid22 .
 _:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid22 <http://www.w3.org/2002/07/owl#unionOf> _:genid24 .
 _:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#Action> .
 _:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#Event> .
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#instanceOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines which is the Interaction Pattern that originates this Instance" .
+<http://purl.org/ontology/swot#instanceOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines which is the Interaction Pattern that originates this Instance" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isActionFor
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isActionFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isActionFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInteractionPatternFor> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isActionFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isActionFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isActionFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the Thing owner of the Action" .
+# http://purl.org/ontology/swot#isActionFor
+<http://purl.org/ontology/swot#isActionFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#isActionFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/swot#isInteractionPatternFor> .
+<http://purl.org/ontology/swot#isActionFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#Action> .
+<http://purl.org/ontology/swot#isActionFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#ThingDescription> .
+<http://purl.org/ontology/swot#isActionFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the Thing owner of the Action" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataFor
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Instance> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects Data to the relevant Instance of Interaction Pattern" .
+# http://purl.org/ontology/swot#isDataFor
+<http://purl.org/ontology/swot#isDataFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#isDataFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#Data> .
+<http://purl.org/ontology/swot#isDataFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#Instance> .
+<http://purl.org/ontology/swot#isDataFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects Data to the relevant Instance of Interaction Pattern" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataSchemaOf
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataSchemaOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#range> _:genid25 .
+# http://purl.org/ontology/swot#isDataSchemaOf
+<http://purl.org/ontology/swot#isDataSchemaOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#isDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#DataSchema> .
+<http://purl.org/ontology/swot#isDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#range> _:genid25 .
 _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid25 <http://www.w3.org/2002/07/owl#unionOf> _:genid27 .
 _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#Data> .
 _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
 _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#InteractionPattern> .
 _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects the DataSchema to the Interaction Pattern or Data resource, in order to refer how it has to be interpreted" .
+<http://purl.org/ontology/swot#isDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects the DataSchema to the Interaction Pattern or Data resource, in order to refer how it has to be interpreted" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isEventFor
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isEventFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isEventFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInteractionPatternFor> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isEventFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isEventFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isEventFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the Thing owner of the Event" .
+# http://purl.org/ontology/swot#isEventFor
+<http://purl.org/ontology/swot#isEventFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#isEventFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/swot#isInteractionPatternFor> .
+<http://purl.org/ontology/swot#isEventFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#Event> .
+<http://purl.org/ontology/swot#isEventFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#ThingDescription> .
+<http://purl.org/ontology/swot#isEventFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the Thing owner of the Event" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isFieldSchemaFor
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isFieldSchemaFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isFieldSchemaFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#FieldSchema> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isFieldSchemaFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isFieldSchemaFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Determines to which DataSchemas the FieldSchema belongs to" .
+# http://purl.org/ontology/swot#isFieldSchemaFor
+<http://purl.org/ontology/swot#isFieldSchemaFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#isFieldSchemaFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#FieldSchema> .
+<http://purl.org/ontology/swot#isFieldSchemaFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#DataSchema> .
+<http://purl.org/ontology/swot#isFieldSchemaFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Determines to which DataSchemas the FieldSchema belongs to" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInputDataFor
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInputDataFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInputDataFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataFor> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInputDataFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInputDataFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInputDataFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects Input Data to the relevant Instance of Interaction Pattern" .
+# http://purl.org/ontology/swot#isInputDataFor
+<http://purl.org/ontology/swot#isInputDataFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#isInputDataFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/swot#isDataFor> .
+<http://purl.org/ontology/swot#isInputDataFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#Data> .
+<http://purl.org/ontology/swot#isInputDataFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#ActionInstance> .
+<http://purl.org/ontology/swot#isInputDataFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects Input Data to the relevant Instance of Interaction Pattern" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInputDataSchemaOf
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInputDataSchemaOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInputDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataSchemaOf> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInputDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInputDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInputDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects the DataSchema to the Action Input Data resource, in order to refer how it has to be interpreted" .
+# http://purl.org/ontology/swot#isInputDataSchemaOf
+<http://purl.org/ontology/swot#isInputDataSchemaOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#isInputDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/swot#isDataSchemaOf> .
+<http://purl.org/ontology/swot#isInputDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#DataSchema> .
+<http://purl.org/ontology/swot#isInputDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#Action> .
+<http://purl.org/ontology/swot#isInputDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects the DataSchema to the Action Input Data resource, in order to refer how it has to be interpreted" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInteractionPatternFor
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInteractionPatternFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInteractionPatternFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInteractionPatternFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInteractionPatternFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the Thing owner of the Interaction Pattern" .
+# http://purl.org/ontology/swot#isInteractionPatternFor
+<http://purl.org/ontology/swot#isInteractionPatternFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#isInteractionPatternFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#InteractionPattern> .
+<http://purl.org/ontology/swot#isInteractionPatternFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#ThingDescription> .
+<http://purl.org/ontology/swot#isInteractionPatternFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the Thing owner of the Interaction Pattern" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isOutputDataFor
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isOutputDataFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isOutputDataFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataFor> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isOutputDataFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isOutputDataFor> <http://www.w3.org/2000/01/rdf-schema#range> _:genid28 .
+# http://purl.org/ontology/swot#isOutputDataFor
+<http://purl.org/ontology/swot#isOutputDataFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#isOutputDataFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/swot#isDataFor> .
+<http://purl.org/ontology/swot#isOutputDataFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#Data> .
+<http://purl.org/ontology/swot#isOutputDataFor> <http://www.w3.org/2000/01/rdf-schema#range> _:genid28 .
 _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid28 <http://www.w3.org/2002/07/owl#unionOf> _:genid30 .
 _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#ActionInstance> .
 _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
 _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#EventInstance> .
 _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isOutputDataFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects Output Data to the relevant Instance of Interaction Pattern" .
+<http://purl.org/ontology/swot#isOutputDataFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects Output Data to the relevant Instance of Interaction Pattern" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isOutputDataSchemaOf
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isOutputDataSchemaOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isOutputDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataSchemaOf> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isOutputDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isOutputDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#range> _:genid31 .
+# http://purl.org/ontology/swot#isOutputDataSchemaOf
+<http://purl.org/ontology/swot#isOutputDataSchemaOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#isOutputDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/swot#isDataSchemaOf> .
+<http://purl.org/ontology/swot#isOutputDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#DataSchema> .
+<http://purl.org/ontology/swot#isOutputDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#range> _:genid31 .
 _:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid31 <http://www.w3.org/2002/07/owl#unionOf> _:genid33 .
 _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#Action> .
 _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
 _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#Event> .
 _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isOutputDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects the DataSchema to the Action or Event Output Data resource, in order to refer how it has to be interpreted" .
+<http://purl.org/ontology/swot#isOutputDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects the DataSchema to the Action or Event Output Data resource, in order to refer how it has to be interpreted" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyDataFor
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyDataFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyDataFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataFor> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyDataFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyDataFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyDataFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects Property Data to the relevant Instance of Interaction Pattern" .
+# http://purl.org/ontology/swot#isPropertyDataFor
+<http://purl.org/ontology/swot#isPropertyDataFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#isPropertyDataFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/swot#isDataFor> .
+<http://purl.org/ontology/swot#isPropertyDataFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#Data> .
+<http://purl.org/ontology/swot#isPropertyDataFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#Property> .
+<http://purl.org/ontology/swot#isPropertyDataFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects Property Data to the relevant Instance of Interaction Pattern" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyDataSchemaOf
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyDataSchemaOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isDataSchemaOf> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects the Property DataSchema to the Property Data resource, in order to refer how it has to be interpreted" .
+# http://purl.org/ontology/swot#isPropertyDataSchemaOf
+<http://purl.org/ontology/swot#isPropertyDataSchemaOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#isPropertyDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/swot#isDataSchemaOf> .
+<http://purl.org/ontology/swot#isPropertyDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#DataSchema> .
+<http://purl.org/ontology/swot#isPropertyDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#Property> .
+<http://purl.org/ontology/swot#isPropertyDataSchemaOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects the Property DataSchema to the Property Data resource, in order to refer how it has to be interpreted" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyFor
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isInteractionPatternFor> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the Thing owner of the Property" .
+# http://purl.org/ontology/swot#isPropertyFor
+<http://purl.org/ontology/swot#isPropertyFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#isPropertyFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/swot#isInteractionPatternFor> .
+<http://purl.org/ontology/swot#isPropertyFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#Property> .
+<http://purl.org/ontology/swot#isPropertyFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#ThingDescription> .
+<http://purl.org/ontology/swot#isPropertyFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the Thing owner of the Property" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isRequestAuthor
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isRequestAuthor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isRequestAuthor> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#requestedBy> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isRequestAuthor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isRequestAuthor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isRequestAuthor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isRequestAuthor> <http://www.w3.org/2000/01/rdf-schema#comment> "The Entity requesting an Action" .
+# http://purl.org/ontology/swot#isRequestAuthor
+<http://purl.org/ontology/swot#isRequestAuthor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#isRequestAuthor> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/swot#requestedBy> .
+<http://purl.org/ontology/swot#isRequestAuthor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/ontology/swot#isRequestAuthor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#Thing> .
+<http://purl.org/ontology/swot#isRequestAuthor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#ActionInstance> .
+<http://purl.org/ontology/swot#isRequestAuthor> <http://www.w3.org/2000/01/rdf-schema#comment> "The Entity requesting an Action" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isTargetPropertyFor
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isTargetPropertyFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isTargetPropertyFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isTargetPropertyFor> <http://www.w3.org/2000/01/rdf-schema#range> _:genid34 .
+# http://purl.org/ontology/swot#isTargetPropertyFor
+<http://purl.org/ontology/swot#isTargetPropertyFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#isTargetPropertyFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#Property> .
+<http://purl.org/ontology/swot#isTargetPropertyFor> <http://www.w3.org/2000/01/rdf-schema#range> _:genid34 .
 _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid34 <http://www.w3.org/2002/07/owl#unionOf> _:genid36 .
 _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#Action> .
 _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
 _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#Event> .
 _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isTargetPropertyFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of forProperty, this object property defines that the Domain is target on which an Action or an Event are evolving" .
+<http://purl.org/ontology/swot#isTargetPropertyFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of forProperty, this object property defines that the Domain is target on which an Action or an Event are evolving" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isThingDescriptionOf
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isThingDescriptionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isThingDescriptionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isThingDescriptionOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isThingDescriptionOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isThingDescriptionOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Pointer from a Thing Description to its Thing" .
+# http://purl.org/ontology/swot#isThingDescriptionOf
+<http://purl.org/ontology/swot#isThingDescriptionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#isThingDescriptionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/ontology/swot#isThingDescriptionOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#ThingDescription> .
+<http://purl.org/ontology/swot#isThingDescriptionOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#Thing> .
+<http://purl.org/ontology/swot#isThingDescriptionOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Pointer from a Thing Description to its Thing" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#requestedBy
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#requestedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#requestedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#requestedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#requestedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#requestedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Action request authorship" .
+# http://purl.org/ontology/swot#requestedBy
+<http://purl.org/ontology/swot#requestedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/swot#requestedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/ontology/swot#requestedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#ActionInstance> .
+<http://purl.org/ontology/swot#requestedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/swot#Thing> .
+<http://purl.org/ontology/swot#requestedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Action request authorship" .
 # 
 # 
 # 
@@ -430,79 +439,79 @@ _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # #################################################################
 # 
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasCompletionTimeStamp
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasCompletionTimeStamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasCompletionTimeStamp> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasTimeStamp> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasCompletionTimeStamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasCompletionTimeStamp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasCompletionTimeStamp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasCompletionTimeStamp> <http://www.w3.org/2000/01/rdf-schema#comment> "Time location of Action performance end" .
+# http://purl.org/ontology/swot#hasCompletionTimeStamp
+<http://purl.org/ontology/swot#hasCompletionTimeStamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/ontology/swot#hasCompletionTimeStamp> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/swot#hasTimeStamp> .
+<http://purl.org/ontology/swot#hasCompletionTimeStamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/ontology/swot#hasCompletionTimeStamp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#ActionInstance> .
+<http://purl.org/ontology/swot#hasCompletionTimeStamp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://purl.org/ontology/swot#hasCompletionTimeStamp> <http://www.w3.org/2000/01/rdf-schema#comment> "Time location of Action performance end" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasConfirmationTimeStamp
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasConfirmationTimeStamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasConfirmationTimeStamp> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasTimeStamp> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasConfirmationTimeStamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasConfirmationTimeStamp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasConfirmationTimeStamp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasConfirmationTimeStamp> <http://www.w3.org/2000/01/rdf-schema#comment> "Time location of Action performance beeing started" .
+# http://purl.org/ontology/swot#hasConfirmationTimeStamp
+<http://purl.org/ontology/swot#hasConfirmationTimeStamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/ontology/swot#hasConfirmationTimeStamp> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/swot#hasTimeStamp> .
+<http://purl.org/ontology/swot#hasConfirmationTimeStamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/ontology/swot#hasConfirmationTimeStamp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#ActionInstance> .
+<http://purl.org/ontology/swot#hasConfirmationTimeStamp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://purl.org/ontology/swot#hasConfirmationTimeStamp> <http://www.w3.org/2000/01/rdf-schema#comment> "Time location of Action performance beeing started" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasName
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid37 .
+# http://purl.org/ontology/swot#hasName
+<http://purl.org/ontology/swot#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/ontology/swot#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/ontology/swot#hasName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid37 .
 _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid37 <http://www.w3.org/2002/07/owl#unionOf> _:genid39 .
 _:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#InteractionPattern> .
 _:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid38 .
 _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#Thing> .
 _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#Name> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasName> <http://www.w3.org/2000/01/rdf-schema#comment> "Naming dataproperty" .
+<http://purl.org/ontology/swot#hasName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#Name> .
+<http://purl.org/ontology/swot#hasName> <http://www.w3.org/2000/01/rdf-schema#comment> "Naming dataproperty" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasRequestTimeStamp
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasRequestTimeStamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasRequestTimeStamp> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasTimeStamp> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasRequestTimeStamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasRequestTimeStamp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasRequestTimeStamp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasRequestTimeStamp> <http://www.w3.org/2000/01/rdf-schema#comment> "Time location and identification of the Action request" .
+# http://purl.org/ontology/swot#hasRequestTimeStamp
+<http://purl.org/ontology/swot#hasRequestTimeStamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/ontology/swot#hasRequestTimeStamp> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/swot#hasTimeStamp> .
+<http://purl.org/ontology/swot#hasRequestTimeStamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/ontology/swot#hasRequestTimeStamp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#ActionInstance> .
+<http://purl.org/ontology/swot#hasRequestTimeStamp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://purl.org/ontology/swot#hasRequestTimeStamp> <http://www.w3.org/2000/01/rdf-schema#comment> "Time location and identification of the Action request" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasStability
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasStability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasStability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasStability> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasStability> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#unsignedLong> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasStability> <http://www.w3.org/2000/01/rdf-schema#comment> "In milliseconds, mean time in which the Property value is usually stable" .
+# http://purl.org/ontology/swot#hasStability
+<http://purl.org/ontology/swot#hasStability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/ontology/swot#hasStability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/ontology/swot#hasStability> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#Property> .
+<http://purl.org/ontology/swot#hasStability> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#unsignedLong> .
+<http://purl.org/ontology/swot#hasStability> <http://www.w3.org/2000/01/rdf-schema#comment> "In milliseconds, mean time in which the Property value is usually stable" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasTimeStamp
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasTimeStamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasTimeStamp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Instance> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasTimeStamp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasTimeStamp> <http://www.w3.org/2000/01/rdf-schema#comment> "Generic timestamp association dataproperty" .
+# http://purl.org/ontology/swot#hasTimeStamp
+<http://purl.org/ontology/swot#hasTimeStamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/ontology/swot#hasTimeStamp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#Instance> .
+<http://purl.org/ontology/swot#hasTimeStamp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://purl.org/ontology/swot#hasTimeStamp> <http://www.w3.org/2000/01/rdf-schema#comment> "Generic timestamp association dataproperty" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasValue
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Dataproperty for Data having Literal value." .
+# http://purl.org/ontology/swot#hasValue
+<http://purl.org/ontology/swot#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/ontology/swot#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/ontology/swot#hasValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#Data> .
+<http://purl.org/ontology/swot#hasValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/ontology/swot#hasValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Dataproperty for Data having Literal value." .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isWritable
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isWritable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isWritable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isWritable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isWritable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isWritable> <http://www.w3.org/2000/01/rdf-schema#comment> "Flag for Property data writability from outside" .
+# http://purl.org/ontology/swot#isWritable
+<http://purl.org/ontology/swot#isWritable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/ontology/swot#isWritable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/ontology/swot#isWritable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#Property> .
+<http://purl.org/ontology/swot#isWritable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://purl.org/ontology/swot#isWritable> <http://www.w3.org/2000/01/rdf-schema#comment> "Flag for Property data writability from outside" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#occurredAt
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#occurredAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#occurredAt> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasTimeStamp> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#occurredAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#occurredAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#occurredAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#occurredAt> <http://www.w3.org/2000/01/rdf-schema#comment> "Used for Event notification time location." .
+# http://purl.org/ontology/swot#occurredAt
+<http://purl.org/ontology/swot#occurredAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/ontology/swot#occurredAt> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/swot#hasTimeStamp> .
+<http://purl.org/ontology/swot#occurredAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/ontology/swot#occurredAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/swot#EventInstance> .
+<http://purl.org/ontology/swot#occurredAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://purl.org/ontology/swot#occurredAt> <http://www.w3.org/2000/01/rdf-schema#comment> "Used for Event notification time location." .
 # 
 # 
 # 
@@ -513,85 +522,85 @@ _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # #################################################################
 # 
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action> <http://www.w3.org/2000/01/rdf-schema#comment> "Something that takes a finite time to perform and can be requested with or without input" .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action> <http://www.w3.org/2000/01/rdf-schema#label> "Action" .
+# http://purl.org/ontology/swot#Action
+<http://purl.org/ontology/swot#Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/swot#Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/swot#InteractionPattern> .
+<http://purl.org/ontology/swot#Action> <http://www.w3.org/2000/01/rdf-schema#comment> "Something that takes a finite time to perform and can be requested with or without input" .
+<http://purl.org/ontology/swot#Action> <http://www.w3.org/2000/01/rdf-schema#label> "Action" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Instance> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance> <http://www.w3.org/2000/01/rdf-schema#comment> "Adding an ActionInstance means requesting the Action to perform" .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ActionInstance> <http://www.w3.org/2000/01/rdf-schema#label> "Action Instance" .
+# http://purl.org/ontology/swot#ActionInstance
+<http://purl.org/ontology/swot#ActionInstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/swot#ActionInstance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/swot#Instance> .
+<http://purl.org/ontology/swot#ActionInstance> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/ontology/swot#EventInstance> .
+<http://purl.org/ontology/swot#ActionInstance> <http://www.w3.org/2000/01/rdf-schema#comment> "Adding an ActionInstance means requesting the Action to perform" .
+<http://purl.org/ontology/swot#ActionInstance> <http://www.w3.org/2000/01/rdf-schema#label> "Action Instance" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data> <http://www.w3.org/2000/01/rdf-schema#comment> "Actual and current valid data as input, output, or Property value" .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Data> <http://www.w3.org/2000/01/rdf-schema#label> "Data" .
+# http://purl.org/ontology/swot#Data
+<http://purl.org/ontology/swot#Data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/swot#Data> <http://www.w3.org/2000/01/rdf-schema#comment> "Actual and current valid data as input, output, or Property value" .
+<http://purl.org/ontology/swot#Data> <http://www.w3.org/2000/01/rdf-schema#label> "Data" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#FieldSchema> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema> <http://www.w3.org/2000/01/rdf-schema#comment> "Resource for data formatting" .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#DataSchema> <http://www.w3.org/2000/01/rdf-schema#label> "DataSchema" .
+# http://purl.org/ontology/swot#DataSchema
+<http://purl.org/ontology/swot#DataSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/swot#DataSchema> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/ontology/swot#FieldSchema> .
+<http://purl.org/ontology/swot#DataSchema> <http://www.w3.org/2000/01/rdf-schema#comment> "Resource for data formatting" .
+<http://purl.org/ontology/swot#DataSchema> <http://www.w3.org/2000/01/rdf-schema#label> "DataSchema" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "Asynchronous interaction" .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event" .
+# http://purl.org/ontology/swot#Event
+<http://purl.org/ontology/swot#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/swot#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/swot#InteractionPattern> .
+<http://purl.org/ontology/swot#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "Asynchronous interaction" .
+<http://purl.org/ontology/swot#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Instance> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance> <http://www.w3.org/2000/01/rdf-schema#comment> "An Event notification is thrown when an EventInstance is inserted in the Knowledge Base" .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#EventInstance> <http://www.w3.org/2000/01/rdf-schema#label> "Event Instance" .
+# http://purl.org/ontology/swot#EventInstance
+<http://purl.org/ontology/swot#EventInstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/swot#EventInstance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/swot#Instance> .
+<http://purl.org/ontology/swot#EventInstance> <http://www.w3.org/2000/01/rdf-schema#comment> "An Event notification is thrown when an EventInstance is inserted in the Knowledge Base" .
+<http://purl.org/ontology/swot#EventInstance> <http://www.w3.org/2000/01/rdf-schema#label> "Event Instance" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#FieldSchema
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#FieldSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#FieldSchema> <http://www.w3.org/2000/01/rdf-schema#comment> "General FieldSchema superclass, to be used for instance when there is a simple datatype" .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#FieldSchema> <http://www.w3.org/2000/01/rdf-schema#label> "FieldSchema" .
+# http://purl.org/ontology/swot#FieldSchema
+<http://purl.org/ontology/swot#FieldSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/swot#FieldSchema> <http://www.w3.org/2000/01/rdf-schema#comment> "General FieldSchema superclass, to be used for instance when there is a simple datatype" .
+<http://purl.org/ontology/swot#FieldSchema> <http://www.w3.org/2000/01/rdf-schema#label> "FieldSchema" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Instance
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Instance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Instance> <http://www.w3.org/2000/01/rdf-schema#comment> "Action-Event instance superclass" .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Instance> <http://www.w3.org/2000/01/rdf-schema#label> "Instance" .
+# http://purl.org/ontology/swot#Instance
+<http://purl.org/ontology/swot#Instance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/swot#Instance> <http://www.w3.org/2000/01/rdf-schema#comment> "Action-Event instance superclass" .
+<http://purl.org/ontology/swot#Instance> <http://www.w3.org/2000/01/rdf-schema#label> "Instance" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Static Property-Action-Event superclass" .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Interaction Pattern" .
+# http://purl.org/ontology/swot#InteractionPattern
+<http://purl.org/ontology/swot#InteractionPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/swot#InteractionPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Static Property-Action-Event superclass" .
+<http://purl.org/ontology/swot#InteractionPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Interaction Pattern" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#OntologyURI
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#OntologyURI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#OntologyURI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#FieldSchema> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#OntologyURI> <http://www.w3.org/2000/01/rdf-schema#comment> "FieldSchemas that are pointers to Ontologies" .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#OntologyURI> <http://www.w3.org/2000/01/rdf-schema#label> "Ontology URI" .
+# http://purl.org/ontology/swot#OntologyURI
+<http://purl.org/ontology/swot#OntologyURI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/swot#OntologyURI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/swot#FieldSchema> .
+<http://purl.org/ontology/swot#OntologyURI> <http://www.w3.org/2000/01/rdf-schema#comment> "FieldSchemas that are pointers to Ontologies" .
+<http://purl.org/ontology/swot#OntologyURI> <http://www.w3.org/2000/01/rdf-schema#label> "Ontology URI" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#InteractionPattern> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property> <http://www.w3.org/2000/01/rdf-schema#comment> "Neither Action, neither Event. It represent an internal status or pure information on the Semantic WebThing" .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property" .
+# http://purl.org/ontology/swot#Property
+<http://purl.org/ontology/swot#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/swot#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/swot#InteractionPattern> .
+<http://purl.org/ontology/swot#Property> <http://www.w3.org/2000/01/rdf-schema#comment> "Neither Action, neither Event. It represent an internal status or pure information on the Semantic WebThing" .
+<http://purl.org/ontology/swot#Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ResourceURI
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ResourceURI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ResourceURI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#FieldSchema> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ResourceURI> <http://www.w3.org/2000/01/rdf-schema#comment> "FieldSchemas that are pointers to web resources" .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ResourceURI> <http://www.w3.org/2000/01/rdf-schema#label> "Resource URI" .
+# http://purl.org/ontology/swot#ResourceURI
+<http://purl.org/ontology/swot#ResourceURI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/swot#ResourceURI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/swot#FieldSchema> .
+<http://purl.org/ontology/swot#ResourceURI> <http://www.w3.org/2000/01/rdf-schema#comment> "FieldSchemas that are pointers to web resources" .
+<http://purl.org/ontology/swot#ResourceURI> <http://www.w3.org/2000/01/rdf-schema#label> "Resource URI" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstraction for the Semantic WebThing" .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Thing> <http://www.w3.org/2000/01/rdf-schema#label> "Semantic WebThing" .
+# http://purl.org/ontology/swot#Thing
+<http://purl.org/ontology/swot#Thing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/swot#Thing> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/ontology/swot#ThingDescription> .
+<http://purl.org/ontology/swot#Thing> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstraction for the Semantic WebThing" .
+<http://purl.org/ontology/swot#Thing> <http://www.w3.org/2000/01/rdf-schema#label> "Semantic WebThing" .
 # 
-# http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Resource representing the Thing Description of the Semantic WebThing. This resource should be a real resource, reachable from the Web and answer to a GET request through a JSON-LD." .
-<http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#ThingDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Thing Description" .
+# http://purl.org/ontology/swot#ThingDescription
+<http://purl.org/ontology/swot#ThingDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/swot#ThingDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Resource representing the Thing Description of the Semantic WebThing. This resource should be a real resource, reachable from the Web and answer to a GET request through a JSON-LD." .
+<http://purl.org/ontology/swot#ThingDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Thing Description" .
 # 
 # 
 # 
@@ -605,61 +614,61 @@ _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 _:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
 _:genid40 <http://www.w3.org/2002/07/owl#members> _:genid43 .
 _:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Action> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#Action> .
 _:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid42 .
 _:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Event> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#Event> .
 _:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid41 .
 _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#Property> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#Property> .
 _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
 _:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointProperties> .
 _:genid44 <http://www.w3.org/2002/07/owl#members> _:genid47 .
 _:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasAction> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#hasAction> .
 _:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid46 .
 _:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasEvent> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#hasEvent> .
 _:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid45 .
 _:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasProperty> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#hasProperty> .
 _:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
 _:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointProperties> .
 _:genid48 <http://www.w3.org/2002/07/owl#members> _:genid51 .
 _:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputData> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#hasInputData> .
 _:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid50 .
 _:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputData> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#hasOutputData> .
 _:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid49 .
 _:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyData> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#hasPropertyData> .
 _:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
 _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointProperties> .
 _:genid52 <http://www.w3.org/2002/07/owl#members> _:genid55 .
 _:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasInputDataSchema> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#hasInputDataSchema> .
 _:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid54 .
 _:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasOutputDataSchema> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#hasOutputDataSchema> .
 _:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid53 .
 _:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#hasPropertyDataSchema> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#hasPropertyDataSchema> .
 _:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
 _:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointProperties> .
 _:genid56 <http://www.w3.org/2002/07/owl#members> _:genid59 .
 _:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isActionFor> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#isActionFor> .
 _:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid58 .
 _:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isEventFor> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#isEventFor> .
 _:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid57 .
 _:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot#isPropertyFor> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/swot#isPropertyFor> .
 _:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-# Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
+# Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/

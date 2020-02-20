@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://www.semanticweb.org/unibo/antoniazzi/2019/0/swot","name":"Semantic Web of Things Ontology", "headline":"The Web of Things (WoT) has recently appeared as the latest evolution of the Internet of Things and, as the name suggests, requires that devices interoperate through the Internet using Web protocols and standards. Currently only a few theoretical approaches have been presented by researchers and industry, to fight the fragmentation of the IoT world through the adoption of semantics. This further evolution is known as Semantic Web of Things and relies on a WoT implementation crafted on the technologies proposed by the Semantic Web stack. This paper presents a working implementation of the Web of Things declined in its Semantic flavour through the adoption of a shared ontology for describing devices. In addition to that, the ontology includes patterns for dynamic interactions between devices, and therefore we define it as dynamic ontology. A practical example will give a proof of concept and overall evaluation, showing how the dynamic setup proposed can foster interoperability at information level allowing on one hand smart discovery, enabling on the other hand orchestration and automatic interaction through the semantic information available.", "datePublished":"16 January 2019", "license":"https://www.gnu.org/licenses/gpl.html", "author":[{"@type":"Person","name":"Francesco Antoniazzi"}], "contributor":[{"@type":"Person","name":"Fabio Viola"}]}</script>
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://purl.org/ontology/swot","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/ontology/swot","name":"Semantic Web of Things Ontology", "headline":"The Web of Things (WoT) has recently appeared as the latest evolution of the Internet of Things and, as the name suggests, requires that devices interoperate through the Internet using Web protocols and standards. Currently, only a few theoretical approaches have been presented by researchers and industry, to fight the fragmentation of the IoT world through the adoption of semantics. This further evolution is known as Semantic WoT and relies on a WoT implementation crafted on the technologies proposed by the Semantic Web stack. This article presents a working implementation of the WoT declined in its Semantic flavor through the adoption of a shared ontology for describing devices. In addition to that, the ontology includes patterns for dynamic interactions between devices, and therefore we define it as dynamic ontology. A practical example will give a proof of concept and overall evaluation, showing how the dynamic setup proposed can foster interoperability at information level allowing on the one hand smart discovery, enabling on the other hand orchestration and automatic interaction through the semantic information available.", "datePublished":"16 January 2019", "version":"https://github.com/fr4ncidir/SemanticWoT", "license":"https://www.gnu.org/licenses/gpl.html", "author":[{"@type":"Person","name":"Francesco Antoniazzi, ARCES, University of Bologna"}], "contributor":[{"@type":"Person","name":"Fabio Viola, ARCES, University of Bologna"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -46,6 +46,7 @@ function loadTOC(){
         return this.clone().find(sel||">*").remove().end();
  };    $(function(){
       $("#abstract").load("sections/abstract-en.html"); 
+      $("#introduction").load("sections/introduction-en.html"); 
       $("#overview").load("sections/overview-en.html"); 
       $("#references").load("sections/references-en.html"); 
       $("#crossref").load("sections/crossref-en.html", null, loadHash); 
@@ -63,9 +64,11 @@ function loadTOC(){
 
 <dl>
 <dt>This version:</dt>
+<dd><a href="http://purl.org/ontology/swot/0.1">http://purl.org/ontology/swot/0.1</a></dd>
+<dt>Latest version:</dt>
 <dd><a href="https://fr4ncidir.github.io/SemanticWoT/">https://fr4ncidir.github.io/SemanticWoT/</a></dd>
 <dt>Version Control:</dt>
-<dd><a href="https://github.com/fr4ncidir/SemanticWoT">https://github.com/fr4ncidir/SemanticWoT</a></dd>
+<dd><a href="https://github.com/fr4ncidir/SemanticWoT">Github repository</a></dd>
 <dt>Authors:</dt>
 <dd>Francesco Antoniazzi, ARCES, University of Bologna</dd>
 
@@ -74,8 +77,10 @@ function loadTOC(){
 
 <dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="https://www.gnu.org/licenses/gpl.html" target="_blank"><img src="https://img.shields.io/badge/License-https://www.gnu.org/licenses/gpl.html-blue.svg" alt="https://www.gnu.org/licenses/gpl.html" /></a>
 </dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
-<dt>Cite as:</dt>
-<dd>Francesco Antoniazzi. Semantic Web of Things Ontology.</dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/OOPSeval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>F. Antoniazzi and F. Viola, "Building the Semantic Web of Things Through a Dynamic Ontology," in IEEE Internet of Things Journal, vol. 6, no. 6, pp. 10560-10579, Dec. 2019. doi: 10.1109/JIOT.2019.2939882</dd>
+<dt>DOI:</dt>
+<dd><a href="http://dx.doi.org/https://doi.org/10.1109/JIOT.2019.2939882"><img src ="https://img.shields.io/badge/DOI-https://doi.org/10.1109/JIOT.2019.2939882-blue.svg" alt="https://doi.org/10.1109/JIOT.2019.2939882" /></a></dd>
 </dl>
 
 <hr/>
@@ -85,17 +90,16 @@ function loadTOC(){
 <span>Ontology Specification Draft</span>
 </div>
 </div>     <div id="abstract"></div>
-<div id="toc"></div>     <div id="overview"></div>
+<div id="toc"></div>     <div id="introduction"></div>
+     <div id="overview"></div>
      <div id="crossref"></div>
      <div id="references"></div>
-<html>
 <div id="acknowledgements">
 <h2 id="ack" class="list">Acknowledgements <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <p>
 The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
 </div>
 
-</html>
 
 </div>
 </body>
