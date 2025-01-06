@@ -1,3 +1,6 @@
+## Buy me a coffee
+[You can also buy me a coffee here!](https://buymeacoffee.com/fr4ncidir)
+
 # The Semantic Web of Things
 1. [SWoT ontology](https://github.com/fr4ncidir/SemanticWoT#the-swot-ontology)
 2. [Cocktail](https://github.com/fr4ncidir/SemanticWoT#cocktail)
